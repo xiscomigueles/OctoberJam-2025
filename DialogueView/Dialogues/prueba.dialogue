@@ -1,11 +1,49 @@
 ~ amador_intro
-Amador: Ahhh... [wave]what a headache...[/wave] what the hell am I doing here? God... what's happening?
-Amador: Do I have blood on my head...? It smells so bad here... I should get out of this place...
-_Maite: Do you remember why you wanted to see us naked?_
-Amador: (Maite...? It can't be...)
-Amador: (This can't be happening...)
-- Ask "Who are you?" 
-    Amador: Who are you? Why are you here?
-- Say "Stay calm"
-    Amador: I need to calm down and think...
-- End the conversation => END
+
+Amador: Wh... [wait=2] What am I doing here? [wait=4] Hold on, isn't this my [shake]basement?[/shake] 
+
+[pulse]Look around, Amador[/pulse] 
+
+[center][shake]Look around [/shake] [/center]
+
+~ amador_first_step
+
+% Amador: The door's closed. [wait=2] I should go back and find the key.
+% Amador: It's of no use; the door's closed. [wait=2] I should head back.
+% Amador: No luck; the door's locked. [wait=2] Let's head back.
+
+~ amador_first_chain_step_one
+% Amador: The key must be here; somewhre hidden in between this mess.
+% Amador: I should start by looking here.
+% Amador: This place is a mess.. but i'm sure the key is somwhere here.
+
+~ amador_first_chain_found_locker
+% Amador: Hmm...[wait=2] maybe the key is inside the locker.
+% Amador: Hmm...[wait=2] I have a vage memory of the key being there.
+% Amador: Hmm...[wait=2] i'm somewhat sure the key is there.
+
+
+~ amador_first_chain_found_first
+% Amador: This number... this must be for the locker.
+% Amador: With this I can open the locker and see what's inside.
+
+~ amador_first_chain_found_second
+% Amador: Another one. One to go.
+% Amador: Just one more number.
+% Amador: Got it. So close to leaving this [shake]basement[/shake].
+
+~ amador_first_chain_found_last
+% Amador: Last one. Let's go back to the locker.
+% Amador: Finally; let's open the locker now.
+
+~ amador_first_chain_open_locker
+% Amador: So tiny, yet so important.
+% Amador: Got the key; let's head basck to the door now.
+% Amador: Finally, the key in my hands. [wait=2] Let's go to the door.
+
+
+
+
+
+
+

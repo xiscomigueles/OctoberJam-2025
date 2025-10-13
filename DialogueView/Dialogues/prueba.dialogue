@@ -1,0 +1,11 @@
+~ amador_intro
+Amador: Ahhh... [wave]what a headache...[/wave] what the hell am I doing here? God... what's happening?
+Amador: Do I have blood on my head...? It smells so bad here... I should get out of this place...
+_Maite: Do you remember why you wanted to see us naked?_
+Amador: (Maite...? It can't be...)
+Amador: (This can't be happening...)
+- Ask "Who are you?" 
+    Amador: Who are you? Why are you here?
+- Say "Stay calm"
+    Amador: I need to calm down and think...
+- End the conversation => END

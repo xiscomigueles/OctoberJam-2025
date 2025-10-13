@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://b463f8h8nha2j"]
+
+[ext_resource type="Script" uid="uid://b8hs8ukk17733" path="res://playerMovement.gd" id="1_xhfnw"]
+[ext_resource type="Script" uid="uid://cqi06kci8ufaw" path="res://coin.gd" id="2_kpjcp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpjcp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xhfnw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xhfnw"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(100, 0)
+script = ExtResource("1_xhfnw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_kpjcp")
+
+[node name="ColorRect" type="ColorRect" parent="Player"]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.1764706, 1, 1, 1)
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(839, 294)
+scale = Vector2(3, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+shape = SubResource("RectangleShape2D_xhfnw")
+
+[node name="ColorRect" type="ColorRect" parent="Wall"]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 0, 1, 1)
+
+[node name="Coin" type="Node2D" parent="."]
+script = ExtResource("2_kpjcp")
+
+[node name="ColorRect" type="ColorRect" parent="Coin"]
+offset_left = 396.0
+offset_top = 396.0
+offset_right = 436.0
+offset_bottom = 436.0
+color = Color(1, 1, 0.050980393, 1)
+
+[node name="CoinBody" type="StaticBody2D" parent="Coin"]
+
+[node name="PhysicalCollision" type="CollisionShape2D" parent="Coin/CoinBody"]
+position = Vector2(396, 396)
+shape = SubResource("CircleShape2D_xhfnw")
+
+[node name="InteractionArea" type="Area2D" parent="Coin"]
+
+[node name="ProximityCollision" type="CollisionShape2D" parent="Coin/InteractionArea"]
+position = Vector2(396, 396)
+shape = SubResource("CircleShape2D_xhfnw")
+
+[connection signal="body_entered" from="Coin/InteractionArea" to="Coin" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="Coin/InteractionArea" to="Coin" method="_on_interaction_area_body_exited"]

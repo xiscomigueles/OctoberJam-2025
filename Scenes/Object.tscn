@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_krg6j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kjguj"]
-radius = 7.071068
+radius = 15.033297
 
 [node name="Coin" type="Node2D"]
 script = ExtResource("1_krg6j")
@@ -13,13 +13,11 @@ script = ExtResource("1_krg6j")
 [node name="CoinBody" type="StaticBody2D" parent="."]
 
 [node name="PhysicalCollision" type="CollisionShape2D" parent="CoinBody"]
-position = Vector2(396, 396)
 shape = SubResource("RectangleShape2D_krg6j")
 
 [node name="InteractionArea" type="Area2D" parent="."]
 
 [node name="ProximityCollision" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2(382, 396)
 shape = SubResource("CircleShape2D_kjguj")
 
 [connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]

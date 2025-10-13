@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://ck8736r5fya6b"]
+
+[ext_resource type="Texture2D" uid="uid://bhokyykrpv3vb" path="res://Assets/Rooms/Basement.png" id="1_wh7eg"]
+[ext_resource type="PackedScene" uid="uid://dl05ng0v1qjmr" path="res://Scenes/Object.tscn" id="2_0kqx7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0kqx7"]
+size = Vector2(240, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7xisx"]
+size = Vector2(2, 142)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rf6rn"]
+size = Vector2(2, 142)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wh7eg"]
+size = Vector2(179, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_udnjo"]
+size = Vector2(27.25, 3)
+
+[node name="Area2D" type="Area2D"]
+z_index = -1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(128, 80)
+texture = ExtResource("1_wh7eg")
+
+[node name="Coin" parent="." instance=ExtResource("2_0kqx7")]
+position = Vector2(62.000004, 54)
+scale = Vector2(1.16, 0.265)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShapeDown" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(128, 151)
+shape = SubResource("RectangleShape2D_0kqx7")
+
+[node name="CollisionShapeLeft" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(9, 79)
+shape = SubResource("RectangleShape2D_7xisx")
+
+[node name="CollisionShapeRight" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(247, 79)
+shape = SubResource("RectangleShape2D_rf6rn")
+
+[node name="CollisionShapeTop1" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(99.5, 36)
+shape = SubResource("RectangleShape2D_wh7eg")
+
+[node name="CollisionShapeTop2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(232.375, 36)
+shape = SubResource("RectangleShape2D_udnjo")

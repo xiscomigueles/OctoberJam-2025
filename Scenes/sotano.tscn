@@ -1,7 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://ck8736r5fya6b"]
+[gd_scene load_steps=12 format=3 uid="uid://ck8736r5fya6b"]
 
 [ext_resource type="Texture2D" uid="uid://bhokyykrpv3vb" path="res://Assets/Rooms/Basement.png" id="1_wh7eg"]
 [ext_resource type="PackedScene" uid="uid://dl05ng0v1qjmr" path="res://Scenes/Object.tscn" id="2_0kqx7"]
+[ext_resource type="Script" uid="uid://ls0mldy2f8dk" path="res://Scripts/CollisionchangeScene.gd" id="3_7xisx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yp4s2"]
+size = Vector2(27.5, 3.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kqx7"]
 size = Vector2(240, 2)
@@ -18,16 +22,25 @@ size = Vector2(179, 3)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udnjo"]
 size = Vector2(27.25, 3)
 
-[node name="Area2D" type="Area2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_56w0n"]
+size = Vector2(1.84375, 27.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fh2o3"]
+size = Vector2(1, 27.46625)
+
+[node name="Sotano" type="Area2D"]
 z_index = -1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(128, 80)
 texture = ExtResource("1_wh7eg")
 
-[node name="Coin" parent="." instance=ExtResource("2_0kqx7")]
-position = Vector2(62.000004, 54)
-scale = Vector2(1.16, 0.265)
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(203, -7)
+script = ExtResource("3_7xisx")
+
+[node name="ExitDoor" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_yp4s2")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -50,3 +63,21 @@ shape = SubResource("RectangleShape2D_wh7eg")
 [node name="CollisionShapeTop2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(232.375, 36)
 shape = SubResource("RectangleShape2D_udnjo")
+
+[node name="CollisionShapeTop3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(187.92188, 20.75)
+shape = SubResource("RectangleShape2D_56w0n")
+
+[node name="CollisionShapeTop4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(219.28, 20.733124)
+shape = SubResource("RectangleShape2D_fh2o3")
+
+[node name="CoinLavadora" parent="." instance=ExtResource("2_0kqx7")]
+position = Vector2(61, 49.999996)
+scale = Vector2(1.27, 0.215)
+
+[node name="CoinEstanteria" parent="." instance=ExtResource("2_0kqx7")]
+position = Vector2(27, 44)
+scale = Vector2(1.03, 0.245)
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

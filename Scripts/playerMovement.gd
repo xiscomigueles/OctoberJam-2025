@@ -5,7 +5,15 @@ extends CharacterBody2D
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var interact_area: Area2D = $InteractionArea
 
+var can_move: bool = true
+
 func _physics_process(delta: float) -> void:
+	if not can_move:
+		velocity = Vector2.ZERO
+		anim.play("Idle")
+		move_and_slide()
+		return
+		
 	var direction = Vector2.ZERO
 
 	# Input del jugador

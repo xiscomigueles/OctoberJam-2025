@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var area: Area2D = $Area2D
-@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
+@onready var anim: AnimatedSprite2D = $StaticBody2D/AnimatedSprite2D
 
 var player_inside: bool = false
 var animation_playing: bool = false

@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var target_scene: String = "res://Scenes/Dialogue.tscn"
+@export var target_scene: String = "res://Scenes/GameplayKitchen.tscn"
 
 
 func _on_body_entered(body: CharacterBody2D) -> void:

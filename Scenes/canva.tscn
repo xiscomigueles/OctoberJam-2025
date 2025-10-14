@@ -79,36 +79,38 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_47fxy")
 }],
-"loop": true,
+"loop": false,
 "name": &"discover",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wbwo0"]
-size = Vector2(22, 19.5)
+size = Vector2(20.5, 0.203125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_teypt"]
-size = Vector2(26, 29)
+size = Vector2(28, 28)
 
 [node name="Canva" type="Area2D"]
+y_sort_enabled = true
 script = ExtResource("1_t8hmj")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_6qxvc")
-animation = &"Idle2"
-autoplay = "Idle"
-frame_progress = 0.4767881
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+sprite_frames = SubResource("SpriteFrames_6qxvc")
+animation = &"discover"
+autoplay = "Idle"
+frame = 6
+frame_progress = 1.0
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-7, -11.75)
+position = Vector2(-7, -3)
 shape = SubResource("RectangleShape2D_wbwo0")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-7, -9.5)
+position = Vector2(-7, -8)
 shape = SubResource("RectangleShape2D_teypt")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

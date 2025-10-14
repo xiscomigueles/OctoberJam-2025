@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_krg6j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oni83"]
-size = Vector2(24, 24)
+size = Vector2(22, 22)
 
 [node name="Coin" type="Node2D"]
 script = ExtResource("1_krg6j")

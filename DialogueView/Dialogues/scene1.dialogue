@@ -11,39 +11,70 @@ Amador: Wh... [wait=2] What am I doing here? [wait=4] Hold on, isn't this my [sh
 % Amador: The door's closed. [wait=2] I should go back and find the key.
 % Amador: It's of no use; the door's closed. [wait=2] I should head back.
 % Amador: No luck; the door's locked. [wait=2] Let's head back.
+=> END
 
 ~ amador_first_chain_step_one
 % Amador: The key must be here; somewhre hidden in between this mess.
 % Amador: I should start by looking here.
 % Amador: This place is a mess.. but i'm sure the key is somwhere here.
+=> END
 
 ~ amador_first_chain_found_locker
 % Amador: Hmm...[wait=2] maybe the key is inside the locker.
 % Amador: Hmm...[wait=2] I have a vage memory of the key being there.
 % Amador: Hmm...[wait=2] i'm somewhat sure the key is there.
-
+=> END
 
 ~ amador_first_chain_found_first
 % Amador: This number... this must be for the locker.
 % Amador: With this I can open the locker and see what's inside.
-
+=> END
 ~ amador_first_chain_found_second
 % Amador: Another one. One to go.
 % Amador: Just one more number.
 % Amador: Got it. So close to leaving this [shake]basement[/shake].
+=> END
 
 ~ amador_first_chain_found_last
 % Amador: Last one. Let's go back to the locker.
 % Amador: Finally; let's open the locker now.
+=> END
 
 ~ amador_first_chain_open_locker
 % Amador: So tiny, yet so important.
 % Amador: Got the key; let's head basck to the door now.
 % Amador: Finally, the key in my hands. [wait=2] Let's go to the door.
+=> END
 
+~ amador_washing_machine
+% Amador: A washer! In this economy! Someething good might be here.
+% Amador: Interesting...[wait=2], a laundry machine. Maybe there is something here.
+% Amador: Great![wait=2]. A clothes washer; let's hope it cah wash my problems away.
 
+- Look inside => amador_first_chain_found_first
+- Do nothing => END
 
+~ amador_bookshelf
+% Amador: So many books in here...[wait=2] no wonder i'm sleeping in the [shake]basement[/shake].
+% Amador: There may be something here...[wait=2] in-between this pile of books.
+% Amador: Can't see a thing here.[wait=2] Let's go deeper.
 
+- Look inside => amador_first_chain_found_second
+- Do nothing => END
 
+~ amador_hidden_painting
+% Amador: A mistery...[wait=2]  I love misteries. Let's unveil it!
+% Amador: Wonder what's under...[wait=2] Let's see.
+
+- Look under => amador_first_chain_found_last
+- Do nothing => END
+
+~ amador_cute_box
+% Amador: What a mess...[wait=2] let's open the box.
+% Amador: Why did i leve this here? [wait=2] Maybe opening it will clear that up.
+% Amador: I should put this elsewhere.[wait=2] Let's take a look at the contents first.
+
+- Look inside => END
+- Do nothing => END
 
 

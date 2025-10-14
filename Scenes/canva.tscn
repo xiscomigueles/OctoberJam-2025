@@ -1,0 +1,114 @@
+[gd_scene load_steps=15 format=3 uid="uid://dxyusay14gwao"]
+
+[ext_resource type="Texture2D" uid="uid://bj3ur4uvffk2x" path="res://Assets/Items/Canvas.png" id="1_laqj7"]
+[ext_resource type="Script" uid="uid://dba2ecftyuogk" path="res://Scripts/CanvaController.gd" id="1_t8hmj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8hmj"]
+atlas = ExtResource("1_laqj7")
+region = Rect2(0, 0, 50, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qxvc"]
+atlas = ExtResource("1_laqj7")
+region = Rect2(300, 0, 50, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0gg6"]
+atlas = ExtResource("1_laqj7")
+region = Rect2(0, 0, 50, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mkrx"]
+atlas = ExtResource("1_laqj7")
+region = Rect2(50, 0, 50, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v180f"]
+atlas = ExtResource("1_laqj7")
+region = Rect2(100, 0, 50, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eeggd"]
+atlas = ExtResource("1_laqj7")
+region = Rect2(150, 0, 50, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ajqx"]
+atlas = ExtResource("1_laqj7")
+region = Rect2(200, 0, 50, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtcka"]
+atlas = ExtResource("1_laqj7")
+region = Rect2(250, 0, 50, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47fxy"]
+atlas = ExtResource("1_laqj7")
+region = Rect2(300, 0, 50, 49)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6qxvc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8hmj")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qxvc")
+}],
+"loop": true,
+"name": &"Idle2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0gg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mkrx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v180f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eeggd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ajqx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtcka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47fxy")
+}],
+"loop": true,
+"name": &"discover",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbwo0"]
+size = Vector2(22, 19.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_teypt"]
+size = Vector2(26, 29)
+
+[node name="Canva" type="Area2D"]
+script = ExtResource("1_t8hmj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6qxvc")
+animation = &"Idle2"
+autoplay = "Idle"
+frame_progress = 0.4767881
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-7, -11.75)
+shape = SubResource("RectangleShape2D_wbwo0")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-7, -9.5)
+shape = SubResource("RectangleShape2D_teypt")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

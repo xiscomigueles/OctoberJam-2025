@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://oa1mw5dlownl"]
+
+[ext_resource type="PackedScene" uid="uid://dfd5q24jb4f1y" path="res://Scenes/Player.tscn" id="1_a4ejm"]
+[ext_resource type="PackedScene" uid="uid://ck8736r5fya6b" path="res://Scenes/sotano.tscn" id="2_o0lve"]
+
+[node name="GameplaySotano" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_a4ejm")]
+position = Vector2(271, 256)
+scale = Vector2(4.2, 4.2)
+
+[node name="sotano" parent="." instance=ExtResource("2_o0lve")]
+position = Vector2(9.536743e-07, 1)
+scale = Vector2(3, 3)
+
+[node name="Camera2D" type="Camera2D" parent="sotano"]
+position = Vector2(128.33333, 79.666664)
+zoom = Vector2(1.505, 1.37)

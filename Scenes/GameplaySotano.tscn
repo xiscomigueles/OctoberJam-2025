@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://oa1mw5dlownl"]
+[gd_scene load_steps=5 format=3 uid="uid://oa1mw5dlownl"]
 
 [ext_resource type="PackedScene" uid="uid://dfd5q24jb4f1y" path="res://Scenes/Player.tscn" id="1_a4ejm"]
+[ext_resource type="Script" uid="uid://cti1ajjd5thka" path="res://Scripts/enviroment.gd" id="1_gqc8w"]
 [ext_resource type="PackedScene" uid="uid://dxyusay14gwao" path="res://Scenes/canva.tscn" id="2_gqc8w"]
 [ext_resource type="PackedScene" uid="uid://ck8736r5fya6b" path="res://Scenes/sotano.tscn" id="2_o0lve"]
 
-[node name="GameplaySotano" type="Node2D"]
+[node name="GameplaySotano" type="Node2D" node_paths=PackedStringArray("player")]
+script = ExtResource("1_gqc8w")
+player = NodePath("Enviroment/CharacterBody2D")
+position_default = Vector2(273, 256)
 
 [node name="sotano" parent="." instance=ExtResource("2_o0lve")]
 y_sort_enabled = true

@@ -1,5 +1,6 @@
-extends Node2D
+extends Area2D
 
+#var player: PlayerMovement = PlayerMovement.new()
 # @export para que puedas seleccionar la tecla directamente en el Inspector de Godot
 # Key es un enum que contiene todas las teclas posibles (KEY_E, KEY_F, etc.)
 @export var interaction_key: Key = KEY_E # Por defecto, la tecla 'E'

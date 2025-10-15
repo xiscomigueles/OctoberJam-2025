@@ -35,6 +35,7 @@ texture = ExtResource("1_7u47w")
 position = Vector2(203, 165)
 script = ExtResource("2_23qos")
 target_scene = "res://Scenes/GameplaySotano.tscn"
+door_name = "GameplayKitchen_puertaSotano"
 
 [node name="ExitDoor" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_cetdd")

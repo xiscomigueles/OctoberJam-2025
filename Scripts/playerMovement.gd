@@ -1,3 +1,4 @@
+class_name PlayerMovement
 extends CharacterBody2D
 
 @export var speed: float = 200.0
@@ -31,13 +32,12 @@ func _physics_process(delta: float) -> void:
 		direction = direction.normalized()
 		velocity = direction * speed
 
-		# --- Animación Walking ---
+		# Animación Walking
 		anim.play("walking")
 
-		# --- Flip horizontal ---
+		# Flip horizontal
 		if direction.x != 0:
 			anim.flip_h = direction.x < 0
-
 			# Girar el área de interacción también
 			var flip_dir = -1 if anim.flip_h else 1
 			interact_area.position.x = abs(interact_area.position.x) * flip_dir

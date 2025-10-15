@@ -1,24 +1,8 @@
 extends CanvasLayer
 
-#@onready var anim: AnimationPlayer = $AnimationPlayer
-
-# Emite una señal cuando termina la transición
-#signal transition_finished
-
-
-	#layer = -1
 
 func change_scene(path: String) -> void:
-	#layer = 1
-	#anim.play("Trans")
+	call_deferred("_deferred_change_scene", path)
 
-	# Espera a que acabe la animación antes de cambiar la escena
-	#await anim.animation_finished
+func _deferred_change_scene(path: String) -> void:
 	get_tree().change_scene_to_file(path)
-
-	# Reproduce la animación al revés (salida)
-	#anim.play_backwards("Trans")
-	#await anim.animation_finished
-
-	#layer = -1
-	#emit_signal("transition_finished")

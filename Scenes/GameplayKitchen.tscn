@@ -7,7 +7,7 @@
 [node name="GameplayKitchen" type="Node2D" node_paths=PackedStringArray("player")]
 script = ExtResource("1_tmvsf")
 player = NodePath("CharacterBody2D")
-entry_door = "puertaKitchen"
+entry_door = "GameplayKitchen_puertaSotano"
 position_default = Vector2(608, 336)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_tmvsf")]

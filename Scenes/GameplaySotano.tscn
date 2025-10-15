@@ -8,6 +8,7 @@
 [node name="GameplaySotano" type="Node2D" node_paths=PackedStringArray("player")]
 script = ExtResource("1_gqc8w")
 player = NodePath("Enviroment/CharacterBody2D")
+entry_door = "GameplaySotano_puertaKitchen"
 position_default = Vector2(273, 256)
 
 [node name="sotano" parent="." instance=ExtResource("2_o0lve")]

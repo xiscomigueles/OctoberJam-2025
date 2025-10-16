@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://dxyusay14gwao"]
 
 [ext_resource type="Texture2D" uid="uid://bj3ur4uvffk2x" path="res://Assets/Items/Canvas.png" id="1_laqj7"]
-[ext_resource type="Script" uid="uid://dba2ecftyuogk" path="res://Scripts/CanvaController.gd" id="1_t8hmj"]
+[ext_resource type="Script" uid="uid://dba2ecftyuogk" path="res://Scripts/Enviroment/CanvaController.gd" id="1_t8hmj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t8hmj"]
 atlas = ExtResource("1_laqj7")

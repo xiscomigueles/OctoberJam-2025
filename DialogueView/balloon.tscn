@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://cf3hj7xj4s3n3"]
 
-[ext_resource type="Script" uid="uid://71di4dwuv276" path="res://Scripts/balloon.gd" id="1_36de5"]
+[ext_resource type="Script" uid="uid://71di4dwuv276" path="res://Scripts/Dialogue/balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="FontFile" uid="uid://du7aq0dpgrdp5" path="res://DialogueView/Fonts/BlockCraft.otf" id="2_f3ulj"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bhokyykrpv3vb" path="res://Assets/Rooms/Basement.png" id="1_wh7eg"]
 [ext_resource type="PackedScene" uid="uid://dl05ng0v1qjmr" path="res://Scenes/Object.tscn" id="2_0kqx7"]
-[ext_resource type="Script" uid="uid://ls0mldy2f8dk" path="res://Scripts/CollisionchangeScene.gd" id="3_7xisx"]
+[ext_resource type="Script" uid="uid://ls0mldy2f8dk" path="res://Scripts/Scene Load/CollisionchangeScene.gd" id="3_7xisx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yp4s2"]
 size = Vector2(27.5, 3.5)

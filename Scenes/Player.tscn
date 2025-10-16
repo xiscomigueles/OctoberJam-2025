@@ -1,19 +1,20 @@
-[gd_scene load_steps=10 format=3 uid="uid://dfd5q24jb4f1y"]
+[gd_scene load_steps=11 format=3 uid="uid://1is26hdpmpuc"]
 
-[ext_resource type="Script" uid="uid://b8hs8ukk17733" path="res://Scripts/playerMovement.gd" id="1_xhfnw"]
-[ext_resource type="Texture2D" uid="uid://bmtg32xdr5a3" path="res://Assets/Amador/idle.png" id="2_gntrk"]
-[ext_resource type="Texture2D" uid="uid://bt068l4873bo4" path="res://Assets/Amador/walk.png" id="3_dewec"]
+[ext_resource type="Script" uid="uid://bbjpu1lfxvrlg" path="res://Scripts/Player/PlayerMovement.gd" id="1_om1vb"]
+[ext_resource type="Texture2D" uid="uid://bmtg32xdr5a3" path="res://Assets/Amador/idle.png" id="2_x5vt2"]
+[ext_resource type="Texture2D" uid="uid://bt068l4873bo4" path="res://Assets/Amador/walk.png" id="3_74br8"]
+[ext_resource type="Script" uid="uid://c1l7ctugs1qjk" path="res://Scripts/Player/PlayerInteraction.gd" id="4_mai0c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ixxa"]
-atlas = ExtResource("2_gntrk")
+atlas = ExtResource("2_x5vt2")
 region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nn08x"]
-atlas = ExtResource("3_dewec")
+atlas = ExtResource("3_74br8")
 region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_52ee3"]
-atlas = ExtResource("3_dewec")
+atlas = ExtResource("3_74br8")
 region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bhhdu"]
@@ -44,10 +45,10 @@ size = Vector2(14, 23.380953)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gntrk"]
 size = Vector2(14, 32)
 
-[node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
+[node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
-scale = Vector2(4.2, 4.2)
-script = ExtResource("1_xhfnw")
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_om1vb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_bhhdu")
@@ -61,6 +62,12 @@ scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_p4m81")
 
 [node name="InteractionArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("4_mai0c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("RectangleShape2D_gntrk")
+
+[connection signal="area_entered" from="InteractionArea" to="InteractionArea" method="_on_area_entered"]
+[connection signal="area_exited" from="InteractionArea" to="InteractionArea" method="_on_area_exited"]

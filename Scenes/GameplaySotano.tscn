@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://oa1mw5dlownl"]
 
-[ext_resource type="PackedScene" uid="uid://dfd5q24jb4f1y" path="res://Scenes/Player.tscn" id="1_a4ejm"]
-[ext_resource type="Script" uid="uid://cti1ajjd5thka" path="res://Scripts/enviroment.gd" id="1_gqc8w"]
+[ext_resource type="PackedScene" uid="uid://1is26hdpmpuc" path="res://Scenes/Player.tscn" id="1_a4ejm"]
+[ext_resource type="Script" uid="uid://cti1ajjd5thka" path="res://Scripts/Scene Load/enviroment.gd" id="1_gqc8w"]
 [ext_resource type="PackedScene" uid="uid://dxyusay14gwao" path="res://Scenes/canva.tscn" id="2_gqc8w"]
 [ext_resource type="PackedScene" uid="uid://ck8736r5fya6b" path="res://Scenes/sotano.tscn" id="2_o0lve"]
 
@@ -11,14 +11,15 @@ player = NodePath("Enviroment/CharacterBody2D")
 entry_door = "GameplaySotano_puertaKitchen"
 position_default = Vector2(273, 256)
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(387, 240)
+scale = Vector2(3, 3)
+zoom = Vector2(1.505, 1.37)
+
 [node name="sotano" parent="." instance=ExtResource("2_o0lve")]
 y_sort_enabled = true
 position = Vector2(1.000001, 1)
 scale = Vector2(3, 3)
-
-[node name="Camera2D" type="Camera2D" parent="sotano"]
-position = Vector2(128.33333, 79.666664)
-zoom = Vector2(1.505, 1.37)
 
 [node name="Enviroment" type="Node2D" parent="."]
 y_sort_enabled = true

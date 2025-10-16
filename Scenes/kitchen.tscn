@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://drgwv2wwjnbfd"]
 
 [ext_resource type="Texture2D" uid="uid://c7oipd66om4pa" path="res://Assets/Rooms/Kitchen.png" id="1_7u47w"]
-[ext_resource type="Script" uid="uid://ls0mldy2f8dk" path="res://Scripts/CollisionchangeScene.gd" id="2_23qos"]
+[ext_resource type="Script" uid="uid://ls0mldy2f8dk" path="res://Scripts/Scene Load/CollisionchangeScene.gd" id="2_23qos"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cetdd"]
 size = Vector2(27.5, 3.5)

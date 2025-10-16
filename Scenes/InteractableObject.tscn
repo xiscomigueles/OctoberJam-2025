@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://laalrfsp2nu2"]
 
 [ext_resource type="Texture2D" uid="uid://x74t2ftvnr4r" path="res://Assets/Items/Canvas-Sheet.png" id="1_4xf6x"]
-[ext_resource type="Script" uid="uid://2fsv852fb6j0" path="res://Pruebas/Scripts/Interactable.gd" id="2_mi14k"]
+[ext_resource type="Script" uid="uid://2fsv852fb6j0" path="res://Scripts/Enviroment/Interactable.gd" id="2_mi14k"]
 [ext_resource type="FontFile" uid="uid://du7aq0dpgrdp5" path="res://DialogueView/Fonts/BlockCraft.otf" id="2_myrwv"]
-[ext_resource type="Resource" uid="uid://brco42kgmiyab" path="res://Pruebas/Dialogues/ObjectDialogue.dialogue" id="3_f7jlp"]
+[ext_resource type="Resource" uid="uid://brco42kgmiyab" path="res://DialogueView/Dialogues/ObjectDialogue.dialogue" id="3_f7jlp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mi14k"]
 size = Vector2(28, 13)
@@ -15,8 +15,10 @@ font = ExtResource("2_myrwv")
 size = Vector2(20, 9)
 
 [node name="InteractableObject" type="StaticBody2D"]
+y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
 position = Vector2(0, -25)
 texture = ExtResource("1_4xf6x")
 region_enabled = true

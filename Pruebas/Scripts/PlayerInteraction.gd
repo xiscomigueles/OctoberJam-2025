@@ -1,10 +1,16 @@
-extends Area2D
+class_name PlayerInteraction extends Area2D
 
 var object_to_interact: Interactable = null
+var can_interact: bool = true
+
+
+func _ready() -> void:
+	DialogueManager.dialogue_started.connect(func(_resource): can_interact = false)
+	DialogueManager.dialogue_ended.connect(func(_resource): can_interact = true)
 
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact") and object_to_interact != null:
+	if event.is_action_pressed("interact") and object_to_interact != null and can_interact:
 		object_to_interact.interact()
 
 

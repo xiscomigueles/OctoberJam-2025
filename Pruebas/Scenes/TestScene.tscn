@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3afu7vgs2pi2"]
+
+[ext_resource type="PackedScene" uid="uid://1is26hdpmpuc" path="res://Pruebas/Scenes/MyPlayer.tscn" id="1_xrnm8"]
+[ext_resource type="PackedScene" uid="uid://laalrfsp2nu2" path="res://Pruebas/Scenes/InteractableObject.tscn" id="2_s3gwi"]
+
+[node name="TestScene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+
+[node name="InteractableObject" parent="." instance=ExtResource("2_s3gwi")]
+
+[node name="Player" parent="." instance=ExtResource("1_xrnm8")]
+position = Vector2(-49, 13)

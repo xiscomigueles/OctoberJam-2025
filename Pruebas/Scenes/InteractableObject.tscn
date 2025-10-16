@@ -1,11 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://laalrfsp2nu2"]
+[gd_scene load_steps=8 format=3 uid="uid://laalrfsp2nu2"]
 
 [ext_resource type="Texture2D" uid="uid://x74t2ftvnr4r" path="res://Assets/Items/Canvas-Sheet.png" id="1_4xf6x"]
 [ext_resource type="Script" uid="uid://2fsv852fb6j0" path="res://Pruebas/Scripts/Interactable.gd" id="2_mi14k"]
+[ext_resource type="FontFile" uid="uid://du7aq0dpgrdp5" path="res://DialogueView/Fonts/BlockCraft.otf" id="2_myrwv"]
 [ext_resource type="Resource" uid="uid://brco42kgmiyab" path="res://Pruebas/Dialogues/ObjectDialogue.dialogue" id="3_f7jlp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mi14k"]
 size = Vector2(28, 13)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ece0p"]
+font = ExtResource("2_myrwv")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xf6x"]
 size = Vector2(20, 9)
@@ -23,11 +27,12 @@ position = Vector2(-1, -31.5)
 shape = SubResource("RectangleShape2D_mi14k")
 
 [node name="Input Label" type="Label" parent="."]
-offset_left = -23.0
+offset_left = -24.0
 offset_top = -76.0
-offset_right = 24.0
+offset_right = 23.0
 offset_bottom = -53.0
 text = "KEY"
+label_settings = SubResource("LabelSettings_ece0p")
 horizontal_alignment = 1
 vertical_alignment = 1
 

@@ -11,6 +11,7 @@ func _ready() -> void:
 	DialogueManager.dialogue_started.connect(func(_resource): can_move = false)
 	DialogueManager.dialogue_ended.connect(func(_resource): can_move = true)
 
+
 func _process(_delta: float) -> void:
 	mov_input = read_mov_input()
 	play_animation()

@@ -20,4 +20,4 @@ func hide_input() -> void:
 
 func interact() -> void:
 	hide_input()
-	DialogueManager.show_example_dialogue_balloon(dialogue)
+	DialogueManager.show_dialogue_balloon(dialogue)

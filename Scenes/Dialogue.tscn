@@ -1,9 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://cykew4s3058pc"]
+[gd_scene load_steps=4 format=3 uid="uid://cykew4s3058pc"]
 
 [ext_resource type="Script" uid="uid://dfswyd27nky76" path="res://Scripts/Dialogue/dialogue.gd" id="1_2842h"]
 [ext_resource type="PackedScene" uid="uid://cf3hj7xj4s3n3" path="res://DialogueView/balloon.tscn" id="2_cq6to"]
+[ext_resource type="PackedScene" path="res://DialogueView/numpad.tscn" id="3_cq6to"]
 
 [node name="Dialogue" type="Node2D"]
 script = ExtResource("1_2842h")
 
 [node name="ExampleBalloon" parent="." instance=ExtResource("2_cq6to")]
+
+[node name="NumpadUI" parent="." instance=ExtResource("3_cq6to")]
+visible = false
+offset_left = 300.0
+offset_top = 50.0
+offset_right = 551.0
+offset_bottom = 387.0

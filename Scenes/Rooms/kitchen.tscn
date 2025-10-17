@@ -65,11 +65,20 @@ shape = SubResource("RectangleShape2D_jbuf1")
 position = Vector2(203, 165)
 script = ExtResource("2_35qkm")
 scene_path = "uid://ck8736r5fya6b"
+spawn_point_name = "Stairs"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit Area"]
 shape = SubResource("RectangleShape2D_cetdd")
 
 [node name="Y Sorting" type="Node2D" parent="."]
 y_sort_enabled = true
+
+[node name="SpawnPoints" type="Node2D" parent="Y Sorting"]
+
+[node name="Default" type="Marker2D" parent="Y Sorting/SpawnPoints"]
+position = Vector2(122, 105)
+
+[node name="Stairs" type="Marker2D" parent="Y Sorting/SpawnPoints"]
+position = Vector2(204, 147)
 
 [connection signal="body_entered" from="Exit Area" to="Exit Area" method="_on_body_entered"]

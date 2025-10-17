@@ -1,6 +1,7 @@
 extends Area2D
 
 @export_file("*.tscn") var scene_path: String
+@export var spawn_point_name: String
 
 func _ready() -> void:
 	if scene_path.is_empty():
@@ -8,4 +9,4 @@ func _ready() -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	SceneManager.change_scene(scene_path)
+	SceneManager.change_scene(scene_path, spawn_point_name)

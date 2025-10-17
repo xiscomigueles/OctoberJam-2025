@@ -1,18 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://dxyelnnq8um81"]
+[gd_scene load_steps=7 format=3 uid="uid://dxyelnnq8um81"]
 
 [ext_resource type="Texture2D" uid="uid://drife3cxcmhm2" path="res://Assets/Items/Regular Items/Basement/Bookshelf.png" id="1_duuux"]
 [ext_resource type="FontFile" uid="uid://du7aq0dpgrdp5" path="res://DialogueView/Fonts/BlockCraft.otf" id="2_ofiol"]
 [ext_resource type="Script" uid="uid://2fsv852fb6j0" path="res://Scripts/Enviroment/Interactable.gd" id="3_ku4pt"]
-[ext_resource type="Resource" uid="uid://12yq1aw7bkuc" path="res://DialogueView/Dialogues/prueba.dialogue" id="4_duuux"]
+[ext_resource type="Resource" uid="uid://12yq1aw7bkuc" path="res://DialogueView/Dialogues/scene1.dialogue" id="4_duuux"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ece0p"]
 font = ExtResource("2_ofiol")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xf6x"]
 size = Vector2(20, 9)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mi14k"]
-size = Vector2(24, 13)
 
 [node name="Bookshelf" type="Node2D"]
 y_sort_enabled = true
@@ -41,11 +38,5 @@ script = ExtResource("3_ku4pt")
 dialogue = ExtResource("4_duuux")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
-position = Vector2(0, -26)
+position = Vector2(0, -25)
 shape = SubResource("RectangleShape2D_4xf6x")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, -31.5)
-shape = SubResource("RectangleShape2D_mi14k")

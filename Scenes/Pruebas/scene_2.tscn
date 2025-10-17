@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0jwyhoxn2oy"]
 
-[ext_resource type="Script" uid="uid://ckuuwbjq653sp" path="res://Scripts/Scene Load/SceneToLoad.gd" id="1_brimm"]
+[ext_resource type="Script" uid="uid://ckuuwbjq653sp" path="res://Scripts/Scene Load/LevelExit.gd" id="1_brimm"]
 [ext_resource type="FontFile" uid="uid://du7aq0dpgrdp5" path="res://DialogueView/Fonts/BlockCraft.otf" id="2_aly7f"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pqsyr"]

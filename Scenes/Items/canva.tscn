@@ -1,42 +1,32 @@
-[gd_scene load_steps=15 format=3 uid="uid://dxyusay14gwao"]
+[gd_scene load_steps=14 format=3 uid="uid://dxyusay14gwao"]
 
-[ext_resource type="Texture2D" uid="uid://bj3ur4uvffk2x" path="res://Assets/Items/Canvas.png" id="1_laqj7"]
 [ext_resource type="Script" uid="uid://dba2ecftyuogk" path="res://Scripts/Enviroment/CanvaController.gd" id="1_t8hmj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t8hmj"]
-atlas = ExtResource("1_laqj7")
 region = Rect2(0, 0, 50, 49)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6qxvc"]
-atlas = ExtResource("1_laqj7")
 region = Rect2(300, 0, 50, 49)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x0gg6"]
-atlas = ExtResource("1_laqj7")
 region = Rect2(0, 0, 50, 49)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8mkrx"]
-atlas = ExtResource("1_laqj7")
 region = Rect2(50, 0, 50, 49)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v180f"]
-atlas = ExtResource("1_laqj7")
 region = Rect2(100, 0, 50, 49)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eeggd"]
-atlas = ExtResource("1_laqj7")
 region = Rect2(150, 0, 50, 49)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ajqx"]
-atlas = ExtResource("1_laqj7")
 region = Rect2(200, 0, 50, 49)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rtcka"]
-atlas = ExtResource("1_laqj7")
 region = Rect2(250, 0, 50, 49)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_47fxy"]
-atlas = ExtResource("1_laqj7")
 region = Rect2(300, 0, 50, 49)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6qxvc"]
@@ -100,8 +90,6 @@ script = ExtResource("1_t8hmj")
 sprite_frames = SubResource("SpriteFrames_6qxvc")
 animation = &"discover"
 autoplay = "Idle"
-frame = 6
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-7, -3)

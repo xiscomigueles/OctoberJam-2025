@@ -7,6 +7,5 @@ func _ready() -> void:
 		print("the scene path is empty")
 
 
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact"):
-		SceneManager.change_scene(scene_path)
+func _on_body_entered(body: Node2D) -> void:
+	SceneManager.change_scene(scene_path)

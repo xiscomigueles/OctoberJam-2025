@@ -47,7 +47,6 @@ size = Vector2(14, 32)
 
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
-scale = Vector2(1.5, 1.5)
 script = ExtResource("1_om1vb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

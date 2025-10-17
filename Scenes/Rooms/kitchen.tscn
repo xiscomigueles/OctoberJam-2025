@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://drgwv2wwjnbfd"]
+
+[ext_resource type="Texture2D" uid="uid://t4esw50ox6di" path="res://Assets/Rooms/Dark Rooms/Kitchen.png" id="1_kjc5c"]
+[ext_resource type="Script" uid="uid://ckuuwbjq653sp" path="res://Scripts/Scene Load/LevelExit.gd" id="2_35qkm"]
+[ext_resource type="PackedScene" uid="uid://1is26hdpmpuc" path="res://Scenes/Player.tscn" id="3_35qkm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7u47w"]
+size = Vector2(2, 144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_23qos"]
+size = Vector2(2, 144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lvc4q"]
+size = Vector2(179, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6pjjr"]
+size = Vector2(28, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pb1w8"]
+size = Vector2(55.25, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jbuf1"]
+size = Vector2(168, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cetdd"]
+size = Vector2(27.5, 3.5)
+
+[node name="Kitchen" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(128, 80)
+zoom = Vector2(4.5, 4.5)
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(128, 80)
+texture = ExtResource("1_kjc5c")
+
+[node name="Collisions" type="StaticBody2D" parent="."]
+
+[node name="CollisionShapeRight" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(247, 80)
+shape = SubResource("RectangleShape2D_7u47w")
+
+[node name="CollisionShapeLeft" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(9, 80)
+shape = SubResource("RectangleShape2D_23qos")
+
+[node name="CollisionShapeDown1" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(99.5, 151)
+shape = SubResource("RectangleShape2D_lvc4q")
+
+[node name="CollisionShapeDown2" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(232, 151)
+shape = SubResource("RectangleShape2D_6pjjr")
+
+[node name="CollisionShapeTop1" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(38, 36)
+shape = SubResource("RectangleShape2D_pb1w8")
+
+[node name="CollisionShapeTop2" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(162, 45)
+shape = SubResource("RectangleShape2D_jbuf1")
+
+[node name="Exit Area" type="Area2D" parent="."]
+position = Vector2(203, 165)
+script = ExtResource("2_35qkm")
+scene_path = "uid://ck8736r5fya6b"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit Area"]
+shape = SubResource("RectangleShape2D_cetdd")
+
+[node name="Player" parent="." instance=ExtResource("3_35qkm")]
+position = Vector2(134, 105)
+
+[connection signal="body_entered" from="Exit Area" to="Exit Area" method="_on_body_entered"]

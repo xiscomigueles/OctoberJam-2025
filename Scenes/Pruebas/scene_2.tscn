@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0jwyhoxn2oy"]
+
+[ext_resource type="Script" uid="uid://ckuuwbjq653sp" path="res://Scripts/Scene Load/SceneToLoad.gd" id="1_brimm"]
+[ext_resource type="FontFile" uid="uid://du7aq0dpgrdp5" path="res://DialogueView/Fonts/BlockCraft.otf" id="2_aly7f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pqsyr"]
+font = ExtResource("2_aly7f")
+font_size = 30
+
+[node name="Scene 2" type="Node2D"]
+script = ExtResource("1_brimm")
+scene_path = "uid://bi6grpksmvwdi"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -50.0
+offset_top = -15.0
+offset_right = 51.0
+offset_bottom = 16.0
+text = "SCENE 2"
+label_settings = SubResource("LabelSettings_pqsyr")

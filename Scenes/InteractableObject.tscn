@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://laalrfsp2nu2"]
 
-[ext_resource type="Texture2D" uid="uid://x74t2ftvnr4r" path="res://Assets/Items/Canvas-Sheet.png" id="1_4xf6x"]
+[ext_resource type="Texture2D" uid="uid://bjsolsyt2ugdw" path="res://icon.svg" id="1_u4o5k"]
 [ext_resource type="Script" uid="uid://2fsv852fb6j0" path="res://Scripts/Enviroment/Interactable.gd" id="2_mi14k"]
 [ext_resource type="FontFile" uid="uid://du7aq0dpgrdp5" path="res://DialogueView/Fonts/BlockCraft.otf" id="2_myrwv"]
 [ext_resource type="Resource" uid="uid://brco42kgmiyab" path="res://DialogueView/Dialogues/ObjectDialogue.dialogue" id="3_f7jlp"]
@@ -20,7 +20,7 @@ y_sort_enabled = true
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
 position = Vector2(0, -25)
-texture = ExtResource("1_4xf6x")
+texture = ExtResource("1_u4o5k")
 region_enabled = true
 region_rect = Rect2(0, 0, 36.862484, 49)
 

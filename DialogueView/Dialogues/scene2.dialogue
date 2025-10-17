@@ -42,7 +42,18 @@ The door, still closed, let torught some voices, making Amador a bit concerned.
 
 Amador: These voices... [wait=2] I keep hearing all these voices in my head.
 
-
+~ amador_test
+Amador: ¡Hola! Necesito que me digas el número secreto para continuar.
+    do request_numpad_input() # <--- ¡ESTE ES EL CAMBIO!
+    - El número ingresado es: {numpad_input}.
+    
+if numpad_input == "123": # Pon el número que esperes
+	Amador: ¡Correcto! La puerta se abre.
+else:
+	Amador: Incorrecto. Por favor, inténtalo de nuevo.
+    
+Amador: Gracias por tu cooperación.
+=> END
 
 
 

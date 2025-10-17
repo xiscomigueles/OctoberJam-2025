@@ -1,4 +1,4 @@
-# aoutload script
+# autoload script
 
 extends Node
 

@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://dxyelnnq8um81"]
+
+[ext_resource type="Texture2D" uid="uid://drife3cxcmhm2" path="res://Assets/Items/Regular Items/Basement/Bookshelf.png" id="1_duuux"]
+[ext_resource type="FontFile" uid="uid://du7aq0dpgrdp5" path="res://DialogueView/Fonts/BlockCraft.otf" id="2_ofiol"]
+[ext_resource type="Script" uid="uid://2fsv852fb6j0" path="res://Scripts/Enviroment/interactable.gd" id="3_ku4pt"]
+[ext_resource type="Resource" uid="uid://12yq1aw7bkuc" path="res://DialogueView/Dialogues/prueba.dialogue" id="4_duuux"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ece0p"]
+font = ExtResource("2_ofiol")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xf6x"]
+size = Vector2(20, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mi14k"]
+size = Vector2(24, 13)
+
+[node name="Bookshelf" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -25)
+texture = ExtResource("1_duuux")
+region_rect = Rect2(0, 0, 36.862484, 49)
+
+[node name="Input Label" type="Label" parent="."]
+z_index = 1
+offset_left = -23.0
+offset_top = -64.0
+offset_right = 24.0
+offset_bottom = -41.0
+text = "E"
+label_settings = SubResource("LabelSettings_ece0p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Interaction Area" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("3_ku4pt")
+dialogue = ExtResource("4_duuux")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
+position = Vector2(0, -26)
+shape = SubResource("RectangleShape2D_4xf6x")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -31.5)
+shape = SubResource("RectangleShape2D_mi14k")

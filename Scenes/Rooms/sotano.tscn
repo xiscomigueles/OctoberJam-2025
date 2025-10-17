@@ -1,7 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://ck8736r5fya6b"]
+[gd_scene load_steps=15 format=3 uid="uid://ck8736r5fya6b"]
 
+[ext_resource type="Texture2D" uid="uid://dc0pjxak5phm6" path="res://Assets/Rooms/Regular Rooms/Basement.png" id="1_cv3oi"]
 [ext_resource type="Texture2D" uid="uid://cp6jqse151mwj" path="res://Assets/Rooms/Dark Rooms/Basement.png" id="1_igsle"]
+[ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/Enviroment/sprite_swap.gd" id="1_sixsl"]
 [ext_resource type="Script" uid="uid://ckuuwbjq653sp" path="res://Scripts/Scene Load/level_exit.gd" id="2_cv3oi"]
+[ext_resource type="PackedScene" uid="uid://dxyelnnq8um81" path="res://Scenes/Items/bookshelf.tscn" id="5_uon3h"]
+[ext_resource type="PackedScene" uid="uid://db2q1gq8wfg6q" path="res://Scenes/Items/washing_machine.tscn" id="6_r3k0l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kqx7"]
 size = Vector2(240, 2)
@@ -33,7 +37,15 @@ size = Vector2(27.5, 3.5)
 offset = Vector2(128, 80)
 zoom = Vector2(4.5, 4.5)
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Sprites" type="Node2D" parent="."]
+script = ExtResource("1_sixsl")
+
+[node name="Regular" type="Sprite2D" parent="Sprites"]
+position = Vector2(128, 80)
+texture = ExtResource("1_cv3oi")
+
+[node name="Dark" type="Sprite2D" parent="Sprites"]
+visible = false
 position = Vector2(128, 80)
 texture = ExtResource("1_igsle")
 
@@ -52,7 +64,7 @@ position = Vector2(247, 79)
 shape = SubResource("RectangleShape2D_rf6rn")
 
 [node name="CollisionShapeTop1" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(99.5, 36)
+position = Vector2(100, 54)
 shape = SubResource("RectangleShape2D_wh7eg")
 
 [node name="CollisionShapeTop2" type="CollisionShape2D" parent="Collisions"]
@@ -77,6 +89,7 @@ spawn_point_name = "Stairs"
 shape = SubResource("RectangleShape2D_yp4s2")
 
 [node name="Y Sorting" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="SpawnPoints" type="Node2D" parent="Y Sorting"]
 
@@ -84,6 +97,12 @@ shape = SubResource("RectangleShape2D_yp4s2")
 position = Vector2(109, 117)
 
 [node name="Stairs" type="Marker2D" parent="Y Sorting/SpawnPoints"]
-position = Vector2(203, 54)
+position = Vector2(204, 52)
+
+[node name="Bookshelf" parent="Y Sorting" instance=ExtResource("5_uon3h")]
+position = Vector2(33, 73)
+
+[node name="Washing Machine" parent="Y Sorting" instance=ExtResource("6_r3k0l")]
+position = Vector2(62, 75)
 
 [connection signal="body_entered" from="Exit Area" to="Exit Area" method="_on_body_entered"]

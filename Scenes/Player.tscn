@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://1is26hdpmpuc"]
 
-[ext_resource type="Script" uid="uid://bbjpu1lfxvrlg" path="res://Scripts/Player/PlayerMovement.gd" id="1_om1vb"]
+[ext_resource type="Script" uid="uid://bbjpu1lfxvrlg" path="res://Scripts/Player/player_movement.gd" id="1_om1vb"]
 [ext_resource type="Texture2D" uid="uid://bmtg32xdr5a3" path="res://Assets/Amador/idle.png" id="2_x5vt2"]
 [ext_resource type="Texture2D" uid="uid://bt068l4873bo4" path="res://Assets/Amador/walk.png" id="3_74br8"]
-[ext_resource type="Script" uid="uid://c1l7ctugs1qjk" path="res://Scripts/Player/PlayerInteraction.gd" id="4_mai0c"]
+[ext_resource type="Script" uid="uid://c1l7ctugs1qjk" path="res://Scripts/Player/player_interaction.gd" id="4_mai0c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ixxa"]
 atlas = ExtResource("2_x5vt2")

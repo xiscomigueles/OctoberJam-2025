@@ -20,7 +20,7 @@ config/icon="res://icon.svg"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Transicion="*res://Scenes/transicion.tscn"
 GLOBAL="*res://Scripts/Scene Load/global.gd"
-SceneManager="*res://Scripts/Scene Load/SceneManager.gd"
+SceneManager="*res://Scripts/Scene Load/scene_manager.gd"
 
 [dialogue_manager]
 

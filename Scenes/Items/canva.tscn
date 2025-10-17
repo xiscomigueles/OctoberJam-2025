@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://dxyusay14gwao"]
 
-[ext_resource type="Script" uid="uid://dba2ecftyuogk" path="res://Scripts/Enviroment/CanvaController.gd" id="1_t8hmj"]
+[ext_resource type="Script" uid="uid://dba2ecftyuogk" path="res://Scripts/Enviroment/canva_controller.gd" id="1_t8hmj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t8hmj"]
 region = Rect2(0, 0, 50, 49)

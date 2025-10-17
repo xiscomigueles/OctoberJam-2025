@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://ck8736r5fya6b"]
 
 [ext_resource type="Texture2D" uid="uid://cp6jqse151mwj" path="res://Assets/Rooms/Dark Rooms/Basement.png" id="1_igsle"]
-[ext_resource type="Script" uid="uid://ckuuwbjq653sp" path="res://Scripts/Scene Load/LevelExit.gd" id="2_cv3oi"]
+[ext_resource type="Script" uid="uid://ckuuwbjq653sp" path="res://Scripts/Scene Load/level_exit.gd" id="2_cv3oi"]
 [ext_resource type="PackedScene" uid="uid://1is26hdpmpuc" path="res://Scenes/Player.tscn" id="3_igsle"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kqx7"]

@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://ck8736r5fya6b"]
+[gd_scene load_steps=11 format=3 uid="uid://ck8736r5fya6b"]
 
 [ext_resource type="Texture2D" uid="uid://cp6jqse151mwj" path="res://Assets/Rooms/Dark Rooms/Basement.png" id="1_igsle"]
 [ext_resource type="Script" uid="uid://ckuuwbjq653sp" path="res://Scripts/Scene Load/level_exit.gd" id="2_cv3oi"]
-[ext_resource type="PackedScene" uid="uid://1is26hdpmpuc" path="res://Scenes/player.tscn" id="3_igsle"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kqx7"]
 size = Vector2(240, 2)
@@ -76,7 +75,6 @@ scene_path = "uid://drgwv2wwjnbfd"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit Area"]
 shape = SubResource("RectangleShape2D_yp4s2")
 
-[node name="Player" parent="." instance=ExtResource("3_igsle")]
-position = Vector2(91, 107)
+[node name="Y Sorting" type="Node2D" parent="."]
 
 [connection signal="body_entered" from="Exit Area" to="Exit Area" method="_on_body_entered"]

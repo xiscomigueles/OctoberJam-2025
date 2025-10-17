@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://drgwv2wwjnbfd"]
+[gd_scene load_steps=10 format=3 uid="uid://drgwv2wwjnbfd"]
 
 [ext_resource type="Texture2D" uid="uid://t4esw50ox6di" path="res://Assets/Rooms/Dark Rooms/Kitchen.png" id="1_kjc5c"]
 [ext_resource type="Script" uid="uid://ckuuwbjq653sp" path="res://Scripts/Scene Load/level_exit.gd" id="2_35qkm"]
-[ext_resource type="PackedScene" uid="uid://1is26hdpmpuc" path="res://Scenes/player.tscn" id="3_35qkm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u47w"]
 size = Vector2(2, 144)
@@ -70,7 +69,7 @@ scene_path = "uid://ck8736r5fya6b"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit Area"]
 shape = SubResource("RectangleShape2D_cetdd")
 
-[node name="Player" parent="." instance=ExtResource("3_35qkm")]
-position = Vector2(134, 105)
+[node name="Y Sorting" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [connection signal="body_entered" from="Exit Area" to="Exit Area" method="_on_body_entered"]

@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://t4esw50ox6di" path="res://Assets/Rooms/Dark Rooms/Kitchen.png" id="1_kjc5c"]
 [ext_resource type="Script" uid="uid://ckuuwbjq653sp" path="res://Scripts/Scene Load/level_exit.gd" id="2_35qkm"]
 [ext_resource type="PackedScene" uid="uid://bhhsvwc5o1l0v" path="res://Scenes/Items/Kitchen/KitchenCounter.tscn" id="3_35qkm"]
-[ext_resource type="PackedScene" uid="uid://cqfxcndl383ie" path="res://Scenes/Items/Kitchen/Fridge.tscn" id="4_jdfhw"]
-[ext_resource type="PackedScene" uid="uid://2lgljxj5a2sw" path="res://Scenes/Items/Kitchen/TableTv.tscn" id="5_j7m0n"]
-[ext_resource type="PackedScene" uid="uid://dkgayadjtpm5i" path="res://Scenes/Items/Kitchen/Door.tscn" id="6_pu28o"]
+[ext_resource type="PackedScene" uid="uid://dlae0to6ncu1l" path="res://Scenes/Items/Kitchen/Fridge.tscn" id="4_jdfhw"]
+[ext_resource type="PackedScene" uid="uid://dx8ue2lgm1eg6" path="res://Scenes/Items/Kitchen/TableTv.tscn" id="5_j7m0n"]
+[ext_resource type="PackedScene" uid="uid://j2nw64wwobkq" path="res://Scenes/Items/Kitchen/Door.tscn" id="6_pu28o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u47w"]
 size = Vector2(2, 144)
@@ -77,6 +77,10 @@ shape = SubResource("RectangleShape2D_cetdd")
 [node name="Door" parent="." instance=ExtResource("6_pu28o")]
 position = Vector2(37, 44)
 
+[node name="KitchenCounter" parent="." instance=ExtResource("3_35qkm")]
+z_index = -1
+position = Vector2(143, 63)
+
 [node name="Y Sorting" type="Node2D" parent="."]
 y_sort_enabled = true
 
@@ -88,9 +92,8 @@ position = Vector2(122, 105)
 [node name="Stairs" type="Marker2D" parent="Y Sorting/SpawnPoints"]
 position = Vector2(204, 147)
 
-[node name="KitchenCounter" parent="Y Sorting" instance=ExtResource("3_35qkm")]
-z_index = -1
-position = Vector2(143, 63)
+[node name="DoorKitchen" type="Marker2D" parent="Y Sorting/SpawnPoints"]
+position = Vector2(34, 70)
 
 [node name="Fridge" parent="Y Sorting" instance=ExtResource("4_jdfhw")]
 position = Vector2(222, 53)

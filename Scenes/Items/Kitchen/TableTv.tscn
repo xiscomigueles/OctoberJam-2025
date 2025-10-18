@@ -1,13 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://2lgljxj5a2sw"]
+[gd_scene load_steps=7 format=3 uid="uid://dx8ue2lgm1eg6"]
 
 [ext_resource type="Texture2D" uid="uid://ialvwfkj7prg" path="res://Assets/Items/Regular Items/Kitchen/Table.png" id="1_0kdq2"]
 [ext_resource type="Texture2D" uid="uid://bjojp0duy0blt" path="res://Assets/Items/Regular Items/Kitchen/TVKitchen.png" id="2_hshbf"]
-[ext_resource type="FontFile" uid="uid://du7aq0dpgrdp5" path="res://DialogueView/Fonts/BlockCraft.otf" id="4_ypvi0"]
-[ext_resource type="Script" uid="uid://2fsv852fb6j0" path="res://Scripts/Enviroment/Interactable.gd" id="5_0l6y0"]
-[ext_resource type="Resource" uid="uid://12yq1aw7bkuc" path="res://DialogueView/Dialogues/scene1.dialogue" id="6_30ab4"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_ece0p"]
-font = ExtResource("4_ypvi0")
+[ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="3_d58cn"]
+[ext_resource type="Resource" uid="uid://c02vfwrmo42wk" path="res://DialogueView/Dialogues/nothing.dialogue" id="4_lsjfc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xf6x"]
 size = Vector2(51, 23.28125)
@@ -29,22 +25,11 @@ position = Vector2(-1, -15)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_hshbf")
 
-[node name="Input Label" type="Label" parent="."]
-z_index = 1
-offset_left = -23.0
-offset_top = -47.0
-offset_right = 24.0
-offset_bottom = -24.0
-text = "E"
-label_settings = SubResource("LabelSettings_ece0p")
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Interaction Area" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("5_0l6y0")
-dialogue = ExtResource("6_30ab4")
+script = ExtResource("3_d58cn")
+dialogue = ExtResource("4_lsjfc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
 position = Vector2(1.5, -6.359375)

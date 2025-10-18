@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmnrcifevx53d"]
+
+[ext_resource type="Texture2D" uid="uid://ttustf64jlq8" path="res://Assets/Items/Regular Items/LivingRoom/Clock.png" id="1_ks6qb"]
+[ext_resource type="Script" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_8uvxb"]
+[ext_resource type="Resource" uid="uid://c02vfwrmo42wk" path="res://DialogueView/Dialogues/nothing.dialogue" id="3_67osx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53a15"]
+size = Vector2(22.75, 18.0625)
+
+[node name="Clock" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ks6qb")
+region_rect = Rect2(0, 0, 36.862484, 49)
+
+[node name="Interaction Area2" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_8uvxb")
+dialogue = ExtResource("3_67osx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area2"]
+position = Vector2(0, 10.96875)
+shape = SubResource("RectangleShape2D_53a15")

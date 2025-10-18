@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://lsvh24ec74jb"]
+
+[ext_resource type="Texture2D" uid="uid://cnrlj3iw0kgyy" path="res://Assets/Items/Regular Items/LivingRoom/remote.png" id="1_p5e1e"]
+[ext_resource type="Script" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_u2kh3"]
+[ext_resource type="Resource" uid="uid://c02vfwrmo42wk" path="res://DialogueView/Dialogues/nothing.dialogue" id="3_4awww"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53a15"]
+size = Vector2(11, 13)
+
+[node name="Remote" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -0.2443461
+texture = ExtResource("1_p5e1e")
+region_rect = Rect2(0, 0, 36.862484, 49)
+
+[node name="Interaction Area2" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_u2kh3")
+dialogue = ExtResource("3_4awww")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area2"]
+position = Vector2(-0.5, -5.5)
+shape = SubResource("RectangleShape2D_53a15")

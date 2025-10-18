@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbcalcijq75t2"]
+
+[ext_resource type="Texture2D" uid="uid://8hjvxdynii2k" path="res://Assets/Items/Regular Items/LivingRoom/VHS.png" id="1_i2ufu"]
+[ext_resource type="Script" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_rp7mh"]
+[ext_resource type="Resource" uid="uid://c02vfwrmo42wk" path="res://DialogueView/Dialogues/nothing.dialogue" id="3_d8fkb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53a15"]
+size = Vector2(11, 13)
+
+[node name="VHS" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -0.2443461
+texture = ExtResource("1_i2ufu")
+region_rect = Rect2(0, 0, 36.862484, 49)
+
+[node name="Interaction Area2" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_rp7mh")
+dialogue = ExtResource("3_d8fkb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area2"]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_53a15")

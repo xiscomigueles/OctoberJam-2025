@@ -1,0 +1,111 @@
+[gd_scene load_steps=17 format=3 uid="uid://d2hlbxr6exf5q"]
+
+[ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/Enviroment/sprite_swap.gd" id="1_tlynu"]
+[ext_resource type="Texture2D" uid="uid://c0ur23k05jy5b" path="res://Assets/Rooms/Regular Rooms/LivingRoom.png" id="2_1i5ug"]
+[ext_resource type="Texture2D" uid="uid://cp6jqse151mwj" path="res://Assets/Rooms/Dark Rooms/Basement.png" id="3_ibneq"]
+[ext_resource type="Script" uid="uid://ckuuwbjq653sp" path="res://Scripts/Scene Load/level_exit.gd" id="4_ht7gs"]
+[ext_resource type="PackedScene" uid="uid://b11qb0g14ypbp" path="res://Scenes/Items/LivingRoom/sofa.tscn" id="5_qcn6x"]
+[ext_resource type="PackedScene" uid="uid://bps3dxnejjjj4" path="res://Scenes/Items/LivingRoom/plant.tscn" id="5_uv1bb"]
+[ext_resource type="PackedScene" uid="uid://cnx6i8okqv7mo" path="res://Scenes/Items/LivingRoom/furnitureTV.tscn" id="7_6indv"]
+[ext_resource type="PackedScene" uid="uid://lsvh24ec74jb" path="res://Scenes/Items/LivingRoom/Remote.tscn" id="8_6574m"]
+[ext_resource type="PackedScene" uid="uid://bmnrcifevx53d" path="res://Scenes/Items/LivingRoom/clock.tscn" id="8_qg171"]
+[ext_resource type="PackedScene" uid="uid://dbcalcijq75t2" path="res://Scenes/Items/LivingRoom/VHS.tscn" id="8_tlynu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0kqx7"]
+size = Vector2(187, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7xisx"]
+size = Vector2(2, 142)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rf6rn"]
+size = Vector2(2, 142)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wh7eg"]
+size = Vector2(235.75, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qcn6x"]
+size = Vector2(8, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yp4s2"]
+size = Vector2(27.5, 3.5)
+
+[node name="LivingRoom" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(128, 80)
+zoom = Vector2(4.5, 4.5)
+
+[node name="Sprites" type="Node2D" parent="."]
+script = ExtResource("1_tlynu")
+
+[node name="Regular" type="Sprite2D" parent="Sprites"]
+position = Vector2(128, 80)
+texture = ExtResource("2_1i5ug")
+
+[node name="Dark" type="Sprite2D" parent="Sprites"]
+visible = false
+position = Vector2(128, 80)
+texture = ExtResource("3_ibneq")
+
+[node name="Collisions" type="StaticBody2D" parent="."]
+
+[node name="CollisionShapeDown1" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(154.5, 151)
+shape = SubResource("RectangleShape2D_0kqx7")
+
+[node name="CollisionShapeLeft" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(9, 79)
+shape = SubResource("RectangleShape2D_7xisx")
+
+[node name="CollisionShapeRight" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(247, 79)
+shape = SubResource("RectangleShape2D_rf6rn")
+
+[node name="CollisionShapeTop" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(128.125, 36)
+shape = SubResource("RectangleShape2D_wh7eg")
+
+[node name="CollisionShapeDown2" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(12, 151)
+shape = SubResource("RectangleShape2D_qcn6x")
+
+[node name="Exit Area" type="Area2D" parent="."]
+position = Vector2(203, -7)
+script = ExtResource("4_ht7gs")
+scene_path = "uid://drgwv2wwjnbfd"
+spawn_point_name = "DoorKitchen"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit Area"]
+position = Vector2(-165, 167)
+shape = SubResource("RectangleShape2D_yp4s2")
+
+[node name="FurnitureTv" parent="." instance=ExtResource("7_6indv")]
+position = Vector2(128, 64)
+
+[node name="Clock" parent="." instance=ExtResource("8_qg171")]
+position = Vector2(27, 22)
+
+[node name="Remote" parent="." instance=ExtResource("8_6574m")]
+position = Vector2(27, 89)
+
+[node name="VHS" parent="." instance=ExtResource("8_tlynu")]
+position = Vector2(128, 99)
+
+[node name="Y Sorting" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Sofa" parent="Y Sorting" instance=ExtResource("5_qcn6x")]
+position = Vector2(128, 130)
+
+[node name="Plant" parent="Y Sorting" instance=ExtResource("5_uv1bb")]
+position = Vector2(226, 49)
+
+[node name="SpawnPoints" type="Node2D" parent="Y Sorting"]
+
+[node name="Default" type="Marker2D" parent="Y Sorting/SpawnPoints"]
+position = Vector2(24, 101)
+
+[node name="Door" type="Marker2D" parent="Y Sorting/SpawnPoints"]
+position = Vector2(37, 142)
+
+[connection signal="body_entered" from="Exit Area" to="Exit Area" method="_on_body_entered"]

@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://cnx6i8okqv7mo"]
+
+[ext_resource type="Texture2D" uid="uid://lac4hhdl66vb" path="res://Assets/Items/Regular Items/LivingRoom/TVLiving.png" id="1_w6dis"]
+[ext_resource type="Texture2D" uid="uid://byumw57qpe013" path="res://Assets/Items/Regular Items/LivingRoom/Furniture.png" id="2_1h85u"]
+[ext_resource type="Script" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_c5axg"]
+[ext_resource type="Resource" uid="uid://c02vfwrmo42wk" path="res://DialogueView/Dialogues/nothing.dialogue" id="3_c6h1n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53a15"]
+size = Vector2(55, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sueh2"]
+size = Vector2(70, 4.5)
+
+[node name="FurnitureTv" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_1h85u")
+region_rect = Rect2(0, 0, 36.862484, 49)
+
+[node name="Tv" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -26)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_w6dis")
+
+[node name="Interaction Area2" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_c5axg")
+dialogue = ExtResource("3_c6h1n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area2"]
+position = Vector2(2.5, -28)
+shape = SubResource("RectangleShape2D_53a15")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -23)
+shape = SubResource("RectangleShape2D_sueh2")

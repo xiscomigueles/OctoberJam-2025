@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b11qb0g14ypbp"]
+
+[ext_resource type="Texture2D" uid="uid://dvxfsxaiuohx3" path="res://Assets/Items/Regular Items/LivingRoom/Sofa.png" id="1_rfvjy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mi14k"]
+size = Vector2(95, 8.5)
+
+[node name="Sofa" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rfvjy")
+region_rect = Rect2(0, 0, 36.862484, 49)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.5, 14.25)
+shape = SubResource("RectangleShape2D_mi14k")

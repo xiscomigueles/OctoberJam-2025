@@ -18,30 +18,33 @@ Amador: Wh... What am I doing here? Hold on, isn't this the [shake]basement?[/sh
 => END
 
 ~ amador_first_chain_found_first
-# This plays after searching the box.
-% Amador: There are [color={red}]{text}[/color] clocks inside.
-% Amador: Two clocks. Why are there TWO here?.
+# This plays after searching the box (First Number).
+% Amador: There are TWO clocks inside.
+% Amador: Two clocks...I cannot remember when did I put those in there.
 => END
 
 ~ amador_first_chain_found_second
-# This plays after getting the second number.
-The book name is [i]The Big Four[/i].
-% Amador: Nice name. Greater book.
+# This plays after searching the bookshelf (Second Number).
+The name of this book is [i]The Big Four[/i].
 % Amador: I should read this sometime.
 % Amador: Got it. So close to leaving this [shake]basement[/shake].
 => END
 
 ~ amador_first_chain_found_last
 # This plays after getting the last number.
-The Painting's name is [i]Composition IX[/i].
-% Amador: Great, fantastic painting. Loved it.
-% Amador: This painting is... breathtaking.
+The painting shows both of your children. Lucas wears a cap with the number 9 on it.
+% Amador: Maite painted it...I wonder where are they now.
+% Amador: Quieres salami?
 => END
+
+
+# IJOSDEPUTAIJOSDEPUTAIJOSDEPUTAIJOSDEPUTAIJOSDEPUTAIJOSDEPUTAIJOSDEPUTAIJOSDEPUTAIJOSDEPUTAIJOSDEPUTA
+
 
 ~ amador_first_chain_open_locker
 # This plays after getting the key and opening the key.
 % Amador: So tiny, yet so important.
-% Amador: Got the key; let's head basck to the door now.
+% Amador: Got the key; let's head back to the door now.
 % Amador: Finally, the key in my hands. Let's go to the door.
 => END
 

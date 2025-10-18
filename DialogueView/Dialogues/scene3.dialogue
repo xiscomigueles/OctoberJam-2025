@@ -55,7 +55,16 @@ Lucas: Dad, get away from the TV; i can't see through meat.
 Lucas: Daad... [wait=1] I need batteries; go to the basement for me.
 
 ~ amador_goes_basement_finds_batteries
-Amador: 
+% Amador: Batteries! Finally, I can watch the recording.
+% Amador: Got them; let's see the VHS now.
+% Amador: Let's head back to the living room and watch the video.
+
+~ amador_clock
+% Amador: Nice clock. Wonder who choose it.
+% Amador: Hopefully some day i will learn to read analog clocks.
+% Amador: Good. What time is it then?
+
+
 
 
 

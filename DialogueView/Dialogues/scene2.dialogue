@@ -38,7 +38,7 @@ Amador: ... [wait=2] What was that?
 => END
 
 ~ amador_lucas_rocio
-
+# This plays right after comming from the basement; is the flashback.
 ???: Daaaaaddd [wait=1] Lucas is taking over the remote again.
 Lucas: Lies!! Lies!! [wait=1] Rocio is lying, dad! She has been watching TV all day.
 
@@ -53,18 +53,22 @@ Amador: These voices... [wait=1] I keep hearing all these voices in my head.
 % Amador: The TV.... why is it on?
 % Amador: The TV is on.... what's going on??
 % Amador: What is that noise? It's comming from the living room?
-=> END
+=> amador_lucas_rocio
 
 
 ~ amador_tv_flashback
+# Flashback while playing the TV in the kitchen.
 Maite: We should go on a holiday trip, darling.
 
 Rocio: Yeessss.... let's go to the snow!
-Lucas: Nooooo... i prefer going hiking daaadd.
+Lucas: Nooooo... I prefer going hiking daaadd.
 Rocio: Shut up, normie. The winter is for going skiing.
 
 Maite: Stop fighting kids. [wait=1] We are going wherever your father and I decide.
 
+~ amador_frigo_flashback
+Rocio: We need more MeatZZa Feast dad. It's the best pizza ever.
+Lucas: Finnaly; something coherent comes out of your mouth...
 
 ~ amador_test
 Amador: ¡Hola! Necesito que me digas el número secreto para continuar.

@@ -50,9 +50,10 @@ do request_numpad()
 
 ~ reaccionar_a_pin
 if GLOBAL.numpad_input == "123":
-	Amador: ¡Correcto! La puerta se abre.
+	¡Correcto! La puerta se abre.
 else:
-	Amador: Incorrecto. Inténtalo de nuevo.
+	Incorrecto. Inténtalo de nuevo.
+	do request_numpad()
 => END
 
 

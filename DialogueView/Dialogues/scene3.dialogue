@@ -1,0 +1,62 @@
+~ amador_enters_living_room
+# This plays inmediately on entering the room
+% Amador: Hmm... [wait=1] since when do I have this TV?
+% Amador: Honestly, I don't like where this is going.
+% Amador: Why is there static on the TV?
+
+~ amador_enters_interacts_vhs_first
+# Amamdor has another flashback, with his dauther and son telling him a one-liner
+Lucas: [i][color=lightgray]D[/color][color=silver]a[/color][color=gray]d[/color][color=darkgray]d[/color][color=dimgray]y[/color]...[/i] [wait=3] [i]it's... [/i][color=silver]not r[/color][color=lightgray]e[/color][color=gray]a[/color][color=darkgray]l[/color] [wait=2] [i][color=silver]p-please[/color]... [color=lightgray][b]don't do it[/b][/color]...[/i]
+
+.....
+.....
+
+Rocio: [i][color=silver]D[/color][color=gray]a[/color][color=darkgray]d[/color]... [/i][wait=2] [i][color=silver]t[/color][color=lightgray]h[/color][color=gray]a[/color][color=darkgray]t's[/color] [color=dimgray]n[/color][color=darkgray]o[/color][color=gray]t[/color]...[/i] [wait=1] [i][b][color=lightgray]t h a t ' s n o t y o u[/color]...[/b][/i] [wait=3] [i][color=silver]W[/color][color=lightgray]a[/color][color=gray]k[/color][color=darkgray]e[/color] [color=dimgray]u[/color][color=darkgray]p[/color]...[/i] [wait=1] [color=silver]p[/color][color=lightgray]l[/color][color=gray]e[/color][color=darkgray]a[/color][color=dimgray]s[/color][color=gray]e.[/color]
+
+...
+...
+...
+
+Maite: [color=white]I'm home... [/color][wait=1] [color=white]how are my [/color][color=gold]w o n d e r[/color]... [wait=1][b][color=red]A[/color][color=darkred]H[/color][color=maroon]H[/color][color=black]H[/color][color=firebrick]H[/color][color=darkred]H[/color][color=maroon]H[/color][color=black]H[/color][color=firebrick]H[/color][color=darkred]H[/color][color=maroon]H[/color][color=black]H[/color][/b][b][color=maroon]![/color][u][color=darkred]![/color][/u][/b]
+
+...
+...
+...
+...
+
+Amador: What...[wait=1] What was that??
+
+Amador looks at his hands; he has a VHS tape [wait=1] - the one previously in the floor - [wait=1] and wonders...
+
+% Amador: i should play this.
+% Amador: Maybe this has the answers I need.
+% Amador: This might be key to all.
+
+=> END
+
+~ amador_goes_tv_first
+# This scene plays when Amador tries to play the tape without the remote.
+% Amador: I need to turn on the TV. I need the remote.
+% Rocio: Daad, the remote is on the couch.
+% Maite [from the Kitchen]: Darling, go fecth the remote on the couch, please.
+
+Lucas: Dad, get away from the TV; i can't see through meat.
+
+~ amador_goes_fetch_remote
+# This plays once the 
+% Amador: Here is the remote; let's turn on the thing.
+% Amador: So, let's turn the TV on.
+% Amador [looking at the VHS]: Let's see what this thing is about.
+
+- Amador: Ups....
+% Amador: The remote... it doesn't have power.
+% Amador: I think I need some batteries.
+
+Lucas: Daad... [wait=1] I need batteries; go to the basement for me.
+
+~ amador_goes_basement_finds_batteries
+Amador: 
+
+
+
+

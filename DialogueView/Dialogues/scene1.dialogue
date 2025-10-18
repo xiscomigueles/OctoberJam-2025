@@ -1,10 +1,11 @@
 ~ amador_intro
 
-Amador: Wh... [wait=2] What am I doing here? [wait=4] Hold on, isn't this my [shake]basement?[/shake] 
+Amador: Wh... [wait=1] What am I doing here? [wait=2] Hold on, isn't this my [shake]basement?[/shake] 
 
 [pulse]Look around, Amador[/pulse] 
 
 [center][shake]Look around [/shake] [/center]
+=> END
 
 ~ amador_first_step
 
@@ -26,35 +27,40 @@ Amador: Wh... [wait=2] What am I doing here? [wait=4] Hold on, isn't this my [sh
 => END
 
 ~ amador_first_chain_found_first
+The NUMBER is 7
 % Amador: This number... this must be for the locker.
 % Amador: With this I can open the locker and see what's inside.
 => END
 ~ amador_first_chain_found_second
+The NUMBER is 4
 % Amador: Another one. One to go.
 % Amador: Just one more number.
 % Amador: Got it. So close to leaving this [shake]basement[/shake].
 => END
 
 ~ amador_first_chain_found_last
-% Amador: Last one. Let's go back to the locker.
-% Amador: Finally; let's open the locker now.
+The NUMBER is 9
+% Amador: Great, another one. Let's continue.
+% Amador: Got it, lets go on.
 => END
 
 ~ amador_first_chain_open_locker
 % Amador: So tiny, yet so important.
 % Amador: Got the key; let's head basck to the door now.
-% Amador: Finally, the key in my hands. [wait=2] Let's go to the door.
+% Amador: Finally, the key in my hands. [wait=1] Let's go to the door.
 => END
 
-~ amador_washing_machine
-% Amador: A washer! In this economy! Someething good might be here.
-% Amador: Interesting...[wait=2], a laundry machine. Maybe there is something here.
-% Amador: Great![wait=2]. A clothes washer; let's hope it cah wash my problems away.
+~ amazor_tv
+# TV machine
+% Amador: A TV in the basement! In this economy! Someething good might be playing.
+% Amador: Interesting...[wait=2], an old school TV. Maybe there is something good here.
+% Amador: Great![wait=2]. An ancient TV; let's hope it cah ease my problems away.
 
 - Look inside => amador_first_chain_found_first
 - Do nothing => END
 
 ~ amador_bookshelf
+# Bookshelf
 % Amador: So many books in here...[wait=2] no wonder i'm sleeping in the [shake]basement[/shake].
 % Amador: There may be something here...[wait=2] in-between this pile of books.
 % Amador: Can't see a thing here.[wait=2] Let's go deeper.
@@ -63,6 +69,7 @@ Amador: Wh... [wait=2] What am I doing here? [wait=4] Hold on, isn't this my [sh
 - Do nothing => END
 
 ~ amador_hidden_painting
+# Painting
 % Amador: A mistery...[wait=2]  I love misteries. Let's unveil it!
 % Amador: Wonder what's under...[wait=2] Let's see.
 
@@ -70,6 +77,7 @@ Amador: Wh... [wait=2] What am I doing here? [wait=4] Hold on, isn't this my [sh
 - Do nothing => END
 
 ~ amador_cute_box
+# Cute box
 % Amador: What a mess...[wait=2] let's open the box.
 % Amador: Why did i leve this here? [wait=2] Maybe opening it will clear that up.
 % Amador: I should put this elsewhere.[wait=2] Let's take a look at the contents first.

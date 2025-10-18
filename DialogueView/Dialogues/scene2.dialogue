@@ -1,24 +1,27 @@
 ~ amador_intro
 
-Amador: The kitchen... [wait=2] it looks.. [wait=2] diferent from how I remeber it.
+Amador: The kitchen... [wait=1] it looks.. [wait=1] diferent from how I remeber it.
 
 Amador: Why is there a blockade on the door? [wait=1] And why it smells bad? [wait=1]
 
 Amador: Let's take a look around.
 
-~ amador_gas_first_look
+=> END
+
+~ amador_gas_cant_exit
 
 % Amador: There is a gas leak. I can't go further.
 % Amador: I can't see and it smells bad here; probably a gas leak.
 
 Amador: Let's head back to the basement. I have tools there.
 
+=> END
 
 ~ amador_stove
 
-% Amador: Why is there a bloddy rag in my stove? [wait=2] And... [wait=2] what's inside??
-% Amador: I don't think I want to knw the details. [wait=2] Let's open this.
-% Amador: This is to much gore. [wait=2] Let's pretend there is nothing here and open this up.
+% Amador: Why is there a bloddy rag in my stove? [wait=1] Let's... [wait=1] fix the gas.
+% Amador: I don't think I want to knw the details. [wait=1] Let's fix this.
+% Amador: This is to much gore. [wait=1] Let's open this up and fix it.
 
 => END
 
@@ -32,20 +35,40 @@ Amador: That voice... [wait=2] it's clearly from
 Maite [from the kitchen]: The gas is doing weird things again! [wait=2] Go fix it darling.
 
 Amador: ... [wait=2] What was that?
+=> END
 
 ~ amador_lucas_rocio
 
-???: Daaaaaddd [wait=2] Lucas is taking over the remote again.
-Lucas: Lies!! Lies!! [wait=2] Rocio is lying, dad! She has been watching TV all day.
+???: Daaaaaddd [wait=1] Lucas is taking over the remote again.
+Lucas: Lies!! Lies!! [wait=1] Rocio is lying, dad! She has been watching TV all day.
 
 The door, still closed, let torught some voices, making Amador a bit concerned.
 
-Amador: These voices... [wait=2] I keep hearing all these voices in my head.
+Amador: These voices... [wait=1] I keep hearing all these voices in my head.
+=> END
+
+~ amador_comes_from_basement_after
+# This plays after comming back from the basement to the kitchen
+[shake][TV noises comming from the living room][/shake]
+% Amador: The TV.... why is it on?
+% Amador: The TV is on.... what's going on??
+% Amador: What is that noise? It's comming from the living room?
+=> END
+
+
+~ amador_tv_flashback
+Maite: We should go on a holiday trip, darling.
+
+Rocio: Yeessss.... let's go to the snow!
+Lucas: Nooooo... i prefer going hiking daaadd.
+Rocio: Shut up, normie. The winter is for going skiing.
+
+Maite: Stop fighting kids. [wait=1] We are going wherever your father and I decide.
+
 
 ~ amador_test
 Amador: ¡Hola! Necesito que me digas el número secreto para continuar.
 do request_numpad()
-# No hay más líneas aquí. El diálogo termina, pero la función request_numpad se ha llamado.
 => END
 
 ~ reaccionar_a_pin

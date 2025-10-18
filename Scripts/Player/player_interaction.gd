@@ -8,8 +8,6 @@ var can_interact: bool = true
 
 
 func _ready() -> void:
-	#DialogueManager.dialogue_started.connect(func(_resource): can_interact = false)
-	#DialogueManager.dialogue_ended.connect(func(_resource): can_interact = true)
 	hide_input()
 
 

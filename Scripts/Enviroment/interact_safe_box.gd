@@ -14,3 +14,4 @@ func interact() -> void:
 	numpad.show()
 	await numpad.ended
 	interaction_ended.emit()
+	print("Has key? " + str(Global.has_basement_key))

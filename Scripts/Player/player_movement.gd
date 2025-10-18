@@ -7,10 +7,6 @@ class_name PlayerMovement extends CharacterBody2D
 var mov_input: Vector2 = Vector2.ZERO
 var can_move: bool = true
 
-#func _ready() -> void:
-	#DialogueManager.dialogue_started.connect(func(_resource): can_move = false)
-	#DialogueManager.dialogue_ended.connect(func(_resource): can_move = true)
-
 
 func _process(_delta: float) -> void:
 	mov_input = read_mov_input()

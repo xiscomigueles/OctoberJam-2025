@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://drife3cxcmhm2" path="res://Assets/Items/Regular Items/Basement/Bookshelf.png" id="1_duuux"]
 [ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_h7swr"]
-[ext_resource type="Resource" uid="uid://c02vfwrmo42wk" path="res://DialogueView/Dialogues/nothing.dialogue" id="3_i1ti1"]
+[ext_resource type="Resource" uid="uid://12yq1aw7bkuc" path="res://DialogueView/Dialogues/scene1.dialogue" id="3_h7swr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xf6x"]
 size = Vector2(20, 9)
@@ -20,7 +20,8 @@ region_rect = Rect2(0, 0, 36.862484, 49)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_h7swr")
-dialogue = ExtResource("3_i1ti1")
+dialogue = ExtResource("3_h7swr")
+dialogue_node = "amador_bookshelf"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
 position = Vector2(0, -25)

@@ -46,9 +46,8 @@ func _clear():
 func _on_ok_pressed():
 	var input_value: String = line_edit_input.text
 	if input_value == combination:
-		print("combinación correcta")
-		ended.emit()
+		Global.has_basement_key = true
 		hide()
+		ended.emit()
 	else:
-		print("combinación incorrecta")
 		_clear()

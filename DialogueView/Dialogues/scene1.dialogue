@@ -8,7 +8,6 @@ Amador: Wh... [wait=1] What am I doing here? [wait=2] Hold on, isn't this my [sh
 => END
 
 ~ amador_first_step
-
 % Amador: The door's closed. [wait=2] I should go back and find the key.
 % Amador: It's of no use; the door's closed. [wait=2] I should head back.
 % Amador: No luck; the door's locked. [wait=2] Let's head back.
@@ -31,6 +30,7 @@ The NUMBER is 7
 % Amador: This number... this must be for the locker.
 % Amador: With this I can open the locker and see what's inside.
 => END
+
 ~ amador_first_chain_found_second
 The NUMBER is 4
 % Amador: Another one. One to go.

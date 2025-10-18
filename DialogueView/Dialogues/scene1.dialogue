@@ -9,30 +9,36 @@ Amador: Wh... [wait=1] What am I doing here? [wait=2] Hold on, isn't this my [sh
 => END
 
 ~ amador_first_step
+# This plays after trying to exit the basement without a key.
 % Amador: The door's closed. [wait=2] I should go back and find the key.
 % Amador: It's of no use; the door's closed. [wait=2] I should head back.
 % Amador: No luck; the door's locked. [wait=2] Let's head back.
 => END
 
 ~ amador_first_chain_step_one
+# This plays after entering the basement, looking around.
 % Amador: The key must be here; somewhre hidden in between this mess.
 % Amador: I should start by looking here.
 % Amador: This place is a mess.. but i'm sure the key is somwhere here.
 => END
 
 ~ amador_first_chain_found_locker
+# This plays after seeing the locker without the key.
 % Amador: Hmm...[wait=2] maybe the key is inside the locker.
 % Amador: Hmm...[wait=2] I have a vage memory of the key being there.
 % Amador: Hmm...[wait=2] i'm somewhat sure the key is there.
 => END
 
 ~ amador_first_chain_found_first
+# This plays after getting the first number.
+
 The NUMBER is 7
 % Amador: This number... this must be for the locker.
 % Amador: With this I can open the locker and see what's inside.
 => END
 
 ~ amador_first_chain_found_second
+# This plays after getting the second number.
 The NUMBER is 4
 % Amador: Another one. One to go.
 % Amador: Just one more number.
@@ -40,12 +46,14 @@ The NUMBER is 4
 => END
 
 ~ amador_first_chain_found_last
+# This plays after getting the last number.
 The NUMBER is 9
 % Amador: Great, another one. Let's continue.
 % Amador: Got it, lets go on.
 => END
 
 ~ amador_first_chain_open_locker
+# This plays after getting the key and opening the key.
 % Amador: So tiny, yet so important.
 % Amador: Got the key; let's head basck to the door now.
 % Amador: Finally, the key in my hands. [wait=1] Let's go to the door.
@@ -59,6 +67,12 @@ The NUMBER is 9
 
 - Look inside => amador_first_chain_found_first
 - Do nothing => END
+
+ ~ amador_open_locker_with_key
+# This plays when opening the locker after getting the key.
+% Amador: Let's open up the locker.
+% Amador: Finally, let's open up this locker.
+% Amador: The mistery is over; let's crack this up.
 
 ~ amador_bookshelf
 # Bookshelf

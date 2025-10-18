@@ -21,7 +21,7 @@ texture = ExtResource("1_345ab")
 region_rect = Rect2(0, 0, 36.862484, 49)
 
 [node name="Extractor" type="Sprite2D" parent="."]
-position = Vector2(-7, -37)
+position = Vector2(-6, -41)
 texture = ExtResource("5_v2px5")
 
 [node name="KitchenShelf" type="Sprite2D" parent="."]
@@ -41,7 +41,8 @@ shape = SubResource("RectangleShape2D_4xf6x")
 [node name="Interaction Area2" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("4_345ab")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area2"]
-position = Vector2(-45, -10)
+position = Vector2(-45, -6)
 shape = SubResource("RectangleShape2D_345ab")

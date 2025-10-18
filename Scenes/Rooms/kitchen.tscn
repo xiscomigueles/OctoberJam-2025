@@ -77,6 +77,10 @@ shape = SubResource("RectangleShape2D_cetdd")
 [node name="Door" parent="." instance=ExtResource("6_pu28o")]
 position = Vector2(37, 44)
 
+[node name="KitchenCounter" parent="." instance=ExtResource("3_35qkm")]
+z_index = -1
+position = Vector2(143, 63)
+
 [node name="Y Sorting" type="Node2D" parent="."]
 y_sort_enabled = true
 
@@ -90,10 +94,6 @@ position = Vector2(204, 147)
 
 [node name="DoorKitchen" type="Marker2D" parent="Y Sorting/SpawnPoints"]
 position = Vector2(34, 70)
-
-[node name="KitchenCounter" parent="Y Sorting" instance=ExtResource("3_35qkm")]
-z_index = -1
-position = Vector2(143, 63)
 
 [node name="Fridge" parent="Y Sorting" instance=ExtResource("4_jdfhw")]
 position = Vector2(222, 53)

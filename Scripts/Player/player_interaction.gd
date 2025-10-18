@@ -50,8 +50,10 @@ func _interact() -> void:
 
 
 func show_input() -> void:
+	print("show input")
 	input_label.visible = true
 
 
 func hide_input() -> void:
+	print("hide input")
 	input_label.visible = false

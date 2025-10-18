@@ -8,22 +8,23 @@ const DEFAULT_SPAWN_NAME = "Default"
 const SPAWNS_NODE_NAME = "SpawnPoints"
 
 func _ready() -> void:
-	_spawn_player(_get_spawn_position())
+	_spawn_player()
 
 
 func change_scene(scene_path: String, spawn_point: String = "") -> void:
 	get_tree().change_scene_to_file(scene_path)
 	await get_tree().scene_changed
-	_spawn_player(_get_spawn_position(spawn_point))
+	_spawn_player(spawn_point)
 
 
-func _spawn_player(position: Vector2) -> void:
+func _spawn_player(spawn_point: String = "") -> void:
 	var y_sort_node = _get_y_sort_node()
 	if y_sort_node == null:
 		printerr("Cannot spawn player.")
 		return
 	
 	var player: Node2D = PLAYER_SCENE.instantiate()
+	var position: Vector2 = _get_spawn_position(spawn_point)
 	
 	player.global_position = position
 	y_sort_node.add_child(player)

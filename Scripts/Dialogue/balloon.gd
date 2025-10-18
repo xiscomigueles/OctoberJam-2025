@@ -51,9 +51,12 @@ func _get_and_display_next_line():
 	current_dialogue_key = dialogue_line.next_id
 
 	if dialogue_line.responses.size() > 0:
-		responses_menu.responses = dialogue_line.responses
+		balloon.focus_mode = Control.FOCUS_NONE
 		responses_menu.show()
-		can_advance_dialogue = false
+	elif dialogue_line.time != "":
+		var time = dialogue_line.text.length() * 0.02 if dialogue_line.time == "auto" else dialogue_line.time.to_float()
+		await get_tree().create_timer(time).timeout
+		next(dialogue_line.next_id)
 	else:
 		responses_menu.hide()
 		can_advance_dialogue = true

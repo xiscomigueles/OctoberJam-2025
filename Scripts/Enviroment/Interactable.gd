@@ -10,14 +10,5 @@ func _ready() -> void:
 	input_label.text = InputUtils.get_action_key_string("interact")
 
 
-func show_input() -> void:
-	input_label.visible = true
-
-
-func hide_input() -> void:
-	input_label.visible = false
-
-
 func interact() -> void:
-	hide_input()
 	DialogueManager.show_dialogue_balloon(dialogue)

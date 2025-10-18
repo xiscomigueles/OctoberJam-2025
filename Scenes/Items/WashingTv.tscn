@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://db2q1gq8wfg6q"]
+[gd_scene load_steps=10 format=3 uid="uid://fml1l8a4inqk"]
 
 [ext_resource type="Texture2D" uid="uid://cw7rkqbeyfcbb" path="res://Assets/Items/Regular Items/Basement/WashingMachine.png" id="1_ln6sn"]
 [ext_resource type="Texture2D" uid="uid://caiux3lcr215b" path="res://Assets/Items/Regular Items/Basement/TVBasement.png" id="2_2i8a4"]
 [ext_resource type="FontFile" uid="uid://du7aq0dpgrdp5" path="res://DialogueView/Fonts/BlockCraft.otf" id="2_4b2t1"]
 [ext_resource type="Script" uid="uid://2fsv852fb6j0" path="res://Scripts/Enviroment/Interactable.gd" id="3_cmvvc"]
+[ext_resource type="Texture2D" uid="uid://2hpbbn8i35pg" path="res://Assets/Amador/dark_amador.png" id="3_pgmm7"]
+[ext_resource type="Texture2D" uid="uid://7mfprwqspmt0" path="res://Assets/Amador/neo_dark_amador.png" id="4_8d34p"]
 [ext_resource type="Resource" uid="uid://12yq1aw7bkuc" path="res://DialogueView/Dialogues/scene1.dialogue" id="4_82hx3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ece0p"]
@@ -24,6 +26,17 @@ region_rect = Rect2(0, 0, 36.862484, 49)
 position = Vector2(0, -26)
 texture = ExtResource("2_2i8a4")
 
+[node name="Amador" type="Sprite2D" parent="."]
+position = Vector2(-3, -22)
+scale = Vector2(0.019809846, 0.01842615)
+texture = ExtResource("3_pgmm7")
+
+[node name="Neo Dark Amador" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-3, -20)
+scale = Vector2(0.015553419, 0.01593531)
+texture = ExtResource("4_8d34p")
+
 [node name="Input Label" type="Label" parent="."]
 z_index = 1
 offset_left = -23.0
@@ -36,6 +49,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Interaction Area" type="Area2D" parent="."]
+visible = false
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("3_cmvvc")

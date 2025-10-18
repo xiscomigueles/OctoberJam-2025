@@ -1,5 +1,7 @@
 class_name PlayerInteraction extends Area2D
 
+@onready var input_label: Label = $"../Input Label"
+
 var object_to_interact: Interactable = null
 var can_interact: bool = true
 
@@ -7,6 +9,7 @@ var can_interact: bool = true
 func _ready() -> void:
 	DialogueManager.dialogue_started.connect(func(_resource): can_interact = false)
 	DialogueManager.dialogue_ended.connect(func(_resource): can_interact = true)
+	hide_input()
 
 
 func _input(event: InputEvent) -> void:
@@ -16,11 +19,19 @@ func _input(event: InputEvent) -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area is Interactable:
-		area.show_input()
+		show_input()
 		object_to_interact = area
 
 
 func _on_area_exited(area: Area2D) -> void:
 	if area is Interactable:
-		area.hide_input()
+		hide_input()
 		object_to_interact = null
+
+
+func show_input() -> void:
+	input_label.visible = true
+
+
+func hide_input() -> void:
+	input_label.visible = false

@@ -48,6 +48,7 @@ func _on_ok_pressed():
 	if input_value == combination:
 		print("combinación correcta")
 		ended.emit()
+		hide()
 	else:
 		print("combinación incorrecta")
 		_clear()

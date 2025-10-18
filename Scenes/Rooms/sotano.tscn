@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://ckuuwbjq653sp" path="res://Scripts/Scene Load/level_exit.gd" id="2_cv3oi"]
 [ext_resource type="PackedScene" uid="uid://dxyelnnq8um81" path="res://Scenes/Items/Basement/bookshelf.tscn" id="5_uon3h"]
 [ext_resource type="PackedScene" uid="uid://bd2pfllfaqble" path="res://Scenes/Items/Basement/safe.tscn" id="7_0m0pe"]
-[ext_resource type="PackedScene" uid="uid://cxog0icu4o63o" path="res://Scenes/Items/Basement/canva.tscn" id="7_7h6k5"]
+[ext_resource type="PackedScene" uid="uid://cxog0icu4o63o" path="res://Scenes/Items/Basement/paint.tscn" id="7_7h6k5"]
 [ext_resource type="PackedScene" uid="uid://c8rr2wenekkmx" path="res://Scenes/Items/Basement/boxes.tscn" id="7_b1fdk"]
 [ext_resource type="PackedScene" uid="uid://dwvu1igu3l8ur" path="res://Scenes/Items/Basement/Bulb.tscn" id="8_uf8c0"]
 [ext_resource type="PackedScene" uid="uid://fml1l8a4inqk" path="res://Scenes/Items/Basement/WashingTv.tscn" id="10_7h6k5"]

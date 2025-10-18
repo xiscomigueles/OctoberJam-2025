@@ -1,14 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhhsvwc5o1l0v"]
+[gd_scene load_steps=8 format=3 uid="uid://bhhsvwc5o1l0v"]
 
 [ext_resource type="Texture2D" uid="uid://dv1q6teiyev6c" path="res://Assets/Items/Regular Items/Kitchen/KitchenCounter.png" id="1_345ab"]
-[ext_resource type="FontFile" uid="uid://du7aq0dpgrdp5" path="res://DialogueView/Fonts/BlockCraft.otf" id="2_mf3sq"]
-[ext_resource type="Script" uid="uid://2fsv852fb6j0" path="res://Scripts/Enviroment/Interactable.gd" id="3_cgnye"]
 [ext_resource type="Texture2D" uid="uid://cl31omcdan7hh" path="res://Assets/Items/Regular Items/Kitchen/KitchenShelf.png" id="3_cxfsi"]
-[ext_resource type="Resource" uid="uid://12yq1aw7bkuc" path="res://DialogueView/Dialogues/scene1.dialogue" id="4_j60r0"]
+[ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="4_345ab"]
+[ext_resource type="Resource" uid="uid://c02vfwrmo42wk" path="res://DialogueView/Dialogues/nothing.dialogue" id="5_cxfsi"]
 [ext_resource type="Texture2D" uid="uid://dxvmkx3fd627w" path="res://Assets/Items/Regular Items/Kitchen/Extractor.png" id="5_v2px5"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_ece0p"]
-font = ExtResource("2_mf3sq")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xf6x"]
 size = Vector2(13.5, 6)
@@ -32,22 +28,11 @@ texture = ExtResource("5_v2px5")
 position = Vector2(35, -35)
 texture = ExtResource("3_cxfsi")
 
-[node name="Input Label" type="Label" parent="."]
-z_index = 1
-offset_left = -26.0
-offset_top = -29.0
-offset_right = 21.0
-offset_bottom = -6.0
-text = "E"
-label_settings = SubResource("LabelSettings_ece0p")
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Interaction Area" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("3_cgnye")
-dialogue = ExtResource("4_j60r0")
+script = ExtResource("4_345ab")
+dialogue = ExtResource("5_cxfsi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
 position = Vector2(-4, -9)
@@ -56,8 +41,6 @@ shape = SubResource("RectangleShape2D_4xf6x")
 [node name="Interaction Area2" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("3_cgnye")
-dialogue = ExtResource("4_j60r0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area2"]
 position = Vector2(-45, -10)

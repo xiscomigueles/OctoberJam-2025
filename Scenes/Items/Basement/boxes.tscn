@@ -1,12 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://c8rr2wenekkmx"]
+[gd_scene load_steps=6 format=3 uid="uid://c8rr2wenekkmx"]
 
 [ext_resource type="Texture2D" uid="uid://b5d68fsil4elk" path="res://Assets/Items/Regular Items/Basement/Boxes.png" id="1_phklr"]
-[ext_resource type="FontFile" uid="uid://du7aq0dpgrdp5" path="res://DialogueView/Fonts/BlockCraft.otf" id="2_du261"]
-[ext_resource type="Script" uid="uid://2fsv852fb6j0" path="res://Scripts/Enviroment/Interactable.gd" id="3_wempn"]
-[ext_resource type="Resource" uid="uid://12yq1aw7bkuc" path="res://DialogueView/Dialogues/scene1.dialogue" id="4_qcjqi"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_ece0p"]
-font = ExtResource("2_du261")
+[ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_rd1b0"]
+[ext_resource type="Resource" uid="uid://c02vfwrmo42wk" path="res://DialogueView/Dialogues/nothing.dialogue" id="3_hynjq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xf6x"]
 size = Vector2(47, 18)
@@ -23,22 +19,11 @@ scale = Vector2(0.75, 0.75)
 texture = ExtResource("1_phklr")
 region_rect = Rect2(0, 0, 36.862484, 49)
 
-[node name="Input Label" type="Label" parent="."]
-z_index = 1
-offset_left = -26.0
-offset_top = -26.0
-offset_right = 21.0
-offset_bottom = -3.0
-text = "E"
-label_settings = SubResource("LabelSettings_ece0p")
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Interaction Area" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("3_wempn")
-dialogue = ExtResource("4_qcjqi")
+script = ExtResource("2_rd1b0")
+dialogue = ExtResource("3_hynjq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
 position = Vector2(-3.5, 2)

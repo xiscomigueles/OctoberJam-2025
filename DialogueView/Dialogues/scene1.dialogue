@@ -1,44 +1,31 @@
 ~ amador_intro
-
+# Intro of the game
 Amador: My head.. it [shake]hurts[/shake].
-
-Amador: Wh... What am I doing here? Hold on, isn't this my [shake]basement?[/shake] 
-
+Amador: Wh... What am I doing here? Hold on, isn't this the [shake]basement?[/shake] 
 ??: [pulse]Look around, Amador[/pulse] 
-
 => END
 
 ~ amador_first_step
 # This plays after trying to exit the basement without a key.
-% Amador: The door's closed. I should go back and find the key.
-% Amador: It's of no use; the door's closed. I should head back.
-% Amador: No luck; the door's locked. Let's head back.
-=> END
-
-~ amador_first_chain_step_one
-# This plays after entering the basement, looking around.
-% Amador: The key must be here; somewhre hidden in between this mess.
-% Amador: I should start by looking here.
-% Amador: This place is a mess.. but i'm sure the key is somwhere here.
+% Amador: The door's closed. I should find the key first.
+% Amador: It's no use; the door's closed. Where was the key?
 => END
 
 ~ amador_first_chain_found_locker
 # This plays after seeing the locker without the key.
-% Amador: Hmm... maybe the key is inside the locker.
-% Amador: Hmm... I have a vage memory of the key being there.
-% Amador: Hmm... i'm somewhat sure the key is there.
+% Amador: Hmm...maybe the key is inside the locker.
+% Amador: ...wasn't the key in there?
 => END
 
 ~ amador_first_chain_found_first
-# This plays after getting the first number.
-
-% Amador: There are are TWO clocks inside.
-% Amador: Two clocks. Why there is two here?.
+# This plays after searching the box.
+% Amador: There are [color={red}]{text}[/color] clocks inside.
+% Amador: Two clocks. Why are there TWO here?.
 => END
 
 ~ amador_first_chain_found_second
 # This plays after getting the second number.
-The Book name is The Big Four.
+The book name is [i]The Big Four[/i].
 % Amador: Nice name. Greater book.
 % Amador: I should read this sometime.
 % Amador: Got it. So close to leaving this [shake]basement[/shake].
@@ -46,7 +33,7 @@ The Book name is The Big Four.
 
 ~ amador_first_chain_found_last
 # This plays after getting the last number.
-The Painting's name is Composition IX.
+The Painting's name is [i]Composition IX[/i].
 % Amador: Great, fantastic painting. Loved it.
 % Amador: This painting is... breathtaking.
 => END
@@ -66,17 +53,14 @@ Maite: We should clean up the basement; it's a bit messy, after all.
 Maite: And the washimg machine... isn't it broken?? It surely belongs in the trash.
 ....
 Maite: The books do look interesting, though. We are keeping them.
-
+=> END
 
  ~ amador_open_locker_with_key
 # This plays when opening the locker after getting the key.
 % Amador: Let's open up the locker.
 % Amador: Finally, let's open up this locker.
 % Amador: The mistery is over; let's crack this up.
-
 => END
-
-
 
 ~ reaccionar_a_pin
 if GLOBAL.numpad_input == "123":
@@ -118,7 +102,7 @@ Amador: Let's see what we have here...
 % Amador: Why did i leve this here?  Maybe opening it will clear that up.
 % Amador: I should put this elsewhere. Let's take a look at the contents first.
 
-- Look inside => amador_first_chain_step_one
+- Look inside => amador_first_chain_found_first
 - Do nothing => END
 
 

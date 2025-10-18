@@ -44,15 +44,16 @@ Amador: These voices... [wait=2] I keep hearing all these voices in my head.
 
 ~ amador_test
 Amador: ¡Hola! Necesito que me digas el número secreto para continuar.
-    do request_numpad_input() # <--- ¡ESTE ES EL CAMBIO!
-    - El número ingresado es: {numpad_input}.
-    
-if numpad_input == "123": # Pon el número que esperes
-	Amador: ¡Correcto! La puerta se abre.
+do request_numpad()
+# No hay más líneas aquí. El diálogo termina, pero la función request_numpad se ha llamado.
+=> END
+
+~ reaccionar_a_pin
+if GLOBAL.numpad_input == "123":
+	¡Correcto! La puerta se abre.
 else:
-	Amador: Incorrecto. Por favor, inténtalo de nuevo.
-    
-Amador: Gracias por tu cooperación.
+	Incorrecto. Inténtalo de nuevo.
+	do request_numpad()
 => END
 
 

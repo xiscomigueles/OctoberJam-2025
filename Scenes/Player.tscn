@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://1is26hdpmpuc"]
+[gd_scene load_steps=13 format=3 uid="uid://1is26hdpmpuc"]
 
 [ext_resource type="Script" uid="uid://bbjpu1lfxvrlg" path="res://Scripts/Player/player_movement.gd" id="1_om1vb"]
 [ext_resource type="Texture2D" uid="uid://bmtg32xdr5a3" path="res://Assets/Amador/idle.png" id="2_x5vt2"]
 [ext_resource type="Texture2D" uid="uid://bt068l4873bo4" path="res://Assets/Amador/walk.png" id="3_74br8"]
+[ext_resource type="FontFile" uid="uid://du7aq0dpgrdp5" path="res://DialogueView/Fonts/BlockCraft.otf" id="4_5ixxa"]
 [ext_resource type="Script" uid="uid://c1l7ctugs1qjk" path="res://Scripts/Player/player_interaction.gd" id="4_mai0c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ixxa"]
@@ -42,25 +43,41 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p4m81"]
 size = Vector2(14, 23.380953)
 
+[sub_resource type="LabelSettings" id="LabelSettings_nn08x"]
+font = ExtResource("4_5ixxa")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gntrk"]
 size = Vector2(5, 32)
 
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
+scale = Vector2(1.35, 1.35)
 script = ExtResource("1_om1vb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16.296295)
 sprite_frames = SubResource("SpriteFrames_bhhdu")
 animation = &"walking"
 autoplay = "Idle"
 frame_progress = 0.36294487
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4.3095245)
+position = Vector2(0, -11.851852)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_p4m81")
 
+[node name="Input Label" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -51.111107
+offset_right = 20.0
+offset_bottom = -28.111107
+text = "E"
+label_settings = SubResource("LabelSettings_nn08x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="InteractionArea" type="Area2D" parent="."]
+position = Vector2(0, -16.296295)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("4_mai0c")

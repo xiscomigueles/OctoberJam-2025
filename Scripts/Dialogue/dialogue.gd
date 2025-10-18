@@ -11,20 +11,15 @@ var balloon: CanvasLayer = null
 
 var dialogue_resource: DialogueResource
 
+
 func _ready():
 	SceneManager.spawn_player_in_current_scene()
 	
 	dialogue_resource = load("res://DialogueView/Dialogues/scene2.dialogue")
 	
-	numpad_ui.get_node("Numpad").input_submitted.connect(_on_numpad_input_submitted)
-	numpad_ui.get_node("Numpad").numpad_cancelled.connect(_on_numpad_cancelled)
-	
-	numpad_ui.hide()
-
-	GLOBAL.numpad_requested_by_dialogue.connect(_on_numpad_requested_by_dialogue)
-
 	# Iniciamos el primer diálogo.
 	start_dialogue("amador_test")
+
 
 # Función para iniciar cualquier diálogo por su título
 func start_dialogue(title: String):
@@ -38,7 +33,8 @@ func start_dialogue(title: String):
 		balloon.tree_exited.connect(_on_balloon_exited_tree)
 
 	# Ahora que sabemos que el globo existe, iniciamos el diálogo en él.
-	balloon.start(dialogue_resource, title, [GLOBAL])
+	balloon.start(dialogue_resource, title, [Global])
+
 
 # ¡NUEVA FUNCIÓN! Esta se ejecuta automáticamente cuando el globo se destruye.
 func _on_balloon_exited_tree():
@@ -46,25 +42,6 @@ func _on_balloon_exited_tree():
 	# Limpiamos nuestra variable para que la próxima llamada a start_dialogue sepa que debe crear uno nuevo.
 	balloon = null
 
-# Esta función se ejecuta CUANDO el script GLOBAL emite su señal.
-func _on_numpad_requested_by_dialogue():
-	numpad_ui.show()
-	numpad_ui.get_node("Numpad").line_edit_input.text = ""
-
-func _on_numpad_input_submitted(value: String):
-	numpad_ui.hide()
-	
-	GLOBAL.numpad_input = value
-	
-	# Iniciamos el SEGUNDO diálogo para reaccionar al resultado.
-	start_dialogue("reaccionar_a_pin")
-
-func _on_numpad_cancelled():
-	numpad_ui.hide()
-	
-	GLOBAL.numpad_input = ""
-	
-	start_dialogue("reaccionar_a_pin")
 
 func _unhandled_input(event):
 	if numpad_ui.visible and event.is_action_pressed("ui_accept"):

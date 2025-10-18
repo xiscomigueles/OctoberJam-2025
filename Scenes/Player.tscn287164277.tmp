@@ -67,12 +67,13 @@ position = Vector2(0, -11.851852)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_p4m81")
 
-[node name="Input Label" type="Label" parent="."]
-z_index = 100
-offset_left = -2.222222
-offset_top = -38.518513
-offset_right = 5.7777777
-offset_bottom = -30.518513
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Input Label" type="Label" parent="CanvasLayer"]
+offset_left = -2.9999998
+offset_top = -51.999992
+offset_right = 5.0
+offset_bottom = -43.999992
 scale = Vector2(0.5555566, 0.6118014)
 text = "E"
 label_settings = SubResource("LabelSettings_nn08x")

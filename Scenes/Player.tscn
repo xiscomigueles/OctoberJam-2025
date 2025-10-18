@@ -51,30 +51,33 @@ size = Vector2(5, 32)
 
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
+scale = Vector2(1.35, 1.35)
 script = ExtResource("1_om1vb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16.296295)
 sprite_frames = SubResource("SpriteFrames_bhhdu")
 animation = &"walking"
 autoplay = "Idle"
 frame_progress = 0.36294487
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4.3095245)
+position = Vector2(0, -11.851852)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_p4m81")
 
 [node name="Input Label" type="Label" parent="."]
 offset_left = -20.0
-offset_top = -34.0
+offset_top = -51.111107
 offset_right = 20.0
-offset_bottom = -11.0
+offset_bottom = -28.111107
 text = "E"
 label_settings = SubResource("LabelSettings_nn08x")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="InteractionArea" type="Area2D" parent="."]
+position = Vector2(0, -16.296295)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("4_mai0c")

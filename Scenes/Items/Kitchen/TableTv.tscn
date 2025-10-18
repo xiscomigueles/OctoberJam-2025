@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://2lgljxj5a2sw"]
+
+[ext_resource type="Texture2D" uid="uid://ialvwfkj7prg" path="res://Assets/Items/Regular Items/Kitchen/Table.png" id="1_0kdq2"]
+[ext_resource type="Texture2D" uid="uid://bjojp0duy0blt" path="res://Assets/Items/Regular Items/Kitchen/TVKitchen.png" id="2_hshbf"]
+[ext_resource type="FontFile" uid="uid://du7aq0dpgrdp5" path="res://DialogueView/Fonts/BlockCraft.otf" id="4_ypvi0"]
+[ext_resource type="Script" uid="uid://2fsv852fb6j0" path="res://Scripts/Enviroment/Interactable.gd" id="5_0l6y0"]
+[ext_resource type="Resource" uid="uid://12yq1aw7bkuc" path="res://DialogueView/Dialogues/scene1.dialogue" id="6_30ab4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ece0p"]
+font = ExtResource("4_ypvi0")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xf6x"]
+size = Vector2(51, 23.28125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0kdq2"]
+size = Vector2(97, 6)
+
+[node name="TableTv" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture = ExtResource("1_0kdq2")
+region_rect = Rect2(0, 0, 36.862484, 49)
+
+[node name="Tv" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-1, -15)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_hshbf")
+
+[node name="Input Label" type="Label" parent="."]
+z_index = 1
+offset_left = -23.0
+offset_top = -47.0
+offset_right = 24.0
+offset_bottom = -24.0
+text = "E"
+label_settings = SubResource("LabelSettings_ece0p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Interaction Area" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("5_0l6y0")
+dialogue = ExtResource("6_30ab4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
+position = Vector2(1.5, -6.359375)
+shape = SubResource("RectangleShape2D_4xf6x")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, 11)
+shape = SubResource("RectangleShape2D_0kdq2")

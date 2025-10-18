@@ -21,13 +21,13 @@ size = Vector2(2, 142)
 size = Vector2(2, 142)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wh7eg"]
-size = Vector2(179, 3)
+size = Vector2(177.5, 3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udnjo"]
 size = Vector2(27.25, 3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_56w0n"]
-size = Vector2(1.84375, 27.5)
+size = Vector2(1.5612793, 26.492188)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fh2o3"]
 size = Vector2(1, 27.46625)
@@ -71,7 +71,7 @@ position = Vector2(247, 79)
 shape = SubResource("RectangleShape2D_rf6rn")
 
 [node name="CollisionShapeTop1" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(100, 41)
+position = Vector2(99, 36)
 shape = SubResource("RectangleShape2D_wh7eg")
 
 [node name="CollisionShapeTop2" type="CollisionShape2D" parent="Collisions"]
@@ -79,7 +79,7 @@ position = Vector2(232.375, 36)
 shape = SubResource("RectangleShape2D_udnjo")
 
 [node name="CollisionShapeTop3" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(187.92188, 20.75)
+position = Vector2(186.78064, 21.246094)
 shape = SubResource("RectangleShape2D_56w0n")
 
 [node name="CollisionShapeTop4" type="CollisionShape2D" parent="Collisions"]
@@ -95,6 +95,9 @@ spawn_point_name = "Stairs"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit Area"]
 shape = SubResource("RectangleShape2D_yp4s2")
 
+[node name="Safe" parent="." instance=ExtResource("7_0m0pe")]
+position = Vector2(169, 50)
+
 [node name="Y Sorting" type="Node2D" parent="."]
 y_sort_enabled = true
 
@@ -105,9 +108,6 @@ position = Vector2(109, 117)
 
 [node name="Stairs" type="Marker2D" parent="Y Sorting/SpawnPoints"]
 position = Vector2(204, 52)
-
-[node name="Safe" parent="Y Sorting" instance=ExtResource("7_0m0pe")]
-position = Vector2(169, 50)
 
 [node name="Canva" parent="Y Sorting" instance=ExtResource("7_7h6k5")]
 position = Vector2(211, 103)

@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://dkgayadjtpm5i"]
+
+[ext_resource type="Texture2D" uid="uid://5pu2gqogfstj" path="res://Assets/Items/Regular Items/Kitchen/Door.png" id="1_i5d7v"]
+[ext_resource type="FontFile" uid="uid://du7aq0dpgrdp5" path="res://DialogueView/Fonts/BlockCraft.otf" id="2_rgomq"]
+[ext_resource type="Script" uid="uid://2fsv852fb6j0" path="res://Scripts/Enviroment/Interactable.gd" id="3_v45on"]
+[ext_resource type="Resource" uid="uid://12yq1aw7bkuc" path="res://DialogueView/Dialogues/scene1.dialogue" id="4_lo1y3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ece0p"]
+font = ExtResource("2_rgomq")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_345ab"]
+size = Vector2(15.5, 15)
+
+[node name="Door" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture = ExtResource("1_i5d7v")
+region_enabled = true
+region_rect = Rect2(-0.7774658, -0.8735924, 51.08625, 48.9796)
+
+[node name="Input Label" type="Label" parent="."]
+z_index = 1
+offset_left = -24.0
+offset_top = -43.0
+offset_right = 23.0
+offset_bottom = -20.0
+text = "E"
+label_settings = SubResource("LabelSettings_ece0p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Interaction Area2" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("3_v45on")
+dialogue = ExtResource("4_lo1y3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area2"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_345ab")

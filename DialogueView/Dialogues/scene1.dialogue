@@ -1,10 +1,11 @@
 ~ amador_intro
 
+Amador: My head.. it [shake]hurts[/shake].
+
 Amador: Wh... [wait=1] What am I doing here? [wait=2] Hold on, isn't this my [shake]basement?[/shake] 
 
-[pulse]Look around, Amador[/pulse] 
+??: [pulse]Look around, Amador[/pulse] 
 
-[center][shake]Look around [/shake] [/center]
 => END
 
 ~ amador_first_step
@@ -50,7 +51,7 @@ The NUMBER is 9
 % Amador: Finally, the key in my hands. [wait=1] Let's go to the door.
 => END
 
-~ amazor_tv
+~ amador_tv
 # TV machine
 % Amador: A TV in the basement! In this economy! Someething good might be playing.
 % Amador: Interesting...[wait=2], an old school TV. Maybe there is something good here.

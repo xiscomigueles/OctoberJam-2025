@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bhhsvwc5o1l0v"]
+[gd_scene load_steps=9 format=3 uid="uid://bhhsvwc5o1l0v"]
 
 [ext_resource type="Texture2D" uid="uid://dv1q6teiyev6c" path="res://Assets/Items/Regular Items/Kitchen/KitchenCounter.png" id="1_345ab"]
 [ext_resource type="Texture2D" uid="uid://cl31omcdan7hh" path="res://Assets/Items/Regular Items/Kitchen/KitchenShelf.png" id="3_cxfsi"]
 [ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="4_345ab"]
-[ext_resource type="Resource" uid="uid://c02vfwrmo42wk" path="res://DialogueView/Dialogues/nothing.dialogue" id="5_cxfsi"]
+[ext_resource type="Resource" uid="uid://dw8w2mw3q4aiy" path="res://DialogueView/Dialogues/scene2.dialogue" id="5_cxfsi"]
 [ext_resource type="Texture2D" uid="uid://dxvmkx3fd627w" path="res://Assets/Items/Regular Items/Kitchen/Extractor.png" id="5_v2px5"]
+[ext_resource type="Resource" uid="uid://c02vfwrmo42wk" path="res://DialogueView/Dialogues/nothing.dialogue" id="6_cxfsi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xf6x"]
 size = Vector2(13.5, 6)
@@ -33,6 +34,7 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource("4_345ab")
 dialogue = ExtResource("5_cxfsi")
+dialogue_node = "amador_stove"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
 position = Vector2(-4, -9)
@@ -42,6 +44,8 @@ shape = SubResource("RectangleShape2D_4xf6x")
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("4_345ab")
+dialogue = ExtResource("6_cxfsi")
+dialogue_node = "nothing"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area2"]
 position = Vector2(-45, -6)

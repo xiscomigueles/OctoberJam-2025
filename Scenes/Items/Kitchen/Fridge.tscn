@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://k2w2wv2iv7it" path="res://Assets/Items/Regular Items/Kitchen/Fridge.png" id="1_dugp0"]
 [ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_5eppc"]
-[ext_resource type="Resource" uid="uid://c02vfwrmo42wk" path="res://DialogueView/Dialogues/nothing.dialogue" id="3_dugp0"]
+[ext_resource type="Resource" uid="uid://dw8w2mw3q4aiy" path="res://DialogueView/Dialogues/scene2.dialogue" id="3_5eppc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_345ab"]
 size = Vector2(15.5, 15)
@@ -19,7 +19,8 @@ region_rect = Rect2(0, 0, 36.862484, 49)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_5eppc")
-dialogue = ExtResource("3_dugp0")
+dialogue = ExtResource("3_5eppc")
+dialogue_node = "amador_frigo_flashback"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area2"]
 position = Vector2(0, -1)

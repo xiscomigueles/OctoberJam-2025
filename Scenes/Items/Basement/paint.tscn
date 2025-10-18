@@ -1,8 +1,8 @@
 [gd_scene load_steps=16 format=3 uid="uid://cxog0icu4o63o"]
 
 [ext_resource type="Texture2D" uid="uid://cph28x00au8iq" path="res://Assets/Items/Regular Items/Basement/Canvas.png" id="1_dljky"]
-[ext_resource type="Script" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_xt153"]
-[ext_resource type="Resource" uid="uid://c02vfwrmo42wk" path="res://DialogueView/Dialogues/nothing.dialogue" id="3_cllmq"]
+[ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_xt153"]
+[ext_resource type="Resource" uid="uid://12yq1aw7bkuc" path="res://DialogueView/Dialogues/scene1.dialogue" id="3_dljky"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jkbqo"]
 atlas = ExtResource("1_dljky")
@@ -104,7 +104,8 @@ autoplay = "Idle"
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_xt153")
-dialogue = ExtResource("3_cllmq")
+dialogue = ExtResource("3_dljky")
+dialogue_node = "amador_hidden_painting"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
 position = Vector2(-7.333335, -6.34375)

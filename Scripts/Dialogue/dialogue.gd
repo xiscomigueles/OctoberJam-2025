@@ -2,58 +2,48 @@
 extends Node2D
 
 @onready var balloon: CanvasLayer = $ExampleBalloon
-@onready var numpad_ui = $NumpadUI 
+@onready var numpad_ui: CanvasLayer = $NumpadUI
 
-var dialogue_paused_state: Dictionary = {}
+var dialogue_state_for_resume: Dictionary = {}
 
 func _ready():
+	#SceneManager.spawn_player_in_current_scene()
+	
 	var dialogue_res = load("res://DialogueView/Dialogues/scene2.dialogue")
 	
-	numpad_ui.input_submitted.connect(_on_numpad_input_submitted)
-	numpad_ui.numpad_cancelled.connect(_on_numpad_cancelled)
+	numpad_ui.get_node("Numpad").input_submitted.connect(_on_numpad_input_submitted)
+	numpad_ui.get_node("Numpad").numpad_cancelled.connect(_on_numpad_cancelled)
 	
-	numpad_ui.hide() # Asegura que el numpad esté oculto al inicio
+	numpad_ui.hide()
 
-	balloon.numpad_requested.connect(_on_balloon_numpad_requested)
+	# Nos conectamos a la señal GLOBAL.
+	GLOBAL.numpad_requested_by_dialogue.connect(_on_numpad_requested_by_dialogue)
 
-	balloon.start(dialogue_res, "amador_test", [self])
+	# ¡¡CAMBIO CRÍTICO!! Ya NO pasamos un host.
+	# Dejamos que Dialogue Manager busque en todos los Autoloads registrados.
+	balloon.start(dialogue_res, "amador_test")
 
-func _on_balloon_numpad_requested(resource: DialogueResource, title_key: String, extra_game_states: Array):
-	# El script del globo de diálogo (balloon.gd) ya ocultó su contenido
-	numpad_ui.show() # Ahora solo mostramos el numpad
-	numpad_ui.line_edit_input.text = "" # Limpia el input del numpad
-	
-	dialogue_paused_state = {
-		"resource": resource,
-		"title": title_key,
-		"extra_game_states": extra_game_states
-	}
+# Esta función se ejecuta CUANDO el script GLOBAL emite su señal.
+func _on_numpad_requested_by_dialogue():
+	dialogue_state_for_resume = balloon.pause_and_get_state()
+	numpad_ui.show()
+	numpad_ui.get_node("Numpad").line_edit_input.text = ""
 
+# ... el resto del script se mantiene exactamente igual ...
 func _on_numpad_input_submitted(value: String):
-	numpad_ui.hide() # Oculta el numpad
-	
-	if not dialogue_paused_state.is_empty():
+	numpad_ui.hide()
+	if not dialogue_state_for_resume.is_empty():
 		DialogueManager.set_variable("numpad_input", value)
-		_resume_dialogue_flow()
-	else:
-		# Fallback: Si no hay estado guardado, simplemente muestra el globo de diálogo
-		balloon.show() 
+		balloon.resume_dialogue(dialogue_state_for_resume)
+		dialogue_state_for_resume = {}
 
 func _on_numpad_cancelled():
-	numpad_ui.hide() # Oculta el numpad
+	numpad_ui.hide()
+	if not dialogue_state_for_resume.is_empty():
+		DialogueManager.set_variable("numpad_input", "")
+		balloon.resume_dialogue(dialogue_state_for_resume)
+		dialogue_state_for_resume = {}
 
-	if not dialogue_paused_state.is_empty():
-		DialogueManager.set_variable("numpad_input", "") # Asigna vacío si se cancela
-		_resume_dialogue_flow()
-	else:
-		# Fallback
-		balloon.show() 
-
-func _resume_dialogue_flow():
-	# El script del globo de diálogo (balloon.gd) es quien reanudará su contenido
-	balloon.continue_from_state(
-		dialogue_paused_state.resource,
-		dialogue_paused_state.title,
-		dialogue_paused_state.extra_game_states
-	)
-	dialogue_paused_state = {}
+func _unhandled_input(event):
+	if numpad_ui.visible and event.is_action_pressed("ui_accept"):
+		get_tree().set_input_as_handled()

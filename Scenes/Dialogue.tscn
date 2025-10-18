@@ -10,8 +10,3 @@ script = ExtResource("1_2842h")
 [node name="ExampleBalloon" parent="." instance=ExtResource("2_cq6to")]
 
 [node name="NumpadUI" parent="." instance=ExtResource("3_cq6to")]
-visible = false
-offset_left = 300.0
-offset_top = 50.0
-offset_right = 551.0
-offset_bottom = 387.0

@@ -2,7 +2,7 @@
 
 extends Node
 
-const PLAYER_SCENE: PackedScene = preload("res://Scenes/player.tscn")
+const PLAYER_SCENE: PackedScene = preload("res://Scenes/Player.tscn")
 const Y_SORT_NODE_NAME: String = "Y Sorting"
 const DEFAULT_SPAWN_NAME = "Default"
 const SPAWNS_NODE_NAME = "SpawnPoints"

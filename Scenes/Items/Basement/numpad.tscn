@@ -1,10 +1,22 @@
 [gd_scene load_steps=9 format=3 uid="uid://duo84fximklg3"]
 
-[ext_resource type="Script" path="res://Scripts/Numpad.gd" id="1_numpad_script"]
+[ext_resource type="Script" uid="uid://bk3gpqmir16hr" path="res://Scripts/numpad.gd" id="1_numpad_script"]
 [ext_resource type="FontFile" uid="uid://du7aq0dpgrdp5" path="res://DialogueView/Fonts/BlockCraft.otf" id="2_font"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
-bg_color = Color(0.15, 0.15, 0.15, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_disabled"]
+bg_color = Color(0.08, 0.08, 0.08, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.2, 0.2, 0.2, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_focus"]
+bg_color = Color(0.35, 0.35, 0.35, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -27,25 +39,13 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_focus"]
-bg_color = Color(0.35, 0.35, 0.35, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
+bg_color = Color(0.15, 0.15, 0.15, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
 border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_disabled"]
-bg_color = Color(0.08, 0.08, 0.08, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.2, 0.2, 0.2, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -76,10 +76,12 @@ Button/styles/hover = SubResource("StyleBoxFlat_hover")
 Button/styles/normal = SubResource("StyleBoxFlat_normal")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_lineedit")
 
-[node name="NumpadUI" type="CanvasLayer"]
+[node name="Numpad" type="CanvasLayer"]
 layer = 101
+script = ExtResource("1_numpad_script")
 
-[node name="Numpad" type="Control" parent="."]
+[node name="Container" type="Control" parent="."]
+layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -92,9 +94,8 @@ offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("NumpadTheme")
-script = ExtResource("1_numpad_script")
 
-[node name="VBox_Main" type="VBoxContainer" parent="Numpad"]
+[node name="Vertical Box" type="VBoxContainer" parent="Container"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -104,8 +105,7 @@ grow_vertical = 2
 theme_override_constants/separation = 15
 alignment = 1
 
-[node name="LineEdit_Input" type="LineEdit" parent="Numpad/VBox_Main"]
-unique_name_in_owner = true
+[node name="LineEdit Input" type="LineEdit" parent="Container/Vertical Box"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.2
@@ -113,9 +113,9 @@ theme_override_font_sizes/font_size = 56
 placeholder_text = "0"
 alignment = 1
 max_length = 9
-theme_override_font_sizes/font_size = 56
+editable = false
 
-[node name="Grid_Buttons" type="GridContainer" parent="Numpad/VBox_Main"]
+[node name="Grid" type="GridContainer" parent="Container/Vertical Box"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.8
@@ -123,74 +123,74 @@ theme_override_constants/h_separation = 10
 theme_override_constants/v_separation = 10
 columns = 3
 
-[node name="Button1" type="Button" parent="Numpad/VBox_Main/Grid_Buttons"]
+[node name="Button1" type="Button" parent="Container/Vertical Box/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "1"
 
-[node name="Button2" type="Button" parent="Numpad/VBox_Main/Grid_Buttons"]
+[node name="Button2" type="Button" parent="Container/Vertical Box/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "2"
 
-[node name="Button3" type="Button" parent="Numpad/VBox_Main/Grid_Buttons"]
+[node name="Button3" type="Button" parent="Container/Vertical Box/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "3"
 
-[node name="Button4" type="Button" parent="Numpad/VBox_Main/Grid_Buttons"]
+[node name="Button4" type="Button" parent="Container/Vertical Box/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "4"
 
-[node name="Button5" type="Button" parent="Numpad/VBox_Main/Grid_Buttons"]
+[node name="Button5" type="Button" parent="Container/Vertical Box/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "5"
 
-[node name="Button6" type="Button" parent="Numpad/VBox_Main/Grid_Buttons"]
+[node name="Button6" type="Button" parent="Container/Vertical Box/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "6"
 
-[node name="Button7" type="Button" parent="Numpad/VBox_Main/Grid_Buttons"]
+[node name="Button7" type="Button" parent="Container/Vertical Box/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "7"
 
-[node name="Button8" type="Button" parent="Numpad/VBox_Main/Grid_Buttons"]
+[node name="Button8" type="Button" parent="Container/Vertical Box/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "8"
 
-[node name="Button9" type="Button" parent="Numpad/VBox_Main/Grid_Buttons"]
+[node name="Button9" type="Button" parent="Container/Vertical Box/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "9"
 
-[node name="ButtonClear" type="Button" parent="Numpad/VBox_Main/Grid_Buttons"]
+[node name="Clear" type="Button" parent="Container/Vertical Box/Grid"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "CLEAR"
 
-[node name="Button0" type="Button" parent="Numpad/VBox_Main/Grid_Buttons"]
+[node name="Button0" type="Button" parent="Container/Vertical Box/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "0"
 
-[node name="ButtonOK" type="Button" parent="Numpad/VBox_Main/Grid_Buttons"]
+[node name="OK" type="Button" parent="Container/Vertical Box/Grid"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3

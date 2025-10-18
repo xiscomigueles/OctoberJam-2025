@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bd2pfllfaqble"]
+[gd_scene load_steps=6 format=3 uid="uid://bd2pfllfaqble"]
 
 [ext_resource type="Texture2D" uid="uid://m4nqwpg5n3su" path="res://Assets/Items/Regular Items/Basement/Safe.png" id="1_n7o0f"]
-[ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_kndio"]
+[ext_resource type="Script" uid="uid://bmwtb2nqsxoux" path="res://Scripts/Enviroment/interact_safe_box.gd" id="2_kndio"]
 [ext_resource type="Resource" uid="uid://c02vfwrmo42wk" path="res://DialogueView/Dialogues/nothing.dialogue" id="3_v24dq"]
+[ext_resource type="PackedScene" uid="uid://duo84fximklg3" path="res://Scenes/Items/Basement/numpad.tscn" id="4_v24dq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xf6x"]
 size = Vector2(16, 6)
@@ -25,3 +26,5 @@ dialogue = ExtResource("3_v24dq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
 position = Vector2(3, 0)
 shape = SubResource("RectangleShape2D_4xf6x")
+
+[node name="NumpadUI" parent="." instance=ExtResource("4_v24dq")]

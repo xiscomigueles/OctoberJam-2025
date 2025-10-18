@@ -1,6 +1,6 @@
 ~ amador_enters_living_room
 # This plays inmediately on entering the room
-% Amador: Hmm... [wait=1] since when do I have this TV?
+% Amador: Hmm...  since when do I have this TV?
 % Amador: Honestly, I don't like where this is going.
 % Amador: Why is there static on the TV?
 
@@ -24,9 +24,9 @@ Maite: [color=white]I'm home... [/color][wait=1] [color=white]how are my [/color
 ...
 ...
 
-Amador: What...[wait=1] What was that??
+Amador: What... What was that??
 
-Amador looks at his hands; he has a VHS tape [wait=1] - the one previously in the floor - [wait=1] and wonders...
+Amador looks at his hands; he has a VHS tape - the one previously in the floor - and wonders...
 
 % Amador: i should play this.
 % Amador: Maybe this has the answers I need.

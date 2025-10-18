@@ -2,7 +2,7 @@
 
 Amador: My head.. it [shake]hurts[/shake].
 
-Amador: Wh... [wait=1] What am I doing here? [wait=2] Hold on, isn't this my [shake]basement?[/shake] 
+Amador: Wh... What am I doing here? Hold on, isn't this my [shake]basement?[/shake] 
 
 ??: [pulse]Look around, Amador[/pulse] 
 
@@ -10,9 +10,9 @@ Amador: Wh... [wait=1] What am I doing here? [wait=2] Hold on, isn't this my [sh
 
 ~ amador_first_step
 # This plays after trying to exit the basement without a key.
-% Amador: The door's closed. [wait=2] I should go back and find the key.
-% Amador: It's of no use; the door's closed. [wait=2] I should head back.
-% Amador: No luck; the door's locked. [wait=2] Let's head back.
+% Amador: The door's closed. I should go back and find the key.
+% Amador: It's of no use; the door's closed. I should head back.
+% Amador: No luck; the door's locked. Let's head back.
 => END
 
 ~ amador_first_chain_step_one
@@ -24,9 +24,9 @@ Amador: Wh... [wait=1] What am I doing here? [wait=2] Hold on, isn't this my [sh
 
 ~ amador_first_chain_found_locker
 # This plays after seeing the locker without the key.
-% Amador: Hmm...[wait=2] maybe the key is inside the locker.
-% Amador: Hmm...[wait=2] I have a vage memory of the key being there.
-% Amador: Hmm...[wait=2] i'm somewhat sure the key is there.
+% Amador: Hmm... maybe the key is inside the locker.
+% Amador: Hmm... I have a vage memory of the key being there.
+% Amador: Hmm... i'm somewhat sure the key is there.
 => END
 
 ~ amador_first_chain_found_first
@@ -55,7 +55,7 @@ The Painting's name is Composition IX.
 # This plays after getting the key and opening the key.
 % Amador: So tiny, yet so important.
 % Amador: Got the key; let's head basck to the door now.
-% Amador: Finally, the key in my hands. [wait=1] Let's go to the door.
+% Amador: Finally, the key in my hands. Let's go to the door.
 => END
 
 ~ amador_tv
@@ -88,35 +88,35 @@ else:
 
 ~ amador_bookshelf
 # Bookshelf
-% Amador: So many books in here...[wait=2] no wonder i'm sleeping in the [shake]basement[/shake].
-% Amador: There may be something here...[wait=2] in-between this pile of books.
-% Amador: Can't see a thing here.[wait=2] Let's go deeper.
+% Amador: So many books in here...no wonder i'm sleeping in the [shake]basement[/shake].
+% Amador: There may be something here... in-between this pile of books.
+% Amador: Can't see a thing here. Let's go deeper.
 
 - Look inside => amador_first_chain_found_second
 - Do nothing => END
 
 ~ amador_hidden_painting
 # Painting
-% Amador: A mistery...[wait=2]  I love misteries. Let's unveil it!
-% Amador: Wonder what's under...[wait=2] Let's see.
+% Amador: A mistery... I love misteries. Let's unveil it!
+% Amador: Wonder what's under... Let's see.
 
 - Look under => amador_first_chain_found_last
 - Do nothing => END
 
 ~ nothing
-Amador: Let's see what we have here... [wait=2]
+Amador: Let's see what we have here... 
 
-% Amador: There is... [wait=2] [rainbow]nothing[/rainbow] here.
-% Amador: Hmm, looks like ... [wait=2] [rainbow]nothing's [/rainbow] here. [wait=2]
-% Amador: What a bummer.. [wait=2] looks like ... [wait=2] [rainbow]nothing's [/rainbow] here. [wait=2]
-% Amador: Amazing! [wait=2] looks like ... [wait=2] [rainbow]nothing's [/rainbow] here. [wait=2]
+% Amador: There is... [rainbow]nothing[/rainbow] here.
+% Amador: Hmm, looks like ... [rainbow]nothing's [/rainbow] here.
+% Amador: What a bummer.. looks like ...[rainbow]nothing's [/rainbow] here.
+% Amador: Amazing!  looks like ... [rainbow]nothing's [/rainbow] here. 
 => END
 
 ~ amador_cute_box
 # Cute box
-% Amador: What a mess...[wait=2] let's open the box.
-% Amador: Why did i leve this here? [wait=2] Maybe opening it will clear that up.
-% Amador: I should put this elsewhere.[wait=2] Let's take a look at the contents first.
+% Amador: What a mess...let's open the box.
+% Amador: Why did i leve this here?  Maybe opening it will clear that up.
+% Amador: I should put this elsewhere. Let's take a look at the contents first.
 
 - Look inside => amador_first_chain_step_one
 - Do nothing => END

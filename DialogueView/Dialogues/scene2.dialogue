@@ -1,8 +1,8 @@
 ~ amador_intro
 
-Amador: The kitchen... [wait=1] it looks.. [wait=1] diferent from how I remeber it.
+Amador: The kitchen...  it looks.. diferent from how I remeber it.
 
-Amador: Why is there a blockade on the door? [wait=1] And why it smells bad? [wait=1]
+Amador: Why is there a blockade on the door? And why it smells bad?
 
 Amador: Let's take a look around.
 
@@ -17,32 +17,32 @@ Amador: There is a blockade here...
 
 ~ amador_stove
 
-% Amador: Why is there a bloddy rag in my stove? [wait=1] Let's... [wait=1] fix the gas.
-% Amador: I don't think I want to knw the details. [wait=1] Let's fix this.
-% Amador: This is to much gore. [wait=1] Let's open this up and fix it.
+% Amador: Why is there a bloddy rag in my stove? Let's... fix the gas.
+% Amador: I don't think I want to knw the details. Let's fix this.
+% Amador: This is to much gore. Let's open this up and fix it.
 
 => END
 
 ~ amador_maite_flash_one
 
 ???: Amador, why?
-Amador: That voice... [wait=2] it's clearly from
+Amador: That voice... it's clearly from
 
 - Maite??
 
-Maite [from the kitchen]: The gas is doing weird things again! [wait=2] Go fix it darling.
+Maite [from the kitchen]: The gas is doing weird things again! Go fix it darling.
 
-Amador: ... [wait=2] What was that?
+Amador: ...  What was that?
 => END
 
 ~ amador_lucas_rocio
 # This plays right after comming from the basement; is the flashback.
-???: Daaaaaddd [wait=1] Lucas is taking over the remote again.
-Lucas: Lies!! Lies!! [wait=1] Rocio is lying, dad! She has been watching TV all day.
+???: Daaaaaddd Lucas is taking over the remote again.
+Lucas: Lies!! Lies!! Rocio is lying, dad! She has been watching TV all day.
 
 The door, still closed, let torught some voices, making Amador a bit concerned.
 
-Amador: These voices... [wait=1] I keep hearing all these voices in my head.
+Amador: These voices...  I keep hearing all these voices in my head.
 => END
 
 ~ amador_comes_from_basement_after
@@ -62,7 +62,7 @@ Rocio: Yeessss.... let's go to the snow!
 Lucas: Nooooo... I prefer going hiking daaadd.
 Rocio: Shut up, normie. The winter is for going skiing.
 
-Maite: Stop fighting kids. [wait=1] We are going wherever your father and I decide.
+Maite: Stop fighting kids. We are going wherever your father and I decide.
 
 ~ amador_frigo_flashback
 Rocio: We need more MeatZZa Feast dad. It's the best pizza ever.

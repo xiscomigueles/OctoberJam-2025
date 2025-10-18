@@ -4,12 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://cp6jqse151mwj" path="res://Assets/Rooms/Dark Rooms/Basement.png" id="1_igsle"]
 [ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/Enviroment/sprite_swap.gd" id="1_sixsl"]
 [ext_resource type="Script" uid="uid://ckuuwbjq653sp" path="res://Scripts/Scene Load/level_exit.gd" id="2_cv3oi"]
-[ext_resource type="PackedScene" uid="uid://dxyelnnq8um81" path="res://Scenes/Items/bookshelf.tscn" id="5_uon3h"]
-[ext_resource type="PackedScene" uid="uid://bd2pfllfaqble" path="res://Scenes/Items/safe.tscn" id="7_0m0pe"]
-[ext_resource type="PackedScene" uid="uid://dxyusay14gwao" path="res://Scenes/Items/canva.tscn" id="7_7h6k5"]
-[ext_resource type="PackedScene" uid="uid://c8rr2wenekkmx" path="res://Scenes/Items/boxes.tscn" id="7_b1fdk"]
-[ext_resource type="PackedScene" path="res://Scenes/Items/Bulb.tscn" id="8_uf8c0"]
-[ext_resource type="PackedScene" uid="uid://fml1l8a4inqk" path="res://Scenes/Items/WashingTv.tscn" id="10_7h6k5"]
+[ext_resource type="PackedScene" uid="uid://dxyelnnq8um81" path="res://Scenes/Items/Basement/bookshelf.tscn" id="5_uon3h"]
+[ext_resource type="PackedScene" uid="uid://bd2pfllfaqble" path="res://Scenes/Items/Basement/safe.tscn" id="7_0m0pe"]
+[ext_resource type="PackedScene" uid="uid://cxog0icu4o63o" path="res://Scenes/Items/Basement/canva.tscn" id="7_7h6k5"]
+[ext_resource type="PackedScene" uid="uid://c8rr2wenekkmx" path="res://Scenes/Items/Basement/boxes.tscn" id="7_b1fdk"]
+[ext_resource type="PackedScene" uid="uid://dwvu1igu3l8ur" path="res://Scenes/Items/Basement/Bulb.tscn" id="8_uf8c0"]
+[ext_resource type="PackedScene" uid="uid://fml1l8a4inqk" path="res://Scenes/Items/Basement/WashingTv.tscn" id="10_7h6k5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kqx7"]
 size = Vector2(240, 2)

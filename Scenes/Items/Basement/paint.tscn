@@ -1,12 +1,16 @@
-[gd_scene load_steps=15 format=3 uid="uid://cxog0icu4o63o"]
+[gd_scene load_steps=16 format=3 uid="uid://cxog0icu4o63o"]
 
 [ext_resource type="Texture2D" uid="uid://cph28x00au8iq" path="res://Assets/Items/Regular Items/Basement/Canvas.png" id="1_dljky"]
-[ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_xt153"]
+[ext_resource type="Script" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_xt153"]
 [ext_resource type="Resource" uid="uid://c02vfwrmo42wk" path="res://DialogueView/Dialogues/nothing.dialogue" id="3_cllmq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jkbqo"]
 atlas = ExtResource("1_dljky")
 region = Rect2(0, 0, 50, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dljky"]
+atlas = ExtResource("1_dljky")
+region = Rect2(300, 0, 50, 49)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_76yww"]
 atlas = ExtResource("1_dljky")
@@ -42,8 +46,16 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jkbqo")
 }],
-"loop": true,
+"loop": false,
 "name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dljky")
+}],
+"loop": false,
+"name": &"Idle2",
 "speed": 5.0
 }, {
 "frames": [{
@@ -68,7 +80,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1dp6d")
 }],
-"loop": true,
+"loop": false,
 "name": &"Without",
 "speed": 5.0
 }]
@@ -85,7 +97,7 @@ scale = Vector2(0.75, 0.75)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_j4cpe")
-animation = &"Without"
+animation = &"Idle2"
 autoplay = "Idle"
 
 [node name="Interaction Area" type="Area2D" parent="."]

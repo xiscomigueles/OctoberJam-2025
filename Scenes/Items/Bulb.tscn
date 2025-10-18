@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwvu1igu3l8ur"]
+
+[ext_resource type="Texture2D" uid="uid://cv4u00jbhr1gg" path="res://Assets/Items/Regular Items/Basement/Bulb.png" id="1_0e4y3"]
+
+[node name="Bulb" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture = ExtResource("1_0e4y3")
+region_rect = Rect2(0, 0, 36.862484, 49)

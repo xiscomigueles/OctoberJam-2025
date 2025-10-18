@@ -1,15 +1,15 @@
-# res://tu_escena_Dialogue.gd (CORREGIDO)
+# res://tu_escena_Dialogue.gd (ARQUITECTURA FINAL Y SIMPLIFICADA)
 extends Node2D
 
 @onready var balloon: CanvasLayer = $ExampleBalloon
 @onready var numpad_ui: CanvasLayer = $NumpadUI
 
-var dialogue_state_for_resume: Dictionary = {}
+var dialogue_resource: DialogueResource
 
 func _ready():
 	#SceneManager.spawn_player_in_current_scene()
 	
-	var dialogue_res = load("res://DialogueView/Dialogues/scene2.dialogue")
+	dialogue_resource = load("res://DialogueView/Dialogues/scene2.dialogue")
 	
 	numpad_ui.get_node("Numpad").input_submitted.connect(_on_numpad_input_submitted)
 	numpad_ui.get_node("Numpad").numpad_cancelled.connect(_on_numpad_cancelled)
@@ -19,30 +19,37 @@ func _ready():
 	# Nos conectamos a la señal GLOBAL.
 	GLOBAL.numpad_requested_by_dialogue.connect(_on_numpad_requested_by_dialogue)
 
-	# ¡¡CAMBIO CRÍTICO!! Ya NO pasamos un host.
-	# Dejamos que Dialogue Manager busque en todos los Autoloads registrados.
-	balloon.start(dialogue_res, "amador_test")
+	# Iniciamos el primer diálogo.
+	start_dialogue("amador_test")
+
+# Función para iniciar cualquier diálogo por su título
+func start_dialogue(title: String):
+	# Pasamos 'GLOBAL' como host.
+	balloon.start(dialogue_resource, title, [GLOBAL])
 
 # Esta función se ejecuta CUANDO el script GLOBAL emite su señal.
 func _on_numpad_requested_by_dialogue():
-	dialogue_state_for_resume = balloon.pause_and_get_state()
+	# El diálogo 'amador_intro' ha terminado. Ahora mostramos el numpad.
 	numpad_ui.show()
 	numpad_ui.get_node("Numpad").line_edit_input.text = ""
 
-# ... el resto del script se mantiene exactamente igual ...
 func _on_numpad_input_submitted(value: String):
 	numpad_ui.hide()
-	if not dialogue_state_for_resume.is_empty():
-		DialogueManager.set_variable("numpad_input", value)
-		balloon.resume_dialogue(dialogue_state_for_resume)
-		dialogue_state_for_resume = {}
+	
+	# Guardamos el resultado en la variable global.
+	GLOBAL.numpad_input = value
+	
+	# Iniciamos el SEGUNDO diálogo para reaccionar al resultado.
+	start_dialogue("reaccionar_a_pin")
 
 func _on_numpad_cancelled():
 	numpad_ui.hide()
-	if not dialogue_state_for_resume.is_empty():
-		DialogueManager.set_variable("numpad_input", "")
-		balloon.resume_dialogue(dialogue_state_for_resume)
-		dialogue_state_for_resume = {}
+	
+	# Guardamos un resultado vacío.
+	GLOBAL.numpad_input = ""
+	
+	# También iniciamos el segundo diálogo para que pueda decir "Incorrecto".
+	start_dialogue("reaccionar_a_pin")
 
 func _unhandled_input(event):
 	if numpad_ui.visible and event.is_action_pressed("ui_accept"):

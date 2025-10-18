@@ -1,13 +1,15 @@
-[gd_scene load_steps=18 format=3 uid="uid://ck8736r5fya6b"]
+[gd_scene load_steps=20 format=3 uid="uid://ck8736r5fya6b"]
 
 [ext_resource type="Texture2D" uid="uid://dc0pjxak5phm6" path="res://Assets/Rooms/Regular Rooms/Basement.png" id="1_cv3oi"]
 [ext_resource type="Texture2D" uid="uid://cp6jqse151mwj" path="res://Assets/Rooms/Dark Rooms/Basement.png" id="1_igsle"]
 [ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/Enviroment/sprite_swap.gd" id="1_sixsl"]
 [ext_resource type="Script" uid="uid://ckuuwbjq653sp" path="res://Scripts/Scene Load/level_exit.gd" id="2_cv3oi"]
 [ext_resource type="PackedScene" uid="uid://dxyelnnq8um81" path="res://Scenes/Items/bookshelf.tscn" id="5_uon3h"]
-[ext_resource type="PackedScene" uid="uid://db2q1gq8wfg6q" path="res://Scenes/Items/washing_machine.tscn" id="6_r3k0l"]
+[ext_resource type="PackedScene" uid="uid://db2q1gq8wfg6q" path="res://Scenes/Items/WashingTv.tscn" id="6_r3k0l"]
 [ext_resource type="PackedScene" uid="uid://bd2pfllfaqble" path="res://Scenes/Items/safe.tscn" id="7_0m0pe"]
+[ext_resource type="PackedScene" uid="uid://cxog0icu4o63o" path="res://Scenes/Items/canva.tscn" id="7_7h6k5"]
 [ext_resource type="PackedScene" uid="uid://c8rr2wenekkmx" path="res://Scenes/Items/boxes.tscn" id="7_b1fdk"]
+[ext_resource type="PackedScene" uid="uid://dwvu1igu3l8ur" path="res://Scenes/Items/Bulb.tscn" id="8_uf8c0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kqx7"]
 size = Vector2(240, 2)
@@ -34,7 +36,7 @@ size = Vector2(1, 27.46625)
 size = Vector2(27.5, 3.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0m0pe"]
-size = Vector2(54, 8)
+size = Vector2(56, 8)
 
 [node name="Sotano" type="Node2D"]
 
@@ -69,7 +71,7 @@ position = Vector2(247, 79)
 shape = SubResource("RectangleShape2D_rf6rn")
 
 [node name="CollisionShapeTop1" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(100, 46)
+position = Vector2(100, 41)
 shape = SubResource("RectangleShape2D_wh7eg")
 
 [node name="CollisionShapeTop2" type="CollisionShape2D" parent="Collisions"]
@@ -107,6 +109,13 @@ position = Vector2(204, 52)
 [node name="Safe" parent="Y Sorting" instance=ExtResource("7_0m0pe")]
 position = Vector2(169, 50)
 
+[node name="Canva" parent="Y Sorting" instance=ExtResource("7_7h6k5")]
+position = Vector2(211, 103)
+
+[node name="Bulb" parent="Y Sorting" instance=ExtResource("8_uf8c0")]
+z_index = 1
+position = Vector2(117, 22)
+
 [node name="Boxes" parent="Y Sorting" instance=ExtResource("7_b1fdk")]
 position = Vector2(88, 135)
 
@@ -119,7 +128,7 @@ position = Vector2(28, 77)
 position = Vector2(58, 63)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Y Sorting/StaticCollisionBookselfWashing"]
-position = Vector2(43, 51)
+position = Vector2(44, 47)
 shape = SubResource("RectangleShape2D_0m0pe")
 
 [connection signal="body_entered" from="Exit Area" to="Exit Area" method="_on_body_entered"]

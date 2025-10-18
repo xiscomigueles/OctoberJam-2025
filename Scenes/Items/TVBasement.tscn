@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://d4j778cevr4k3"]
+
+[ext_resource type="Texture2D" uid="uid://caiux3lcr215b" path="res://Assets/Items/Regular Items/Basement/TVBasement.png" id="1_uskus"]
+[ext_resource type="FontFile" uid="uid://du7aq0dpgrdp5" path="res://DialogueView/Fonts/BlockCraft.otf" id="2_clgkh"]
+[ext_resource type="Script" uid="uid://2fsv852fb6j0" path="res://Scripts/Enviroment/Interactable.gd" id="3_l6la8"]
+[ext_resource type="Resource" uid="uid://12yq1aw7bkuc" path="res://DialogueView/Dialogues/scene1.dialogue" id="4_mhul0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ece0p"]
+font = ExtResource("2_clgkh")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xf6x"]
+size = Vector2(17, 6)
+
+[node name="TVBasement" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_uskus")
+region_rect = Rect2(0, 0, 36.862484, 49)
+
+[node name="Input Label" type="Label" parent="."]
+z_index = 1
+offset_left = -23.0
+offset_top = -27.0
+offset_right = 24.0
+offset_bottom = -4.0
+text = "E"
+label_settings = SubResource("LabelSettings_ece0p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Interaction Area" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("3_l6la8")
+dialogue = ExtResource("4_mhul0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_4xf6x")

@@ -32,24 +32,23 @@ Amador: Wh... [wait=1] What am I doing here? [wait=2] Hold on, isn't this my [sh
 ~ amador_first_chain_found_first
 # This plays after getting the first number.
 
-The NUMBER is 7
-% Amador: This number... this must be for the locker.
-% Amador: With this I can open the locker and see what's inside.
+% Amador: There are are TWO clocks inside.
+% Amador: Two clocks. Why there is two here?.
 => END
 
 ~ amador_first_chain_found_second
 # This plays after getting the second number.
-The NUMBER is 4
-% Amador: Another one. One to go.
-% Amador: Just one more number.
+The Book name is The Big Four.
+% Amador: Nice name. Greater book.
+% Amador: I should read this sometime.
 % Amador: Got it. So close to leaving this [shake]basement[/shake].
 => END
 
 ~ amador_first_chain_found_last
 # This plays after getting the last number.
-The NUMBER is 9
-% Amador: Great, another one. Let's continue.
-% Amador: Got it, lets go on.
+The Painting's name is Composition IX.
+% Amador: Great, fantastic painting. Loved it.
+% Amador: This painting is... breathtaking.
 => END
 
 ~ amador_first_chain_open_locker
@@ -61,18 +60,31 @@ The NUMBER is 9
 
 ~ amador_tv
 # TV machine
-% Amador: A TV in the basement! In this economy! Someething good might be playing.
-% Amador: Interesting...[wait=2], an old school TV. Maybe there is something good here.
-% Amador: Great![wait=2]. An ancient TV; let's hope it cah ease my problems away.
+Maite: We should clean up the basement; it's a bit messy, after all.
+...
+...
+Maite: And the washimg machine... isn't it broken?? It surely belongs in the trash.
+....
+Maite: The books do look interesting, though. We are keeping them.
 
-- Look inside => amador_first_chain_found_first
-- Do nothing => END
 
  ~ amador_open_locker_with_key
 # This plays when opening the locker after getting the key.
 % Amador: Let's open up the locker.
 % Amador: Finally, let's open up this locker.
 % Amador: The mistery is over; let's crack this up.
+
+=> END
+
+
+
+~ reaccionar_a_pin
+if GLOBAL.numpad_input == "123":
+	¡Correcto! La puerta se abre.
+else:
+	Incorrecto. Inténtalo de nuevo.
+	do request_numpad()
+=> END
 
 ~ amador_bookshelf
 # Bookshelf
@@ -91,13 +103,22 @@ The NUMBER is 9
 - Look under => amador_first_chain_found_last
 - Do nothing => END
 
+~ nothing
+Amador: Let's see what we have here... [wait=2]
+
+% Amador: There is... [wait=2] [rainbow]nothing[/rainbow] here.
+% Amador: Hmm, looks like ... [wait=2] [rainbow]nothing's [/rainbow] here. [wait=2]
+% Amador: What a bummer.. [wait=2] looks like ... [wait=2] [rainbow]nothing's [/rainbow] here. [wait=2]
+% Amador: Amazing! [wait=2] looks like ... [wait=2] [rainbow]nothing's [/rainbow] here. [wait=2]
+=> END
+
 ~ amador_cute_box
 # Cute box
 % Amador: What a mess...[wait=2] let's open the box.
 % Amador: Why did i leve this here? [wait=2] Maybe opening it will clear that up.
 % Amador: I should put this elsewhere.[wait=2] Let's take a look at the contents first.
 
-- Look inside => END
+- Look inside => amador_first_chain_step_one
 - Do nothing => END
 
 

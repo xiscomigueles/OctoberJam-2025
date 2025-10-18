@@ -8,14 +8,12 @@ Amador: Let's take a look around.
 
 => END
 
-~ amador_gas_cant_exit
+~ amador_cant_exit
+NOTE - Can't exit.
 
-% Amador: There is a gas leak. I can't go further.
-% Amador: I can't see and it smells bad here; probably a gas leak.
+Amador: There is a blockade here...
 
-Amador: Let's head back to the basement. I have tools there.
-
-=> END
+=> amador_maite_flash_one
 
 ~ amador_stove
 

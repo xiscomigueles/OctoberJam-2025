@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cw7rkqbeyfcbb" path="res://Assets/Items/Regular Items/Basement/WashingMachine.png" id="1_ln6sn"]
 [ext_resource type="Texture2D" uid="uid://caiux3lcr215b" path="res://Assets/Items/Regular Items/Basement/TVBasement.png" id="2_2i8a4"]
 [ext_resource type="Texture2D" uid="uid://2hpbbn8i35pg" path="res://Assets/Amador/dark_amador.png" id="3_pgmm7"]
-[ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="4_l8mp4"]
+[ext_resource type="Script" uid="uid://c7axubvavf3y3" path="res://Scripts/interactDialogueTV.gd" id="4_56uj4"]
 [ext_resource type="Resource" uid="uid://12yq1aw7bkuc" path="res://DialogueView/Dialogues/scene1.dialogue" id="5_56uj4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xf6x"]
@@ -29,7 +29,7 @@ texture = ExtResource("3_pgmm7")
 [node name="Interaction Area" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("4_l8mp4")
+script = ExtResource("4_56uj4")
 dialogue = ExtResource("5_56uj4")
 dialogue_node = "amador_tv"
 

@@ -8,8 +8,12 @@ var paint_reveal: bool = false
 var has_homer_simpson: bool = false
 var door_kitchen_open: bool = false
 
+var has_remote : bool = false
+var has_VHS: bool = false
+
 var can_move: bool = true
 var can_interact: bool = true
+
 
 
 func enable_input() -> void:

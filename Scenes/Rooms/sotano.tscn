@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://ck8736r5fya6b"]
+[gd_scene load_steps=25 format=3 uid="uid://ck8736r5fya6b"]
 
 [ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/DarkMode/sprite_swap.gd" id="1_7h6k5"]
 [ext_resource type="Texture2D" uid="uid://dc0pjxak5phm6" path="res://Assets/Rooms/Regular Rooms/Basement.png" id="1_cv3oi"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bd2pfllfaqble" path="res://Scenes/Items/Basement/safe.tscn" id="7_0m0pe"]
 [ext_resource type="PackedScene" uid="uid://cxog0icu4o63o" path="res://Scenes/Items/Basement/paint.tscn" id="7_7h6k5"]
 [ext_resource type="PackedScene" uid="uid://c8rr2wenekkmx" path="res://Scenes/Items/Basement/boxes.tscn" id="7_b1fdk"]
+[ext_resource type="AudioStream" uid="uid://b2r1f34r5kewc" path="res://Assets/Sound/open-safe.wav" id="8_k5i3q"]
 [ext_resource type="PackedScene" uid="uid://dwvu1igu3l8ur" path="res://Scenes/Items/Basement/Bulb.tscn" id="8_uf8c0"]
 [ext_resource type="PackedScene" uid="uid://fml1l8a4inqk" path="res://Scenes/Items/Basement/WashingTv.tscn" id="10_7h6k5"]
 
@@ -124,6 +125,9 @@ shape = SubResource("RectangleShape2D_uf8c0")
 [node name="DoorBasementKey" type="CollisionShape2D" parent="DoorBasementKey/StaticBody2D"]
 position = Vector2(203.5, 5.875)
 shape = SubResource("RectangleShape2D_7h6k5")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="DoorBasementKey"]
+stream = ExtResource("8_k5i3q")
 
 [node name="Y Sorting" type="Node2D" parent="."]
 y_sort_enabled = true

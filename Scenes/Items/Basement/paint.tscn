@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://cxog0icu4o63o"]
 
 [ext_resource type="Texture2D" uid="uid://cph28x00au8iq" path="res://Assets/Items/Regular Items/Basement/Canvas.png" id="1_dljky"]
-[ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_xt153"]
+[ext_resource type="Script" uid="uid://dnecprb633wpa" path="res://Scripts/interactCanvaSotano.gd" id="2_dljky"]
 [ext_resource type="Resource" uid="uid://12yq1aw7bkuc" path="res://DialogueView/Dialogues/scene1.dialogue" id="3_dljky"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jkbqo"]
@@ -103,9 +103,11 @@ autoplay = "Idle"
 [node name="Interaction Area" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("2_xt153")
-dialogue = ExtResource("3_dljky")
-dialogue_node = "amador_hidden_painting"
+script = ExtResource("2_dljky")
+dialogue_first = ExtResource("3_dljky")
+node_first = "amador_hidden_painting"
+dialogue_after = ExtResource("3_dljky")
+node_after = "amador_first_chain_found_last"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
 position = Vector2(-7.333335, -6.34375)

@@ -1,12 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://d2hlbxr6exf5q"]
+[gd_scene load_steps=17 format=3 uid="uid://d2hlbxr6exf5q"]
 
+[ext_resource type="Script" uid="uid://chefjp8bivc0g" path="res://Scenes/Rooms/living_room_dialogue.gd" id="1_qg171"]
 [ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/DarkMode/sprite_swap.gd" id="1_tlynu"]
 [ext_resource type="Texture2D" uid="uid://c0ur23k05jy5b" path="res://Assets/Rooms/Regular Rooms/LivingRoom.png" id="2_1i5ug"]
+[ext_resource type="Resource" uid="uid://c4q5xoawxgha8" path="res://DialogueView/Dialogues/scene3.dialogue" id="2_tlynu"]
 [ext_resource type="Script" uid="uid://ckuuwbjq653sp" path="res://Scripts/Scene Load/level_exit.gd" id="4_ht7gs"]
 [ext_resource type="PackedScene" uid="uid://b11qb0g14ypbp" path="res://Scenes/Items/LivingRoom/sofa.tscn" id="5_qcn6x"]
 [ext_resource type="PackedScene" uid="uid://bps3dxnejjjj4" path="res://Scenes/Items/LivingRoom/plant.tscn" id="5_uv1bb"]
 [ext_resource type="PackedScene" uid="uid://cnx6i8okqv7mo" path="res://Scenes/Items/LivingRoom/furnitureTV.tscn" id="7_6indv"]
-[ext_resource type="PackedScene" uid="uid://lsvh24ec74jb" path="res://Scenes/Items/LivingRoom/Remote.tscn" id="8_6574m"]
 [ext_resource type="PackedScene" uid="uid://bmnrcifevx53d" path="res://Scenes/Items/LivingRoom/clock.tscn" id="8_qg171"]
 [ext_resource type="PackedScene" uid="uid://dbcalcijq75t2" path="res://Scenes/Items/LivingRoom/VHS.tscn" id="8_tlynu"]
 
@@ -29,6 +30,14 @@ size = Vector2(8, 2)
 size = Vector2(27.5, 3.5)
 
 [node name="LivingRoom" type="Node2D"]
+script = ExtResource("1_qg171")
+dialogue = ExtResource("2_tlynu")
+dialogue_node = "amador_enters_living_room"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(128, 80)
@@ -84,11 +93,8 @@ position = Vector2(128, 64)
 [node name="Clock" parent="." instance=ExtResource("8_qg171")]
 position = Vector2(27, 22)
 
-[node name="Remote" parent="." instance=ExtResource("8_6574m")]
-position = Vector2(27, 89)
-
 [node name="VHS" parent="." instance=ExtResource("8_tlynu")]
-position = Vector2(128, 99)
+position = Vector2(24, 91)
 
 [node name="Y Sorting" type="Node2D" parent="."]
 y_sort_enabled = true

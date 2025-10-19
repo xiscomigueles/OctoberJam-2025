@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://cf3hj7xj4s3n3"]
+[gd_scene load_steps=9 format=3 uid="uid://cf3hj7xj4s3n3"]
 
 [ext_resource type="Script" uid="uid://bn7kxmncgvm8u" path="res://Scripts/Dialogue/balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
-[ext_resource type="FontFile" uid="uid://du7aq0dpgrdp5" path="res://DialogueView/Fonts/BlockCraft.otf" id="2_f3ulj"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
@@ -107,7 +106,6 @@ unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/normal_font = ExtResource("2_f3ulj")
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "Character"
@@ -118,7 +116,6 @@ scroll_active = false
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/normal_font = ExtResource("2_f3ulj")
 theme_override_font_sizes/normal_font_size = 26
 text = "Dialogue..."
 
@@ -144,7 +141,6 @@ response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_f3ulj")
 theme_override_font_sizes/font_size = 26
 text = "Response example"
 

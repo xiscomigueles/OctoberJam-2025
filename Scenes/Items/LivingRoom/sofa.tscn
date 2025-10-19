@@ -1,9 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://b11qb0g14ypbp"]
+[gd_scene load_steps=6 format=3 uid="uid://b11qb0g14ypbp"]
 
 [ext_resource type="Texture2D" uid="uid://dvxfsxaiuohx3" path="res://Assets/Items/Regular Items/LivingRoom/Sofa.png" id="1_rfvjy"]
+[ext_resource type="Script" uid="uid://duy52uy54un0v" path="res://Scripts/Enviroment/LivingRoom/interactSofaTv.gd" id="2_ccgbm"]
+[ext_resource type="Resource" uid="uid://c4q5xoawxgha8" path="res://DialogueView/Dialogues/scene3.dialogue" id="3_2f1bu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mi14k"]
 size = Vector2(95, 8.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfvjy"]
+size = Vector2(92, 19)
 
 [node name="Sofa" type="Node2D"]
 y_sort_enabled = true
@@ -17,3 +22,14 @@ region_rect = Rect2(0, 0, 36.862484, 49)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(0.5, 14.25)
 shape = SubResource("RectangleShape2D_mi14k")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_ccgbm")
+dialogue = ExtResource("3_2f1bu")
+dialogue_node = "amador_goes_fetch_remote"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_rfvjy")

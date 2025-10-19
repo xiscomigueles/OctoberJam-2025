@@ -35,15 +35,15 @@ func _update_state() -> void:
 
 
 func _close_interaction() -> void:
-	if not Global.has_homer_simpson:
-		DialogueManager.show_dialogue_balloon(dialogue_first, node_first)
-		await DialogueManager.dialogue_ended
-	else:
+	if Global.has_homer_simpson and Global.kitchen_gas:
 		door_anim.animated_sprite.play("Wood")
 		await door_anim.animated_sprite.animation_finished
 		door_anim.animated_sprite.play("Idle2")
 		state = State.OPEN
 		Global.door_kitchen_open = true
+	else:
+		DialogueManager.show_dialogue_balloon(dialogue_first, node_first)
+		await DialogueManager.dialogue_ended
 
 
 func _open_interaction() -> void:

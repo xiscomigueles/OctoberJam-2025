@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://cxog0icu4o63o"]
 
 [ext_resource type="Texture2D" uid="uid://cph28x00au8iq" path="res://Assets/Items/Regular Items/Basement/Canvas.png" id="1_dljky"]
-[ext_resource type="Script" uid="uid://dnecprb633wpa" path="res://Scripts/interactCanvaSotano.gd" id="2_dljky"]
+[ext_resource type="Script" uid="uid://dnecprb633wpa" path="res://Scripts/Enviroment/interactCanvaSotano.gd" id="2_dljky"]
 [ext_resource type="Resource" uid="uid://12yq1aw7bkuc" path="res://DialogueView/Dialogues/scene1.dialogue" id="3_dljky"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jkbqo"]

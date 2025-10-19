@@ -12,6 +12,14 @@ Amador: There is a blockade here...
 Amador: There must be a hammer in the basement to get rid of this.
 => END
 
+~ amador_cant_exit_gas
+# This plays when trying to exit the kitchen without completing the gas. 
+
+% Amador: I can't leave; the gas is still leaking.
+% Amador: I have to fix the gas; otherwise it would be a problem later.
+
+=> END
+
 ~ amador_stove
 # This plays when Amador goes to the stove. There is a gas leak.
 Amador: Who let the gas on? It must have been Maite.

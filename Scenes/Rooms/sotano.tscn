@@ -1,9 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://ck8736r5fya6b"]
+[gd_scene load_steps=24 format=3 uid="uid://ck8736r5fya6b"]
 
 [ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/DarkMode/sprite_swap.gd" id="1_7h6k5"]
 [ext_resource type="Texture2D" uid="uid://dc0pjxak5phm6" path="res://Assets/Rooms/Regular Rooms/Basement.png" id="1_cv3oi"]
 [ext_resource type="Texture2D" uid="uid://cp6jqse151mwj" path="res://Assets/Rooms/Dark Rooms/Basement.png" id="1_igsle"]
 [ext_resource type="Script" uid="uid://ckuuwbjq653sp" path="res://Scripts/Scene Load/level_exit.gd" id="2_cv3oi"]
+[ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="4_uf8c0"]
+[ext_resource type="Resource" uid="uid://12yq1aw7bkuc" path="res://DialogueView/Dialogues/scene1.dialogue" id="5_4f5m2"]
 [ext_resource type="PackedScene" uid="uid://dxyelnnq8um81" path="res://Scenes/Items/Basement/bookshelf.tscn" id="5_uon3h"]
 [ext_resource type="PackedScene" uid="uid://bd2pfllfaqble" path="res://Scenes/Items/Basement/safe.tscn" id="7_0m0pe"]
 [ext_resource type="PackedScene" uid="uid://cxog0icu4o63o" path="res://Scenes/Items/Basement/paint.tscn" id="7_7h6k5"]
@@ -34,6 +36,11 @@ size = Vector2(1, 27.46625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yp4s2"]
 size = Vector2(27.5, 3.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uf8c0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7h6k5"]
+size = Vector2(27, 3.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0m0pe"]
 size = Vector2(56, 8)
@@ -97,6 +104,25 @@ shape = SubResource("RectangleShape2D_yp4s2")
 
 [node name="Safe" parent="." instance=ExtResource("7_0m0pe")]
 position = Vector2(167, 42)
+
+[node name="DoorBasementKey" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="DoorBasementKey"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("4_uf8c0")
+dialogue = ExtResource("5_4f5m2")
+dialogue_node = "amador_first_step"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorBasementKey/Area2D"]
+position = Vector2(204, 6)
+shape = SubResource("RectangleShape2D_uf8c0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="DoorBasementKey"]
+
+[node name="DoorBasementKey" type="CollisionShape2D" parent="DoorBasementKey/StaticBody2D"]
+position = Vector2(203.5, 5.875)
+shape = SubResource("RectangleShape2D_7h6k5")
 
 [node name="Y Sorting" type="Node2D" parent="."]
 y_sort_enabled = true

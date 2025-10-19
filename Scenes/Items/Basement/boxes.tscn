@@ -27,11 +27,11 @@ texture = ExtResource("1_phklr")
 region_rect = Rect2(0, 0, 36.862484, 49)
 
 [node name="Dark" type="Sprite2D" parent="Sprites"]
+visible = false
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_hynjq")
 
 [node name="Interaction Area" type="Area2D" parent="."]
-visible = false
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_rd1b0")

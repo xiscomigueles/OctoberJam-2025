@@ -1,20 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://j2nw64wwobkq"]
+[gd_scene load_steps=7 format=3 uid="uid://j2nw64wwobkq"]
 
 [ext_resource type="Texture2D" uid="uid://5pu2gqogfstj" path="res://Assets/Items/Regular Items/Kitchen/Door.png" id="1_i5d7v"]
+[ext_resource type="Script" uid="uid://mxm7v6hpc2oy" path="res://Scripts/DarkGroup.gd" id="1_rgomq"]
 [ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_02bt8"]
+[ext_resource type="Texture2D" uid="uid://cb7pb8gl1qks3" path="res://Assets/Items/Dark Items/Kitchen/Door.png" id="2_i5d7v"]
 [ext_resource type="Resource" uid="uid://dw8w2mw3q4aiy" path="res://DialogueView/Dialogues/scene2.dialogue" id="3_txxey"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_345ab"]
 size = Vector2(15.5, 15)
 
-[node name="Door" type="Node2D"]
+[node name="Door" type="Node2D" node_paths=PackedStringArray("regular_sprite", "dark_sprite")]
 y_sort_enabled = true
+script = ExtResource("1_rgomq")
+regular_sprite = NodePath("Sprites/Regular")
+dark_sprite = NodePath("Sprites/Dark")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="Regular" type="Sprite2D" parent="Sprites"]
 y_sort_enabled = true
 texture = ExtResource("1_i5d7v")
 region_enabled = true
-region_rect = Rect2(-0.7774658, -0.8735924, 51.08625, 48.9796)
+region_rect = Rect2(0, 0, 50, 50)
+
+[node name="Dark" type="Sprite2D" parent="Sprites"]
+visible = false
+texture = ExtResource("2_i5d7v")
+region_enabled = true
+region_rect = Rect2(0, 0, 50, 50)
 
 [node name="Interaction Area2" type="Area2D" parent="."]
 collision_layer = 2

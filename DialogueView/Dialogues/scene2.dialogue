@@ -1,7 +1,7 @@
 ~ amador_intro
 # This plays when Amador enters the kitchen
-Amador: The kitchen...I thought I heared Maite around here....
-Amador: ...why is there a blockade on the door? And why does it smell like...is the gas on?
+Amador: The kitchen...I thought I heard Maite around here....
+Amador: ...why is there a blockade on the door? And why does it smell like... wait, is the gas on?
 => END
 
 ~ amador_cant_exit

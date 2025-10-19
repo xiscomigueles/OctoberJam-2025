@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://6ytqfpoyxl46"
-path="res://.godot/imported/DisposableDroidBB_ital.ttf-b06f527f21cb46997f42fdc238b60e26.fontdata"
+uid="uid://beccil661nm7h"
+path="res://.godot/imported/SFPixelate-BoldOblique.ttf-ec1801e189476b5734676dd3f3268dc6.fontdata"
 
 [deps]
 
-source_file="res://DialogueView/Fonts/DisposableDroidBB_ital.ttf"
-dest_files=["res://.godot/imported/DisposableDroidBB_ital.ttf-b06f527f21cb46997f42fdc238b60e26.fontdata"]
+source_file="res://DialogueView/Fonts/TrueType/SFPixelate-BoldOblique.ttf"
+dest_files=["res://.godot/imported/SFPixelate-BoldOblique.ttf-ec1801e189476b5734676dd3f3268dc6.fontdata"]
 
 [params]
 

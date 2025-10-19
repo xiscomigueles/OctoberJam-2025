@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://du7aq0dpgrdp5"
-path="res://.godot/imported/BlockCraft.otf-4d334ab685a4a0c1a9f0edf6aed24762.fontdata"
+uid="uid://uah7fofsvg6f"
+path="res://.godot/imported/SFPixelate-Bold.ttf-0e084ed2fb0d5eac97627bc0ee1ee268.fontdata"
 
 [deps]
 
-source_file="res://DialogueView/Fonts/BlockCraft.otf"
-dest_files=["res://.godot/imported/BlockCraft.otf-4d334ab685a4a0c1a9f0edf6aed24762.fontdata"]
+source_file="res://DialogueView/Fonts/TrueType/SFPixelate-Bold.ttf"
+dest_files=["res://.godot/imported/SFPixelate-Bold.ttf-0e084ed2fb0d5eac97627bc0ee1ee268.fontdata"]
 
 [params]
 

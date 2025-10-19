@@ -1,6 +1,7 @@
 ~ amador_enters_living_room
 # This plays inmediately on entering the room
 Amador: Rocio?! Lucas? Where did you go?
+=> END
 
 ~ amador_enters_interacts_vhs_first
 # Amamonador has another flashback, with his children telling him a one-liner
@@ -20,16 +21,17 @@ Amador looks at his hands; he has a VHS tape - the one previously in the floor..
 % Amador: Maybe this has the answers I need.
 => END
 
-~ amador_goes_tv_first
-# This scene plays when Amador tries to play the tape without the remote.
-% Rocio: Daad, the remote is on the couch.
-% Maite: Darling, go fecth the remote on the couch, please.
-=> END
-
-~ amador_goes_tv_no_vhs
-# This scene plays when Amador tries to play the tape without the remote.
-% Lucas: Daad, play something on the TV!
-% Amador: I should play something on the TV
+~ amador_goes_tv
+if not Global.has_remote:
+	# This scene plays when Amador tries to play the tape without the remote.
+	% Rocio: Daad, the remote is on the couch.
+	% Maite: Darling, go fecth the remote on the couch, please.
+elif not Global.has_VHS:
+	# This scene plays when Amador tries to play the tape without the remote.
+	% Lucas: Daad, play something on the TV!
+	% Amador: I should play something on the TV
+else:
+	Amador: Oh no...
 => END
 
 ~ amador_goes_fetch_remote

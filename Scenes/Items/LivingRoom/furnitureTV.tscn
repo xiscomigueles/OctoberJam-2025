@@ -30,7 +30,7 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_c5axg")
 dialogue = ExtResource("4_w6dis")
-dialogue_node = "amador_goes_tv_first"
+dialogue_node = "amador_goes_tv"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area2"]
 position = Vector2(2.5, -28)

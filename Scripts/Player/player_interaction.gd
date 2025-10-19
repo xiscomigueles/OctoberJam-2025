@@ -1,13 +1,12 @@
 class_name PlayerInteraction extends Area2D
 
 @onready var input_label: Label = $"../Input Label"
-@onready var movement: PlayerMovement = $".."
 
 var object_to_interact: Interactable = null
-var can_interact: bool = true
 
 
 func _ready() -> void:
+	Global.enable_input()
 	hide_input()
 
 
@@ -28,25 +27,15 @@ func _on_area_exited(area: Area2D) -> void:
 		object_to_interact = null
 
 
-func _disable_input() -> void:
-	can_interact = false
-	movement.can_move = false
-
-
-func _enable_input() -> void:
-	can_interact = true
-	movement.can_move = true
-
-
 func _interact() -> void:
-	if object_to_interact == null or not can_interact:
+	if object_to_interact == null or not Global.can_interact:
 		return
 	
-	_disable_input()
+	Global.disable_input()
 	object_to_interact.interact()
 	await object_to_interact.interaction_ended
 	print("interaction ended")
-	_enable_input()
+	Global.enable_input()
 
 
 func show_input() -> void:

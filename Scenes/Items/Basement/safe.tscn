@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/DarkMode/sprite_swap.gd" id="1_mbpw3"]
 [ext_resource type="Texture2D" uid="uid://m4nqwpg5n3su" path="res://Assets/Items/Regular Items/Basement/Safe.png" id="1_n7o0f"]
 [ext_resource type="Texture2D" uid="uid://bvuexgh12r5k3" path="res://Assets/Items/Dark Items/Basement/Safe.png" id="2_0sr4q"]
-[ext_resource type="Script" uid="uid://bmwtb2nqsxoux" path="res://Scripts/Enviroment/interact_safe_box.gd" id="2_kndio"]
+[ext_resource type="Script" uid="uid://bmwtb2nqsxoux" path="res://Scripts/Enviroment/basement/interact_safe_box.gd" id="2_kndio"]
 [ext_resource type="Resource" uid="uid://12yq1aw7bkuc" path="res://DialogueView/Dialogues/scene1.dialogue" id="3_v24dq"]
-[ext_resource type="PackedScene" uid="uid://duo84fximklg3" path="res://Scenes/Items/Basement/numpad.tscn" id="4_v24dq"]
+[ext_resource type="PackedScene" uid="uid://3k7axxhcbcem" path="res://Scenes/Items/Basement/numpad.tscn" id="4_v24dq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xf6x"]
 size = Vector2(16, 6)
@@ -33,7 +33,7 @@ collision_mask = 2
 script = ExtResource("2_kndio")
 dialogue = ExtResource("3_v24dq")
 node_no_key = "amador_first_chain_found_locker"
-node_key = "amador_open_locker_with_key"
+node_key = "amador_first_chain_open_locker"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
 position = Vector2(3, 0)

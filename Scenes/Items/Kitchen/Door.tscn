@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b5jelceuc0uin" path="res://Scripts/DarkMode/animated_sprite_swap.gd" id="1_rgomq"]
 [ext_resource type="Texture2D" uid="uid://cb7pb8gl1qks3" path="res://Assets/Items/Dark Items/Kitchen/Door.png" id="2_i5d7v"]
 [ext_resource type="Resource" uid="uid://dw8w2mw3q4aiy" path="res://DialogueView/Dialogues/scene2.dialogue" id="3_txxey"]
-[ext_resource type="Script" uid="uid://6m70j23pbm7p" path="res://Scripts/Enviroment/interactDoorKitchen.gd" id="4_rgomq"]
+[ext_resource type="Script" uid="uid://6m70j23pbm7p" path="res://Scripts/Enviroment/kitchen/interactDoorKitchen.gd" id="4_rgomq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rgomq"]
 atlas = ExtResource("1_i5d7v")

@@ -81,3 +81,8 @@ Maite: [i]The books do look interesting, though. We are keeping them.[/i]
 # This plays when opening the door with the key
 [i]Amador opens the basement door.[/i]
 => END
+
+~ amador_get_homer
+# This plays when opening the door with the key
+[i]Amador get the homer simpson.[/i]
+=> END

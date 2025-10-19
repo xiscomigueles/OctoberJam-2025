@@ -1,30 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqhbu50pd56v6"]
+[gd_scene load_steps=3 format=3 uid="uid://cqhbu50pd56v6"]
 
-[ext_resource type="Shader" uid="uid://drtj5o6adytoe" path="res://Pruebas/ctr.gdshader" id="1_5br5x"]
+[ext_resource type="PackedScene" uid="uid://cxry78h0t6gjl" path="res://Scenes/ctr.tscn" id="2_5br5x"]
 [ext_resource type="Texture2D" uid="uid://bjsolsyt2ugdw" path="res://icon.svg" id="2_oihqu"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lb1jv"]
-shader = ExtResource("1_5br5x")
-shader_parameter/scanline_count = 149.21200708757
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_5br5x"]
 
 [node name="Prueba Shader" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(579, 324)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-material = SubResource("ShaderMaterial_lb1jv")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("ViewportTexture_5br5x")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(534, 277)
+position = Vector2(608, 269)
 texture = ExtResource("2_oihqu")
+
+[node name="CTR" parent="." instance=ExtResource("2_5br5x")]

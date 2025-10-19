@@ -34,7 +34,7 @@ size = Vector2(27.5, 3.5)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(128, 80)
-zoom = Vector2(4.5, 4.5)
+zoom = Vector2(3.5, 3.5)
 
 [node name="Sprites" type="Node2D" parent="."]
 script = ExtResource("1_7hyju")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dbcalcijq75t2"]
 
 [ext_resource type="Texture2D" uid="uid://8hjvxdynii2k" path="res://Assets/Items/Regular Items/LivingRoom/VHS.png" id="1_i2ufu"]
-[ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_rp7mh"]
+[ext_resource type="Script" uid="uid://lnf6ecoxl68p" path="res://Scripts/Enviroment/LivingRoom/interactVHS.gd" id="2_i2ufu"]
 [ext_resource type="Resource" uid="uid://c4q5xoawxgha8" path="res://DialogueView/Dialogues/scene3.dialogue" id="3_i2ufu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_53a15"]
@@ -18,7 +18,7 @@ region_rect = Rect2(0, 0, 36.862484, 49)
 [node name="Interaction Area2" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("2_rp7mh")
+script = ExtResource("2_i2ufu")
 dialogue = ExtResource("3_i2ufu")
 dialogue_node = "amador_enters_interacts_vhs_first"
 

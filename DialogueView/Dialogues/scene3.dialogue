@@ -23,7 +23,13 @@ Amador looks at his hands; he has a VHS tape - the one previously in the floor..
 ~ amador_goes_tv_first
 # This scene plays when Amador tries to play the tape without the remote.
 % Rocio: Daad, the remote is on the couch.
-% Maite [from the Kitchen]: Darling, go fecth the remote on the couch, please.
+% Maite: Darling, go fecth the remote on the couch, please.
+=> END
+
+~ amador_goes_tv_no_vhs
+# This scene plays when Amador tries to play the tape without the remote.
+% Lucas: Daad, play something on the TV!
+% Amador: I should play something on the TV
 => END
 
 ~ amador_goes_fetch_remote

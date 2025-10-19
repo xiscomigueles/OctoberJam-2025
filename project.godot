@@ -58,7 +58,7 @@ cancel={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://DialogueView/Dialogues/nothing.dialogue", "res://DialogueView/Dialogues/scene1.dialogue", "res://DialogueView/Dialogues/scene2.dialogue", "res://DialogueView/Dialogues/scene3.dialogue", "res://DialogueView/Dialogues/ObjectDialogue.dialogue")
+locale/translations_pot_files=PackedStringArray("res://DialogueView/Dialogues/nothing.dialogue", "res://DialogueView/Dialogues/scene1.dialogue", "res://DialogueView/Dialogues/scene2.dialogue", "res://DialogueView/Dialogues/scene3.dialogue")
 
 [layer_names]
 

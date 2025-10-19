@@ -20,66 +20,54 @@ Amador looks at his hands; he has a VHS tape - the one previously in the floor..
 % Amador: Maybe this has the answers I need.
 => END
 
-# IJOSDEPUTAAAAIJOSDEPUTAAAAIJOSDEPUTAAAAIJOSDEPUTAAAAIJOSDEPUTAAAAIJOSDEPUTAAAAIJOSDEPUTAAAAIJOSDEPUTAAAAIJOSDEPUTAAAA
-
 ~ amador_goes_tv_first
 # This scene plays when Amador tries to play the tape without the remote.
 % Rocio: Daad, the remote is on the couch.
 % Maite [from the Kitchen]: Darling, go fecth the remote on the couch, please.
-
-Lucas: Dad, get away from the TV; I can't see through meat.
-
 => END
 
 ~ amador_goes_fetch_remote
-# This plays once the 
-% Amador: Here is the remote; let's turn on the thing.
-% Amador: So, let's turn the TV on.
-% Amador [looking at the VHS]: Let's see what this thing is about.
-
-- Amador: Ups....
-% Amador: The remote... it doesn't have power.
-% Amador: I think I need some batteries.
-
-Lucas: Daad... [wait=1] I need batteries; go to the basement for me.
-
-=> END
-
-~ amador_goes_basement_finds_batteries
-% Amador: Batteries! Finally, I can watch the recording.
-% Amador: Got them; let's see the VHS now.
-% Amador: Let's head back to the living room and watch the video.
-
+# This plays once Amador interacts with the sofa
+Amador: Here's the TV remote, let's see what this is all about.
 => END
 
 ~ amador_clock
-% Amador: Nice clock. Wonder who choose it.
-% Amador: Hopefully some day i will learn to read analog clocks.
-% Amador: Good. What time is it then?
-
+# This plays when interacting with the clock
+Amador: It's 3:33 AM.
 => END
 
 ~ amador_news_report
+# THE END (When Amador interacts with the TV, having obtained the VHS and the TV remote
+The TV turns on.
+...
 Amador: It's a news report about some incident.
-
-News presenter: [i]Last week, the police found several dead bodies in the basement in the house of a local man.[ /i]
-
+News anchor: [i]Last week, the police found several dead bodies in the basement in the house of a local family.[/i]
 Amador: What happened?
-
-News presenter: [i]The man's wife was found dead in the basement.[ /i] 
-
-....
-
-News presenter: [i]Their kids unfortunately shared the same fate.[ /i]
-
+News anchor: [i]The man's wife was found dead in the basement.[/i] 
 ...
+News anchor: [i]Their kids unfortunately shared the same fate.[/i]
 ...
-
-News presenter: [i]The police have not been able to identify the murderer. The husband is still missing.[ /i]
+News anchor: [i]Medical reports from the husband states he had some mental health issues triggered by TV static sounds...[/i]
+..
 ...
+Amador: What happened? Where did they go?
+# A flashback appears on the screen; making the scene a more bloddy. <- equisdeeeeeeeee 
+News anchor: Amador..... it's time  to face it.
+Amador: ...
+News anchor: You killed your own children. You murdered your wife...
+# The bodies appear in the room
+News anchor: and you took your own life soon after.
+Amador: ...
+- What did I do??
+- What did I do??
+- What did I do??
+- What did I do??
+- What did I do??
+- What did I do??
+News anchor: This is your punishment.
 ...
+News anchor: And for those people still watching this...
+News anchor: Whatever you do...
+News anchor: Do not turn on your home TV at 3:33 AM
 ...
-
-
-
-
+Amador: Thank you for playing. UwU

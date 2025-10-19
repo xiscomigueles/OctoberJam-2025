@@ -75,5 +75,9 @@ Maite: [i]The books do look interesting, though. We are keeping them.[/i]
 # Painting
 % Amador: Looks like a painting. It's so dusty...
 % Amador: Wonder what's under this...let's see.
+=> END
 
+~ amador_opens_door
+# This plays when opening the door with the key
+[i]Amador opens the basement door.[/i]
 => END

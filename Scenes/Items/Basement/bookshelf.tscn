@@ -1,21 +1,19 @@
 [gd_scene load_steps=7 format=3 uid="uid://dxyelnnq8um81"]
 
 [ext_resource type="Texture2D" uid="uid://drife3cxcmhm2" path="res://Assets/Items/Regular Items/Basement/Bookshelf.png" id="1_duuux"]
-[ext_resource type="Script" uid="uid://mxm7v6hpc2oy" path="res://Scripts/DarkGroup.gd" id="1_si7h2"]
 [ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_h7swr"]
 [ext_resource type="Texture2D" uid="uid://cgj25n3f254nl" path="res://Assets/Items/Dark Items/Basement/Bookshelf.png" id="2_i1ti1"]
+[ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/DarkMode/sprite_swap.gd" id="2_p5w7i"]
 [ext_resource type="Resource" uid="uid://12yq1aw7bkuc" path="res://DialogueView/Dialogues/scene1.dialogue" id="3_h7swr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xf6x"]
 size = Vector2(18, 8.5)
 
-[node name="Bookshelf" type="Node2D" node_paths=PackedStringArray("regular_sprite", "dark_sprite")]
+[node name="Bookshelf" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource("1_si7h2")
-regular_sprite = NodePath("Sprites/Regular")
-dark_sprite = NodePath("Sprites/Dark")
 
 [node name="Sprites" type="Node2D" parent="."]
+script = ExtResource("2_p5w7i")
 
 [node name="Regular" type="Sprite2D" parent="Sprites"]
 y_sort_enabled = true

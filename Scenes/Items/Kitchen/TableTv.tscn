@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://dx8ue2lgm1eg6"]
 
 [ext_resource type="Texture2D" uid="uid://ialvwfkj7prg" path="res://Assets/Items/Regular Items/Kitchen/Table.png" id="1_0kdq2"]
-[ext_resource type="Script" uid="uid://mxm7v6hpc2oy" path="res://Scripts/DarkGroup.gd" id="1_hshbf"]
+[ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/DarkMode/sprite_swap.gd" id="1_hshbf"]
 [ext_resource type="Texture2D" uid="uid://bjojp0duy0blt" path="res://Assets/Items/Regular Items/Kitchen/TVKitchen.png" id="2_hshbf"]
 [ext_resource type="Texture2D" uid="uid://b4uk1jimrj3y" path="res://Assets/Items/Dark Items/Kitchen/Table.png" id="3_d3g53"]
-[ext_resource type="Script" uid="uid://c7axubvavf3y3" path="res://Scripts/interactDialogueTV.gd" id="3_lsjfc"]
+[ext_resource type="Script" uid="uid://c7axubvavf3y3" path="res://Scripts/Enviroment/interactDialogueTV.gd" id="3_lsjfc"]
 [ext_resource type="Resource" uid="uid://dw8w2mw3q4aiy" path="res://DialogueView/Dialogues/scene2.dialogue" id="4_lsjfc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xf6x"]
@@ -16,10 +16,9 @@ size = Vector2(97, 6)
 [node name="TableTv" type="Node2D"]
 y_sort_enabled = true
 
-[node name="Sprites" type="Node2D" parent="." node_paths=PackedStringArray("regular_sprite", "dark_sprite")]
+[node name="Sprites" type="Node2D" parent="."]
 script = ExtResource("1_hshbf")
-regular_sprite = NodePath("Regular")
-dark_sprite = NodePath("Dark")
+room_type = 1
 
 [node name="Regular" type="Sprite2D" parent="Sprites"]
 y_sort_enabled = true
@@ -41,7 +40,7 @@ collision_mask = 2
 script = ExtResource("3_lsjfc")
 dialogue = ExtResource("4_lsjfc")
 dialogue_node = "amador_tv_flashback"
-nodeScene = "Kitchen"
+room_type = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
 position = Vector2(-1, -4.359375)

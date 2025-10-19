@@ -1,16 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://dwvu1igu3l8ur"]
 
 [ext_resource type="Texture2D" uid="uid://cv4u00jbhr1gg" path="res://Assets/Items/Regular Items/Basement/Bulb.png" id="1_0e4y3"]
-[ext_resource type="Script" uid="uid://mxm7v6hpc2oy" path="res://Scripts/DarkGroup.gd" id="1_jltx0"]
+[ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/DarkMode/sprite_swap.gd" id="1_jltx0"]
 [ext_resource type="Texture2D" uid="uid://bxgkkncqsapy3" path="res://Assets/Items/Dark Items/Basement/Bulb.png" id="2_ik5rg"]
 
-[node name="Bulb" type="Node2D" node_paths=PackedStringArray("regular_sprite", "dark_sprite")]
+[node name="Bulb" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource("1_jltx0")
-regular_sprite = NodePath("Sprites/Regular")
-dark_sprite = NodePath("Sprites/Dark")
 
 [node name="Sprites" type="Node2D" parent="."]
+script = ExtResource("1_jltx0")
 
 [node name="Regular" type="Sprite2D" parent="Sprites"]
 y_sort_enabled = true

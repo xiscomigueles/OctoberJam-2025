@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://bhhsvwc5o1l0v"]
 
 [ext_resource type="Texture2D" uid="uid://dv1q6teiyev6c" path="res://Assets/Items/Regular Items/Kitchen/KitchenCounter.png" id="1_345ab"]
-[ext_resource type="Script" uid="uid://mxm7v6hpc2oy" path="res://Scripts/DarkGroup.gd" id="1_hf36h"]
+[ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/DarkMode/sprite_swap.gd" id="1_hf36h"]
 [ext_resource type="Texture2D" uid="uid://cl31omcdan7hh" path="res://Assets/Items/Regular Items/Kitchen/KitchenShelf.png" id="3_cxfsi"]
 [ext_resource type="Texture2D" uid="uid://0tpf0msrjcdf" path="res://Assets/Items/Dark Items/Kitchen/KitchenCounter.png" id="3_kcmmk"]
 [ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="4_345ab"]
@@ -20,10 +20,9 @@ size = Vector2(13, 6)
 [node name="KitchenCounter" type="Node2D"]
 y_sort_enabled = true
 
-[node name="SpritesCounter" type="Node2D" parent="." node_paths=PackedStringArray("regular_sprite", "dark_sprite")]
+[node name="SpritesCounter" type="Node2D" parent="."]
 script = ExtResource("1_hf36h")
-regular_sprite = NodePath("Regular")
-dark_sprite = NodePath("Dark")
+room_type = 1
 
 [node name="Regular" type="Sprite2D" parent="SpritesCounter"]
 y_sort_enabled = true
@@ -34,10 +33,9 @@ region_rect = Rect2(0, 0, 36.862484, 49)
 visible = false
 texture = ExtResource("3_kcmmk")
 
-[node name="SpritesExtractor" type="Node2D" parent="." node_paths=PackedStringArray("regular_sprite", "dark_sprite")]
+[node name="SpritesExtractor" type="Node2D" parent="."]
 script = ExtResource("1_hf36h")
-regular_sprite = NodePath("Regular")
-dark_sprite = NodePath("Dark")
+room_type = 1
 
 [node name="Regular" type="Sprite2D" parent="SpritesExtractor"]
 position = Vector2(-6, -41)
@@ -48,10 +46,9 @@ visible = false
 position = Vector2(-6, -41)
 texture = ExtResource("5_1cm7m")
 
-[node name="SpritesShelf" type="Node2D" parent="." node_paths=PackedStringArray("regular_sprite", "dark_sprite")]
+[node name="SpritesShelf" type="Node2D" parent="."]
 script = ExtResource("1_hf36h")
-regular_sprite = NodePath("Regular")
-dark_sprite = NodePath("Dark")
+room_type = 1
 
 [node name="Regular" type="Sprite2D" parent="SpritesShelf"]
 position = Vector2(35, -35)

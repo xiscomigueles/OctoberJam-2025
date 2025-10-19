@@ -21,6 +21,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Transicion="*res://Scenes/transicion.tscn"
 Global="*res://Scripts/Scene Load/global.gd"
 SceneManager="*res://Scripts/Scene Load/scene_manager.gd"
+DarkManager="*res://Scripts/DarkMode/dark_manager.gd"
 
 [dialogue_manager]
 

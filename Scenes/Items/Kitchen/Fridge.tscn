@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dlae0to6ncu1l"]
 
 [ext_resource type="Texture2D" uid="uid://k2w2wv2iv7it" path="res://Assets/Items/Regular Items/Kitchen/Fridge.png" id="1_dugp0"]
-[ext_resource type="Script" uid="uid://mxm7v6hpc2oy" path="res://Scripts/DarkGroup.gd" id="1_v44p6"]
+[ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/DarkMode/sprite_swap.gd" id="1_v44p6"]
 [ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_5eppc"]
 [ext_resource type="Texture2D" uid="uid://ke403r6rjv32" path="res://Assets/Items/Dark Items/Kitchen/Fridge.png" id="2_dugp0"]
 [ext_resource type="Resource" uid="uid://dw8w2mw3q4aiy" path="res://DialogueView/Dialogues/scene2.dialogue" id="3_5eppc"]
@@ -12,10 +12,9 @@ size = Vector2(15.5, 15)
 [node name="Fridge" type="Node2D"]
 y_sort_enabled = true
 
-[node name="Sprites" type="Node2D" parent="." node_paths=PackedStringArray("regular_sprite", "dark_sprite")]
+[node name="Sprites" type="Node2D" parent="."]
 script = ExtResource("1_v44p6")
-regular_sprite = NodePath("Regular")
-dark_sprite = NodePath("Dark")
+room_type = 1
 
 [node name="Regular" type="Sprite2D" parent="Sprites"]
 y_sort_enabled = true

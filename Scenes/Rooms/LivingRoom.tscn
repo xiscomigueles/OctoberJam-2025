@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://d2hlbxr6exf5q"]
 
-[ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/Enviroment/sprite_swap.gd" id="1_tlynu"]
+[ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/DarkMode/sprite_swap.gd" id="1_tlynu"]
 [ext_resource type="Texture2D" uid="uid://c0ur23k05jy5b" path="res://Assets/Rooms/Regular Rooms/LivingRoom.png" id="2_1i5ug"]
 [ext_resource type="Texture2D" uid="uid://cp6jqse151mwj" path="res://Assets/Rooms/Dark Rooms/Basement.png" id="3_ibneq"]
 [ext_resource type="Script" uid="uid://ckuuwbjq653sp" path="res://Scripts/Scene Load/level_exit.gd" id="4_ht7gs"]

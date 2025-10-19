@@ -5,7 +5,7 @@ extends Node2D
 
 func _ready() -> void:
 	swap_to_regular()
-	add_to_group("dark_objects") 
+	add_to_group("dark_objects")
 
 func swap_to_regular() -> void:
 	regular_sprite.visible = true

@@ -33,7 +33,7 @@ size = Vector2(27.5, 3.5)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(128, 80)
-zoom = Vector2(4.5, 4.5)
+zoom = Vector2(3.5, 3.5)
 
 [node name="Sprites" type="Node2D" parent="."]
 script = ExtResource("1_tlynu")
@@ -103,7 +103,7 @@ position = Vector2(226, 49)
 [node name="SpawnPoints" type="Node2D" parent="Y Sorting"]
 
 [node name="Default" type="Marker2D" parent="Y Sorting/SpawnPoints"]
-position = Vector2(24, 101)
+position = Vector2(63, 88)
 
 [node name="Door" type="Marker2D" parent="Y Sorting/SpawnPoints"]
 position = Vector2(37, 142)

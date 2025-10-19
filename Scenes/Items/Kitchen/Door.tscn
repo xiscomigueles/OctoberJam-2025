@@ -1,10 +1,10 @@
 [gd_scene load_steps=17 format=3 uid="uid://j2nw64wwobkq"]
 
 [ext_resource type="Texture2D" uid="uid://5pu2gqogfstj" path="res://Assets/Items/Regular Items/Kitchen/Door.png" id="1_i5d7v"]
-[ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/DarkMode/sprite_swap.gd" id="1_rgomq"]
-[ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_02bt8"]
+[ext_resource type="Script" uid="uid://b5jelceuc0uin" path="res://Scripts/DarkMode/animated_sprite_swap.gd" id="1_rgomq"]
 [ext_resource type="Texture2D" uid="uid://cb7pb8gl1qks3" path="res://Assets/Items/Dark Items/Kitchen/Door.png" id="2_i5d7v"]
 [ext_resource type="Resource" uid="uid://dw8w2mw3q4aiy" path="res://DialogueView/Dialogues/scene2.dialogue" id="3_txxey"]
+[ext_resource type="Script" uid="uid://6m70j23pbm7p" path="res://Scripts/Enviroment/interactDoorKitchen.gd" id="4_rgomq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rgomq"]
 atlas = ExtResource("1_i5d7v")
@@ -119,12 +119,15 @@ sprite_frames = SubResource("SpriteFrames_cskgg")
 animation = &"Idle"
 autoplay = "Idle"
 
-[node name="Interaction Area2" type="Area2D" parent="."]
+[node name="Interaction Area" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("2_02bt8")
-dialogue = ExtResource("3_txxey")
+script = ExtResource("4_rgomq")
+scene_path = "uid://d2hlbxr6exf5q"
+spawn_point_name = "Door"
+dialogue_first = ExtResource("3_txxey")
+node_first = "amador_cant_exit"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_345ab")

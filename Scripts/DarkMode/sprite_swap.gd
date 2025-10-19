@@ -1,4 +1,4 @@
-extends Node2D
+class_name SpriteSwap extends Node2D
 
 @onready var regular_sprite = $Regular
 @onready var dark_sprite = $Dark

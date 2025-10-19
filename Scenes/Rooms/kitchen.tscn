@@ -1,5 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://drgwv2wwjnbfd"]
+[gd_scene load_steps=16 format=3 uid="uid://drgwv2wwjnbfd"]
 
+[ext_resource type="Texture2D" uid="uid://pmqfo2a2vhqi" path="res://Assets/Rooms/Regular Rooms/Kitchen.png" id="1_5goep"]
+[ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/DarkMode/sprite_swap.gd" id="1_7hyju"]
 [ext_resource type="Texture2D" uid="uid://t4esw50ox6di" path="res://Assets/Rooms/Dark Rooms/Kitchen.png" id="1_kjc5c"]
 [ext_resource type="Script" uid="uid://ckuuwbjq653sp" path="res://Scripts/Scene Load/level_exit.gd" id="2_35qkm"]
 [ext_resource type="PackedScene" uid="uid://bhhsvwc5o1l0v" path="res://Scenes/Items/Kitchen/KitchenCounter.tscn" id="3_35qkm"]
@@ -34,7 +36,16 @@ size = Vector2(27.5, 3.5)
 offset = Vector2(128, 80)
 zoom = Vector2(4.5, 4.5)
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Sprites" type="Node2D" parent="."]
+script = ExtResource("1_7hyju")
+room_type = 1
+
+[node name="Regular" type="Sprite2D" parent="Sprites"]
+z_index = -1
+position = Vector2(128, 80)
+texture = ExtResource("1_5goep")
+
+[node name="Dark" type="Sprite2D" parent="Sprites"]
 z_index = -1
 position = Vector2(128, 80)
 texture = ExtResource("1_kjc5c")

@@ -1,86 +1,61 @@
 ~ amador_intro
+# This plays when Amador enters the kitchen
 
-Amador: The kitchen...  it looks.. diferent from how I remeber it.
-
-Amador: Why is there a blockade on the door? And why it smells bad?
-
-Amador: Let's take a look around.
-
+Amador: The kitchen...I thought I heared Maite around here....
+Amador: ...why is there a blockade on the door? And why does it smell like...is the gas on?
 => END
 
 ~ amador_cant_exit
-NOTE - Can't exit.
+# This plays when trying to exit the kitchen without completing everything. 
 
+NOTE - DO NOT OPEN
 Amador: There is a blockade here...
-
 => amador_maite_flash_one
 
 ~ amador_stove
+# This plays when Amador goes to the stove. There is a gas leak.
 
-% Amador: Why is there a bloddy rag in my stove? Let's... fix the gas.
-% Amador: I don't think I want to knw the details. Let's fix this.
-% Amador: This is to much gore. Let's open this up and fix it.
-
+Amador: Who let the gas on? It must have been Maite.
+[i]Amador turns off the gass[/i]
 => END
 
 ~ amador_maite_flash_one
-
-???: Amador, why?
-Amador: That voice... it's clearly from
-
+#This plays right after unlocking the door.
+...
+???: Amador! WHY?
+Amador: That voice... it's clearly from...
 - Maite??
-
-Maite [from the kitchen]: The gas is doing weird things again! Go fix it darling.
-
-Amador: ...  What was that?
+Maite: STAY AWAY FROM US!
+...
+Amador: ...what was that?
+Amador: My head...still hurts so bad...
 => END
 
 ~ amador_lucas_rocio
-# This plays right after comming from the basement; is the flashback.
-???: Daaaaaddd Lucas is taking over the remote again.
-Lucas: Lies!! Lies!! Rocio is lying, dad! She has been watching TV all day.
-
-The door, still closed, let torught some voices, making Amador a bit concerned.
-
-Amador: These voices...  I keep hearing all these voices in my head.
+# This plays right after comming from the basement; having obtained the hammer
+[shake][TV noises comming from the living room][/shake]
+% Amador: The TV.... did I also leave it on?
+% Amador: What is that noise? It's comming from the living room?
+...
+???: Daaaaad! Lucas is taking over the remote again.
+Lucas: She is lying dad!! She has been watching TV all day.
+The door, still closed, lets through some voices, making Amador a bit concerned.
+Amador: Rocio! Lucas! They must be in the living room...I need to open the door first.
 => END
 
-~ amador_comes_from_basement_after
-# This plays after comming back from the basement to the kitchen
-[shake][TV noises comming from the living room][/shake]
-% Amador: The TV.... why is it on?
-% Amador: The TV is on.... what's going on??
-% Amador: What is that noise? It's comming from the living room?
-=> amador_lucas_rocio
-
-
 ~ amador_tv_flashback
-# Flashback while playing the TV in the kitchen.
+# Flashback while playing the TV of the kitchen.
+The TV turns on, letting out an annoying static noise.
+...
 Maite: We should go on a holiday trip, darling.
-
-Rocio: Yeessss.... let's go to the snow!
-Lucas: Nooooo... I prefer going hiking daaadd.
-Rocio: Shut up, normie. The winter is for going skiing.
-
+Rocio: Yeessss...let's go to the snow!
+Lucas: Nooooo...I want to go hiking daaad!
+Rocio: Shut up, normie! The winter is for going skiing.
 Maite: Stop fighting kids. We are going wherever your father and I decide.
 => END
 
 ~ amador_frigo_flashback
+# This plays when interacting with the fridge.
 Rocio: We need more MeatZZa Feast dad. It's the best pizza ever.
-Lucas: Finnaly; something coherent comes out of your mouth...
-
-~ amador_test
-Amador: ¡Hola! Necesito que me digas el número secreto para continuar.
-do request_numpad()
+Lucas: Yeesss, I love it too!
 => END
-
-~ reaccionar_a_pin
-if GLOBAL.numpad_input == "123":
-	¡Correcto! La puerta se abre.
-else:
-	Incorrecto. Inténtalo de nuevo.
-	do request_numpad()
-=> END
-
-
-

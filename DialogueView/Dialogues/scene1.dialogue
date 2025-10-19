@@ -19,7 +19,7 @@ Amador: Wh... What am I doing here? Hold on, isn't this the [shake]basement?[/sh
 
 ~ amador_first_chain_found_first
 # This plays after searching the box (First Number).
-% Amador: There are TWO clocks inside.
+% Amador: There are 2 clocks inside.
 % Amador: Two clocks...I cannot remember when did I put those in there.
 => END
 
@@ -27,85 +27,53 @@ Amador: Wh... What am I doing here? Hold on, isn't this the [shake]basement?[/sh
 # This plays after searching the bookshelf (Second Number).
 The name of this book is [i]The Big Four[/i].
 % Amador: I should read this sometime.
-% Amador: Got it. So close to leaving this [shake]basement[/shake].
+% Amador: My father brought it last year. I couldn't find time to read it yet.
 => END
 
 ~ amador_first_chain_found_last
-# This plays after getting the last number.
+# This plays after unveiling the painting (Third Number).
 The painting shows both of your children. Lucas wears a cap with the number 9 on it.
 % Amador: Maite painted it...I wonder where are they now.
-% Amador: Quieres salami?
+% Amador: I love this painting. It's so [shake]beautiful[/shake].
 => END
 
-
-# IJOSDEPUTAIJOSDEPUTAIJOSDEPUTAIJOSDEPUTAIJOSDEPUTAIJOSDEPUTAIJOSDEPUTAIJOSDEPUTAIJOSDEPUTAIJOSDEPUTA
-
-
 ~ amador_first_chain_open_locker
-# This plays after getting the key and opening the key.
-% Amador: So tiny, yet so important.
-% Amador: Got the key; let's head back to the door now.
-% Amador: Finally, the key in my hands. Let's go to the door.
+# This plays after opening the locker
+% Amador: The key to the door; let's get out of here.
+% Amador: Finally, the key in my hands. Let's open the door.
 => END
 
 ~ amador_tv
 # TV machine
-Maite: We should clean up the basement; it's a bit messy, after all.
+The TV turns on, letting out an annoying static noise.
+...
+Maite: [i]We should clean up the basement; it's a bit messy, after all.[/i]
 ...
 ...
-Maite: And the washimg machine... isn't it broken?? It surely belongs in the trash.
-....
-Maite: The books do look interesting, though. We are keeping them.
-=> END
-
- ~ amador_open_locker_with_key
-# This plays when opening the locker after getting the key.
-% Amador: Let's open up the locker.
-% Amador: Finally, let's open up this locker.
-% Amador: The mistery is over; let's crack this up.
-=> END
-
-~ reaccionar_a_pin
-if GLOBAL.numpad_input == "123":
-	¡Correcto! La puerta se abre.
-else:
-	Incorrecto. Inténtalo de nuevo.
-	do request_numpad()
+Maite: [i]And the washimg machine... isn't it broken?? It surely belongs in the trash.[/i]
+...
+Maite: [i]The books do look interesting, though. We are keeping them.[/i]
 => END
 
 ~ amador_bookshelf
 # Bookshelf
-% Amador: So many books in here...no wonder i'm sleeping in the [shake]basement[/shake].
 % Amador: There may be something here... in-between this pile of books.
-% Amador: Can't see a thing here. Let's go deeper.
+% Amador: Can't see a thing here. Let's search deeper.
 
 - Look inside => amador_first_chain_found_second
 - Do nothing => END
 
-~ amador_hidden_painting
-# Painting
-% Amador: A mistery... I love misteries. Let's unveil it!
-% Amador: Wonder what's under... Let's see.
-
-- Look under => amador_first_chain_found_last
-- Do nothing => END
-
-~ nothing
-Amador: Let's see what we have here... 
-
-% Amador: There is... [rainbow]nothing[/rainbow] here.
-% Amador: Hmm, looks like ... [rainbow]nothing's [/rainbow] here.
-% Amador: What a bummer.. looks like ...[rainbow]nothing's [/rainbow] here.
-% Amador: Amazing!  looks like ... [rainbow]nothing's [/rainbow] here. 
-=> END
-
 ~ amador_cute_box
 # Cute box
-% Amador: What a mess...let's open the box.
-% Amador: Why did i leve this here?  Maybe opening it will clear that up.
-% Amador: I should put this elsewhere. Let's take a look at the contents first.
+% Amador: What a mess...let's see what's inside.
+% Amador: Why did I leave this here? Maybe opening it will clear that up.
 
 - Look inside => amador_first_chain_found_first
 - Do nothing => END
 
+~ amador_hidden_painting
+# Painting
+% Amador: Looks like a painting. It's so dusty...
+% Amador: Wonder what's under this...let's see.
 
+=> END

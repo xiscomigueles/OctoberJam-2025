@@ -5,7 +5,6 @@ class_name PlayerMovement extends CharacterBody2D
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
 var mov_input: Vector2 = Vector2.ZERO
-var can_move: bool = true
 
 
 func _process(_delta: float) -> void:
@@ -20,7 +19,7 @@ func _physics_process(_delta: float) -> void:
 
 
 func read_mov_input() -> Vector2:
-	if not can_move:
+	if not Global.can_move:
 		return Vector2.ZERO
 	
 	var input = Vector2(

@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://12yq1aw7bkuc" path="res://DialogueView/Dialogues/scene1.dialogue" id="3_h7swr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xf6x"]
-size = Vector2(20, 9)
+size = Vector2(18, 8.5)
 
 [node name="Bookshelf" type="Node2D" node_paths=PackedStringArray("regular_sprite", "dark_sprite")]
 y_sort_enabled = true
@@ -36,5 +36,5 @@ dialogue = ExtResource("3_h7swr")
 dialogue_node = "amador_bookshelf"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
-position = Vector2(0, -25)
+position = Vector2(0, -24.75)
 shape = SubResource("RectangleShape2D_4xf6x")

@@ -1,11 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://bhhsvwc5o1l0v"]
+[gd_scene load_steps=13 format=3 uid="uid://bhhsvwc5o1l0v"]
 
 [ext_resource type="Texture2D" uid="uid://dv1q6teiyev6c" path="res://Assets/Items/Regular Items/Kitchen/KitchenCounter.png" id="1_345ab"]
+[ext_resource type="Script" uid="uid://mxm7v6hpc2oy" path="res://Scripts/DarkGroup.gd" id="1_hf36h"]
 [ext_resource type="Texture2D" uid="uid://cl31omcdan7hh" path="res://Assets/Items/Regular Items/Kitchen/KitchenShelf.png" id="3_cxfsi"]
+[ext_resource type="Texture2D" uid="uid://0tpf0msrjcdf" path="res://Assets/Items/Dark Items/Kitchen/KitchenCounter.png" id="3_kcmmk"]
 [ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="4_345ab"]
+[ext_resource type="Texture2D" uid="uid://2y8is155pkuj" path="res://Assets/Items/Dark Items/Kitchen/Extractor.png" id="5_1cm7m"]
 [ext_resource type="Resource" uid="uid://dw8w2mw3q4aiy" path="res://DialogueView/Dialogues/scene2.dialogue" id="5_cxfsi"]
 [ext_resource type="Texture2D" uid="uid://dxvmkx3fd627w" path="res://Assets/Items/Regular Items/Kitchen/Extractor.png" id="5_v2px5"]
 [ext_resource type="Resource" uid="uid://c02vfwrmo42wk" path="res://DialogueView/Dialogues/nothing.dialogue" id="6_cxfsi"]
+[ext_resource type="Texture2D" uid="uid://bfa4cahcuixq" path="res://Assets/Items/Dark Items/Kitchen/KitchenShelf.png" id="7_50ax1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xf6x"]
 size = Vector2(13.5, 6)
@@ -16,18 +20,47 @@ size = Vector2(13, 6)
 [node name="KitchenCounter" type="Node2D"]
 y_sort_enabled = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="SpritesCounter" type="Node2D" parent="." node_paths=PackedStringArray("regular_sprite", "dark_sprite")]
+script = ExtResource("1_hf36h")
+regular_sprite = NodePath("Regular")
+dark_sprite = NodePath("Dark")
+
+[node name="Regular" type="Sprite2D" parent="SpritesCounter"]
 y_sort_enabled = true
 texture = ExtResource("1_345ab")
 region_rect = Rect2(0, 0, 36.862484, 49)
 
-[node name="Extractor" type="Sprite2D" parent="."]
+[node name="Dark" type="Sprite2D" parent="SpritesCounter"]
+visible = false
+texture = ExtResource("3_kcmmk")
+
+[node name="SpritesExtractor" type="Node2D" parent="." node_paths=PackedStringArray("regular_sprite", "dark_sprite")]
+script = ExtResource("1_hf36h")
+regular_sprite = NodePath("Regular")
+dark_sprite = NodePath("Dark")
+
+[node name="Regular" type="Sprite2D" parent="SpritesExtractor"]
 position = Vector2(-6, -41)
 texture = ExtResource("5_v2px5")
 
-[node name="KitchenShelf" type="Sprite2D" parent="."]
+[node name="Dark" type="Sprite2D" parent="SpritesExtractor"]
+visible = false
+position = Vector2(-6, -41)
+texture = ExtResource("5_1cm7m")
+
+[node name="SpritesShelf" type="Node2D" parent="." node_paths=PackedStringArray("regular_sprite", "dark_sprite")]
+script = ExtResource("1_hf36h")
+regular_sprite = NodePath("Regular")
+dark_sprite = NodePath("Dark")
+
+[node name="Regular" type="Sprite2D" parent="SpritesShelf"]
 position = Vector2(35, -35)
 texture = ExtResource("3_cxfsi")
+
+[node name="Dark" type="Sprite2D" parent="SpritesShelf"]
+visible = false
+position = Vector2(35, -35)
+texture = ExtResource("7_50ax1")
 
 [node name="Interaction Area" type="Area2D" parent="."]
 collision_layer = 2

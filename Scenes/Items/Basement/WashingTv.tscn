@@ -1,23 +1,34 @@
-[gd_scene load_steps=7 format=3 uid="uid://fml1l8a4inqk"]
+[gd_scene load_steps=9 format=3 uid="uid://fml1l8a4inqk"]
 
 [ext_resource type="Texture2D" uid="uid://cw7rkqbeyfcbb" path="res://Assets/Items/Regular Items/Basement/WashingMachine.png" id="1_ln6sn"]
+[ext_resource type="Script" uid="uid://mxm7v6hpc2oy" path="res://Scripts/DarkGroup.gd" id="1_qva83"]
 [ext_resource type="Texture2D" uid="uid://caiux3lcr215b" path="res://Assets/Items/Regular Items/Basement/TVBasement.png" id="2_2i8a4"]
 [ext_resource type="Texture2D" uid="uid://2hpbbn8i35pg" path="res://Assets/Amador/dark_amador.png" id="3_pgmm7"]
 [ext_resource type="Script" uid="uid://c7axubvavf3y3" path="res://Scripts/interactDialogueTV.gd" id="4_56uj4"]
 [ext_resource type="Resource" uid="uid://12yq1aw7bkuc" path="res://DialogueView/Dialogues/scene1.dialogue" id="5_56uj4"]
+[ext_resource type="Texture2D" uid="uid://jsfe7ixchbil" path="res://Assets/Items/Dark Items/Basement/WashingMachine.png" id="6_npug7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xf6x"]
-size = Vector2(20, 9)
+size = Vector2(17, 8.25)
 
 [node name="Washing TV" type="Node2D"]
 y_sort_enabled = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="SpriteWashing" type="Node2D" parent="." node_paths=PackedStringArray("regular_sprite", "dark_sprite")]
+script = ExtResource("1_qva83")
+regular_sprite = NodePath("Regular")
+dark_sprite = NodePath("Dark")
+
+[node name="Regular" type="Sprite2D" parent="SpriteWashing"]
 y_sort_enabled = true
 texture = ExtResource("1_ln6sn")
 region_rect = Rect2(0, 0, 36.862484, 49)
 
-[node name="TV" type="Sprite2D" parent="."]
+[node name="Dark" type="Sprite2D" parent="SpriteWashing"]
+visible = false
+texture = ExtResource("6_npug7")
+
+[node name="Tv" type="Sprite2D" parent="."]
 position = Vector2(0, -26)
 texture = ExtResource("2_2i8a4")
 
@@ -32,7 +43,8 @@ collision_mask = 2
 script = ExtResource("4_56uj4")
 dialogue = ExtResource("5_56uj4")
 dialogue_node = "amador_tv"
+nodeScene = "Sotano"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
-position = Vector2(0, -12)
+position = Vector2(1.5, -11.125)
 shape = SubResource("RectangleShape2D_4xf6x")

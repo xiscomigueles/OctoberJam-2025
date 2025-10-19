@@ -5,10 +5,12 @@ extends Node
 @onready var timer: Timer = $Timer
 
 func _ready() -> void:
-	timer.timeout.connect(_play_dialogue)
+	if not Global.kitchen_dialogue_displayed:
+		timer.timeout.connect(_play_dialogue)
 
 func _play_dialogue() -> void:
 	Global.disable_input()
 	DialogueManager.show_dialogue_balloon(dialogue, dialogue_node)
 	await DialogueManager.dialogue_ended
 	Global.enable_input()
+	Global.kitchen_dialogue_displayed = true

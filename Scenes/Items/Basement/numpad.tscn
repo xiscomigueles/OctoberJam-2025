@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://3k7axxhcbcem"]
 
-[ext_resource type="Script" uid="uid://bk3gpqmir16hr" path="res://Scripts/Numpad.gd" id="1_numpad_script"]
-[ext_resource type="FontFile" uid="uid://du7aq0dpgrdp5" path="res://DialogueView/Fonts/BlockCraft.otf" id="2_font"]
+[ext_resource type="Script" uid="uid://bk3gpqmir16hr" path="res://Scripts/numpad.gd" id="1_numpad_script"]
+[ext_resource type="FontFile" uid="uid://bqrla7ilrh4x5" path="res://DialogueView/Fonts/TrueType/SFPixelate.ttf" id="2_font"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_disabled"]
 bg_color = Color(0.08, 0.08, 0.08, 1)

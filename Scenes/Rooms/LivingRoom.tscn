@@ -1,8 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://d2hlbxr6exf5q"]
+[gd_scene load_steps=16 format=3 uid="uid://d2hlbxr6exf5q"]
 
 [ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/DarkMode/sprite_swap.gd" id="1_tlynu"]
 [ext_resource type="Texture2D" uid="uid://c0ur23k05jy5b" path="res://Assets/Rooms/Regular Rooms/LivingRoom.png" id="2_1i5ug"]
-[ext_resource type="Texture2D" uid="uid://cp6jqse151mwj" path="res://Assets/Rooms/Dark Rooms/Basement.png" id="3_ibneq"]
 [ext_resource type="Script" uid="uid://ckuuwbjq653sp" path="res://Scripts/Scene Load/level_exit.gd" id="4_ht7gs"]
 [ext_resource type="PackedScene" uid="uid://b11qb0g14ypbp" path="res://Scenes/Items/LivingRoom/sofa.tscn" id="5_qcn6x"]
 [ext_resource type="PackedScene" uid="uid://bps3dxnejjjj4" path="res://Scenes/Items/LivingRoom/plant.tscn" id="5_uv1bb"]
@@ -45,7 +44,7 @@ texture = ExtResource("2_1i5ug")
 [node name="Dark" type="Sprite2D" parent="Sprites"]
 visible = false
 position = Vector2(128, 80)
-texture = ExtResource("3_ibneq")
+texture = ExtResource("2_1i5ug")
 
 [node name="Collisions" type="StaticBody2D" parent="."]
 

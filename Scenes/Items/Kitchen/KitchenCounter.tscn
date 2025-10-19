@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bhhsvwc5o1l0v"]
+[gd_scene load_steps=14 format=3 uid="uid://bhhsvwc5o1l0v"]
 
 [ext_resource type="Texture2D" uid="uid://dv1q6teiyev6c" path="res://Assets/Items/Regular Items/Kitchen/KitchenCounter.png" id="1_345ab"]
 [ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/DarkMode/sprite_swap.gd" id="1_hf36h"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dxvmkx3fd627w" path="res://Assets/Items/Regular Items/Kitchen/Extractor.png" id="5_v2px5"]
 [ext_resource type="Resource" uid="uid://c02vfwrmo42wk" path="res://DialogueView/Dialogues/nothing.dialogue" id="6_cxfsi"]
 [ext_resource type="Texture2D" uid="uid://bfa4cahcuixq" path="res://Assets/Items/Dark Items/Kitchen/KitchenShelf.png" id="7_50ax1"]
+[ext_resource type="Script" uid="uid://c5kdeohocsrtl" path="res://Scripts/Enviroment/kitchen/gas_interaction.gd" id="8_kcmmk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xf6x"]
 size = Vector2(13.5, 6)
@@ -59,14 +60,14 @@ visible = false
 position = Vector2(35, -35)
 texture = ExtResource("7_50ax1")
 
-[node name="Interaction Area" type="Area2D" parent="."]
+[node name="Interaction Area Oven" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("4_345ab")
+script = ExtResource("8_kcmmk")
 dialogue = ExtResource("5_cxfsi")
 dialogue_node = "amador_stove"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area Oven"]
 position = Vector2(-4, -9)
 shape = SubResource("RectangleShape2D_4xf6x")
 

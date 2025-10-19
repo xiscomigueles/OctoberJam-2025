@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bps3dxnejjjj4"]
 
 [ext_resource type="Texture2D" uid="uid://c0ti2x5ce7mk6" path="res://Assets/Items/Regular Items/LivingRoom/Plant.png" id="1_sueh2"]
-[ext_resource type="Script" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_gdrlh"]
+[ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_gdrlh"]
 [ext_resource type="Resource" uid="uid://c02vfwrmo42wk" path="res://DialogueView/Dialogues/nothing.dialogue" id="3_0f5st"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_53a15"]
@@ -22,6 +22,7 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_gdrlh")
 dialogue = ExtResource("3_0f5st")
+dialogue_node = "nothing"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area2"]
 position = Vector2(1, 0)

@@ -23,6 +23,7 @@ Global="*res://Scripts/Scene Load/global.gd"
 SceneManager="*res://Scripts/Scene Load/scene_manager.gd"
 DarkManager="*res://Scripts/DarkMode/dark_manager.gd"
 CTR="*res://Scenes/ctr.tscn"
+Music="*res://Scenes/music.tscn"
 
 [dialogue_manager]
 

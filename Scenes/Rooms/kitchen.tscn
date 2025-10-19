@@ -86,7 +86,7 @@ spawn_point_name = "Stairs"
 shape = SubResource("RectangleShape2D_cetdd")
 
 [node name="Door" parent="." instance=ExtResource("6_pu28o")]
-position = Vector2(37, 46)
+position = Vector2(37, 47)
 
 [node name="KitchenCounter" parent="." instance=ExtResource("3_35qkm")]
 z_index = -1

@@ -1,10 +1,102 @@
-[gd_scene load_steps=7 format=3 uid="uid://j2nw64wwobkq"]
+[gd_scene load_steps=17 format=3 uid="uid://j2nw64wwobkq"]
 
 [ext_resource type="Texture2D" uid="uid://5pu2gqogfstj" path="res://Assets/Items/Regular Items/Kitchen/Door.png" id="1_i5d7v"]
 [ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/DarkMode/sprite_swap.gd" id="1_rgomq"]
 [ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_02bt8"]
 [ext_resource type="Texture2D" uid="uid://cb7pb8gl1qks3" path="res://Assets/Items/Dark Items/Kitchen/Door.png" id="2_i5d7v"]
 [ext_resource type="Resource" uid="uid://dw8w2mw3q4aiy" path="res://DialogueView/Dialogues/scene2.dialogue" id="3_txxey"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgomq"]
+atlas = ExtResource("1_i5d7v")
+region = Rect2(0, 0, 52, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v45on"]
+atlas = ExtResource("1_i5d7v")
+region = Rect2(52, 0, 52, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lo1y3"]
+atlas = ExtResource("1_i5d7v")
+region = Rect2(0, 0, 52, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cavd"]
+atlas = ExtResource("1_i5d7v")
+region = Rect2(52, 0, 52, 52)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ook5u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rgomq")
+}],
+"loop": false,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v45on")
+}],
+"loop": false,
+"name": &"Idle2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lo1y3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cavd")
+}],
+"loop": false,
+"name": &"Wood",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcupm"]
+atlas = ExtResource("2_i5d7v")
+region = Rect2(0, 0, 52, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enu25"]
+atlas = ExtResource("2_i5d7v")
+region = Rect2(52, 0, 52, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45r5e"]
+atlas = ExtResource("2_i5d7v")
+region = Rect2(0, 0, 52, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsnrh"]
+atlas = ExtResource("2_i5d7v")
+region = Rect2(52, 0, 52, 52)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cskgg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcupm")
+}],
+"loop": false,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enu25")
+}],
+"loop": true,
+"name": &"Idle2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45r5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsnrh")
+}],
+"loop": false,
+"name": &"Wood",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_345ab"]
 size = Vector2(15.5, 15)
@@ -16,17 +108,16 @@ y_sort_enabled = true
 script = ExtResource("1_rgomq")
 room_type = 1
 
-[node name="Regular" type="Sprite2D" parent="Sprites"]
-y_sort_enabled = true
-texture = ExtResource("1_i5d7v")
-region_enabled = true
-region_rect = Rect2(0, 0, 50, 50)
+[node name="Regular" type="AnimatedSprite2D" parent="Sprites"]
+sprite_frames = SubResource("SpriteFrames_ook5u")
+animation = &"Idle"
+autoplay = "Idle"
 
-[node name="Dark" type="Sprite2D" parent="Sprites"]
+[node name="Dark" type="AnimatedSprite2D" parent="Sprites"]
 visible = false
-texture = ExtResource("2_i5d7v")
-region_enabled = true
-region_rect = Rect2(0, 0, 50, 50)
+sprite_frames = SubResource("SpriteFrames_cskgg")
+animation = &"Idle"
+autoplay = "Idle"
 
 [node name="Interaction Area2" type="Area2D" parent="."]
 collision_layer = 2

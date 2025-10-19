@@ -1,9 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://drgwv2wwjnbfd"]
+[gd_scene load_steps=18 format=3 uid="uid://drgwv2wwjnbfd"]
 
 [ext_resource type="Texture2D" uid="uid://pmqfo2a2vhqi" path="res://Assets/Rooms/Regular Rooms/Kitchen.png" id="1_5goep"]
 [ext_resource type="Script" uid="uid://c88hsgk1qd63g" path="res://Scripts/DarkMode/sprite_swap.gd" id="1_7hyju"]
 [ext_resource type="Texture2D" uid="uid://t4esw50ox6di" path="res://Assets/Rooms/Dark Rooms/Kitchen.png" id="1_kjc5c"]
+[ext_resource type="Script" uid="uid://c8h3vb156vcnq" path="res://Scripts/Enviroment/kitchen/kitchen_dialogue.gd" id="1_msce2"]
 [ext_resource type="Script" uid="uid://ckuuwbjq653sp" path="res://Scripts/Scene Load/level_exit.gd" id="2_35qkm"]
+[ext_resource type="Resource" uid="uid://dw8w2mw3q4aiy" path="res://DialogueView/Dialogues/scene2.dialogue" id="2_j51df"]
 [ext_resource type="PackedScene" uid="uid://bhhsvwc5o1l0v" path="res://Scenes/Items/Kitchen/KitchenCounter.tscn" id="3_35qkm"]
 [ext_resource type="PackedScene" uid="uid://dlae0to6ncu1l" path="res://Scenes/Items/Kitchen/Fridge.tscn" id="4_jdfhw"]
 [ext_resource type="PackedScene" uid="uid://dx8ue2lgm1eg6" path="res://Scenes/Items/Kitchen/TableTv.tscn" id="5_j7m0n"]
@@ -31,10 +33,18 @@ size = Vector2(168, 2)
 size = Vector2(27.5, 3.5)
 
 [node name="Kitchen" type="Node2D"]
+script = ExtResource("1_msce2")
+dialogue = ExtResource("2_j51df")
+dialogue_node = "amador_intro"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(128, 80)
 zoom = Vector2(3.5, 3.5)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+autostart = true
 
 [node name="Sprites" type="Node2D" parent="."]
 script = ExtResource("1_7hyju")

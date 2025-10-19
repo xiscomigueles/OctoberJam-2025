@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dqwogrhlfi3i7"
-path="res://.godot/imported/DisposableDroidBB_bldital.ttf-096323216faaff51ad63c3618c85f777.fontdata"
+uid="uid://b3cu6dcg0e4vq"
+path="res://.godot/imported/SFPixelateShaded-BoldObliqu.ttf-7b2f3f3c91f8b1367ccbc5fb642062d7.fontdata"
 
 [deps]
 
-source_file="res://DialogueView/Fonts/DisposableDroidBB_bldital.ttf"
-dest_files=["res://.godot/imported/DisposableDroidBB_bldital.ttf-096323216faaff51ad63c3618c85f777.fontdata"]
+source_file="res://DialogueView/Fonts/TrueType/SFPixelateShaded-BoldObliqu.ttf"
+dest_files=["res://.godot/imported/SFPixelateShaded-BoldObliqu.ttf-7b2f3f3c91f8b1367ccbc5fb642062d7.fontdata"]
 
 [params]
 

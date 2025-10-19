@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://lsvh24ec74jb"]
 
 [ext_resource type="Texture2D" uid="uid://cnrlj3iw0kgyy" path="res://Assets/Items/Regular Items/LivingRoom/remote.png" id="1_p5e1e"]
-[ext_resource type="Script" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_u2kh3"]
-[ext_resource type="Resource" uid="uid://c02vfwrmo42wk" path="res://DialogueView/Dialogues/nothing.dialogue" id="3_4awww"]
+[ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_u2kh3"]
+[ext_resource type="Resource" uid="uid://c4q5xoawxgha8" path="res://DialogueView/Dialogues/scene3.dialogue" id="3_p5e1e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_53a15"]
 size = Vector2(11, 13)
@@ -19,7 +19,8 @@ region_rect = Rect2(0, 0, 36.862484, 49)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_u2kh3")
-dialogue = ExtResource("3_4awww")
+dialogue = ExtResource("3_p5e1e")
+dialogue_node = "amador_goes_fetch_remote"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area2"]
 position = Vector2(-0.5, -5.5)

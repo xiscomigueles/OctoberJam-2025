@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://lac4hhdl66vb" path="res://Assets/Items/Regular Items/LivingRoom/TVLiving.png" id="1_w6dis"]
 [ext_resource type="Texture2D" uid="uid://byumw57qpe013" path="res://Assets/Items/Regular Items/LivingRoom/Furniture.png" id="2_1h85u"]
-[ext_resource type="Script" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_c5axg"]
-[ext_resource type="Resource" uid="uid://c02vfwrmo42wk" path="res://DialogueView/Dialogues/nothing.dialogue" id="3_c6h1n"]
+[ext_resource type="Script" uid="uid://c0pajxyea1oru" path="res://Scripts/Enviroment/interact_dialogue.gd" id="2_c5axg"]
+[ext_resource type="Resource" uid="uid://c4q5xoawxgha8" path="res://DialogueView/Dialogues/scene3.dialogue" id="4_w6dis"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_53a15"]
 size = Vector2(55, 46)
@@ -29,7 +29,8 @@ texture = ExtResource("1_w6dis")
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_c5axg")
-dialogue = ExtResource("3_c6h1n")
+dialogue = ExtResource("4_w6dis")
+dialogue_node = "amador_goes_tv_first"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area2"]
 position = Vector2(2.5, -28)

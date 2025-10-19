@@ -1,20 +1,19 @@
 ~ amador_intro
 # This plays when Amador enters the kitchen
-
 Amador: The kitchen...I thought I heared Maite around here....
 Amador: ...why is there a blockade on the door? And why does it smell like...is the gas on?
 => END
 
 ~ amador_cant_exit
 # This plays when trying to exit the kitchen without completing everything. 
-
 NOTE - DO NOT OPEN
 Amador: There is a blockade here...
-=> amador_maite_flash_one
+...
+Amador: There must be a hammer in the basement to get rid of this.
+=> END
 
 ~ amador_stove
 # This plays when Amador goes to the stove. There is a gas leak.
-
 Amador: Who let the gas on? It must have been Maite.
 [i]Amador turns off the gass[/i]
 => END

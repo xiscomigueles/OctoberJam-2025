@@ -9,6 +9,7 @@ signal ended()
 @export var max_input_length = 3
 @export var combination: String = "123"
 
+var is_open: bool = false
 
 func _ready():
 	_clear()
@@ -48,8 +49,14 @@ func _clear():
 func _on_ok_pressed():
 	var input_value: String = line_edit_input.text
 	if input_value == combination:
-		Global.has_basement_key = true
-		hide()
-		ended.emit()
+		_open()
 	else:
 		_clear()
+
+
+func _open() -> void:
+	Global.has_basement_key = true
+	is_open = true
+	hide()
+	ended.emit()
+	audio.play_open_safe_sound()

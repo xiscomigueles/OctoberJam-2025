@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8f3b3dl2rhoy"]
+
+[ext_resource type="Script" uid="uid://cifffti76gp2f" path="res://Scripts/Sounds/sfx.gd" id="1_nvdi4"]
+[ext_resource type="AudioStream" uid="uid://fjbey5ox8m85" path="res://Assets/Sound/static.wav" id="2_b6urm"]
+
+[node name="SFX" type="Node2D"]
+script = ExtResource("1_nvdi4")
+static_sound = ExtResource("2_b6urm")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

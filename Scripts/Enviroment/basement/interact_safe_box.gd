@@ -3,6 +3,8 @@ extends Interactable
 @export var dialogue: DialogueResource
 @export var node_no_key: String
 @export var node_key: String
+@export var node_open_safe: String
+
 @onready var numpad: Numpad = $"../NumpadUI"
 
 
@@ -16,6 +18,9 @@ func interact() -> void:
 	if not Global.has_basement_key:
 		numpad.show()
 		await numpad.ended
+		if numpad.is_open:
+			DialogueManager.show_dialogue_balloon(dialogue, node_open_safe)
+			await DialogueManager.dialogue_ended
 	interaction_ended.emit()
 	print("Has key? " + str(Global.has_basement_key))
 

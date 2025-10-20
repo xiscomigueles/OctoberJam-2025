@@ -34,6 +34,7 @@ script = ExtResource("2_kndio")
 dialogue = ExtResource("3_v24dq")
 node_no_key = "amador_first_chain_found_locker"
 node_key = "amador_first_chain_open_locker"
+node_open_safe = "amador_open_safe"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
 position = Vector2(3, 0)

@@ -84,9 +84,13 @@ Maite: [i]The books do look interesting, though. We are keeping them.[/i]
 
 ~ amador_get_homer
 # This plays when opening the door with the key
-
 if Global.has_homer_simpson:
 	Amador: Nothing left.
 else:
-	[i]Amador get the homer simpson.[/i]
+	* Amador gets the hammer *
+=> END
+
+~ amador_open_safe
+* The safe was opened *
+* Amador gets the key *
 => END

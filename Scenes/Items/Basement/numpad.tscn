@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://3k7axxhcbcem"]
+[gd_scene load_steps=11 format=3 uid="uid://3k7axxhcbcem"]
 
-[ext_resource type="Script" uid="uid://bk3gpqmir16hr" path="res://Scripts/numpad.gd" id="1_numpad_script"]
+[ext_resource type="Script" uid="uid://bk3gpqmir16hr" path="res://Scripts/Numpad.gd" id="1_numpad_script"]
+[ext_resource type="Script" uid="uid://bhxhajsigxvwd" path="res://Scripts/Enviroment/basement/numpad_audio.gd" id="2_0tlyd"]
 [ext_resource type="FontFile" uid="uid://bqrla7ilrh4x5" path="res://DialogueView/Fonts/TrueType/SFPixelate.ttf" id="2_font"]
+[ext_resource type="AudioStream" uid="uid://d3oytfxqmt0av" path="res://Assets/Sound/beep.wav" id="3_uf2c5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_disabled"]
 bg_color = Color(0.08, 0.08, 0.08, 1)
@@ -80,6 +82,10 @@ LineEdit/styles/normal = SubResource("StyleBoxFlat_lineedit")
 layer = 101
 script = ExtResource("1_numpad_script")
 combination = "249"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+script = ExtResource("2_0tlyd")
+button_sound = ExtResource("3_uf2c5")
 
 [node name="Container" type="Control" parent="."]
 layout_mode = 3

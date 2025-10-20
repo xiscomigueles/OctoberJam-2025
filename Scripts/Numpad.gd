@@ -4,6 +4,7 @@ signal ended()
 
 @onready var line_edit_input: LineEdit = $"Container/Vertical Box/LineEdit Input"
 @onready var grid: GridContainer = $"Container/Vertical Box/Grid"
+@onready var audio: NumpadAudio = $AudioStreamPlayer2D
 
 @export var max_input_length = 3
 @export var combination: String = "123"
@@ -36,6 +37,7 @@ func _on_number_button_pressed(number_char: String):
 		return
 	var index: int = line_edit_input.text.find("*")
 	if index != -1:
+		audio.play_button_sound()
 		line_edit_input.text[index] = number_char
 
 

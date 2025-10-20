@@ -51,6 +51,7 @@ func _on_ok_pressed():
 	if input_value == combination:
 		_open()
 	else:
+		audio.play_incorrect_beep()
 		_clear()
 
 

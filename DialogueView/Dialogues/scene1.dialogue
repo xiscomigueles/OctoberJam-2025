@@ -25,7 +25,7 @@ Amador: Wh... What am I doing here? Hold on, isn't this the [shake]basement?[/sh
 
 ~ amador_first_chain_found_second
 # This plays after searching the bookshelf (Second Number).
-The name of this book is [i]The Big Four[/i].
+* The name of this book is  "The Big Four" *
 % Amador: I should read this sometime.
 % Amador: My father brought it last year. I couldn't find time to read it yet.
 => END
@@ -47,12 +47,12 @@ The painting shows both of your children. Lucas wears a cap with the number 9 on
 # TV machine
 The TV turns on, letting out an annoying static noise.
 ...
-Maite: [i]We should clean up the basement; it's a bit messy, after all.[/i]
+Maite: We should clean up the basement; it's a bit messy, after all.
 ...
 ...
-Maite: [i]And the washimg machine... isn't it broken?? It surely belongs in the trash.[/i]
+Maite: And the washimg machine... isn't it broken?? It surely belongs in the trash.
 ...
-Maite: [i]The books do look interesting, though. We are keeping them.[/i]
+Maite: The books do look interesting, though. We are keeping them.
 => END
 
 ~ amador_bookshelf
@@ -79,7 +79,7 @@ Maite: [i]The books do look interesting, though. We are keeping them.[/i]
 
 ~ amador_opens_door
 # This plays when opening the door with the key
-[i]Amador opens the basement door.[/i]
+* Amador opens the basement door *
 => END
 
 ~ amador_get_homer

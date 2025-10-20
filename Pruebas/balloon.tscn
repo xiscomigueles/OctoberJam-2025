@@ -1,11 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://csg45lfkoi57m"]
+[gd_scene load_steps=10 format=3 uid="uid://csg45lfkoi57m"]
 
 [ext_resource type="Script" uid="uid://dva5xnhn4mpdk" path="res://Pruebas/balloon.gd" id="1_36de5"]
+[ext_resource type="FontFile" uid="uid://b6wqbtkknxa4b" path="res://DialogueView/Fonts/AtariClassic-gry3.ttf" id="2_7asmm"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
-[ext_resource type="FontFile" uid="uid://ch6vg4dwtdnl3" path="res://DialogueView/Fonts/Cayetano/cayetano.regular.ttf" id="2_b6sje"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
-[ext_resource type="FontFile" uid="uid://6y6wl7ybgnl6" path="res://DialogueView/Fonts/Cayetano/cayetano.italic.ttf" id="3_pre3y"]
-[ext_resource type="FontFile" uid="uid://elfpyefr4g5w" path="res://DialogueView/Fonts/Cayetano/cayetano.bold.ttf" id="5_jj72x"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -109,8 +107,7 @@ unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/normal_font = ExtResource("2_b6sje")
-theme_override_fonts/italics_font = ExtResource("3_pre3y")
+theme_override_fonts/normal_font = ExtResource("2_7asmm")
 theme_override_font_sizes/normal_font_size = 30
 theme_override_font_sizes/italics_font_size = 30
 bbcode_enabled = true
@@ -122,9 +119,7 @@ scroll_active = false
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/normal_font = ExtResource("2_b6sje")
-theme_override_fonts/bold_font = ExtResource("5_jj72x")
-theme_override_fonts/italics_font = ExtResource("3_pre3y")
+theme_override_fonts/normal_font = ExtResource("2_7asmm")
 theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/italics_font_size = 24
 text = "Dialogue..."
@@ -151,7 +146,7 @@ response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_b6sje")
+theme_override_fonts/font = ExtResource("2_7asmm")
 theme_override_font_sizes/font_size = 24
 text = "Response example"
 vertical_icon_alignment = 0

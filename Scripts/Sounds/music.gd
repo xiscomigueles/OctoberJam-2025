@@ -1,5 +1,7 @@
 extends Node
 
+@export var cinematic_volume: float = -4.0
+
 @export var game_music: AudioStream
 @export var cinematic_music: AudioStream
 @export var cimeatic_music_loop: AudioStream
@@ -30,6 +32,7 @@ func play_cinematic_music() -> void:
 	audio_player.finished.disconnect(_on_music_finished)
 	
 	audio_player.stop()
+	audio_player.volume_db = cinematic_volume
 	audio_player.stream = cinematic_music
 	audio_player.play()
 	

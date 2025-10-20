@@ -12,7 +12,7 @@ signal ended()
 var is_open: bool = false
 
 func _ready():
-	_clear()
+	_clear(false)
 	_connect_buttons()
 
 
@@ -42,8 +42,10 @@ func _on_number_button_pressed(number_char: String):
 		line_edit_input.text[index] = number_char
 
 
-func _clear():
+func _clear(with_sfx: bool = true):
 	line_edit_input.text = "***"
+	if with_sfx:
+		audio.play_reset_beep()
 
 
 func _on_ok_pressed():
@@ -52,7 +54,7 @@ func _on_ok_pressed():
 		_open()
 	else:
 		audio.play_incorrect_beep()
-		_clear()
+		_clear(false)
 
 
 func _open() -> void:

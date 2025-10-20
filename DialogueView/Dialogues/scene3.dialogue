@@ -46,7 +46,7 @@ Amador: It's 3:33 AM.
 
 ~ amador_news_report
 # THE END (When Amador interacts with the TV, having obtained the VHS and the TV remote
-The TV turns on.
+* The TV turns on *
 ...
 Amador: It's a news report about some incident.
 News anchor: [i]Last week, the police found several dead bodies in the basement in the house of a local family.[/i]
@@ -58,14 +58,17 @@ News anchor: [i]Their kids unfortunately shared the same fate.[/i]
 News anchor: [i]Medical reports from the husband states he had some mental health issues triggered by TV static sounds...[/i]
 ..
 ...
+# -- amador reveal --
 Amador: What happened? Where did they go?
 News anchor: Amador..... it's time  to face it.
-# A flashback appears on the screen; making the scene a more bloddy. <- equisdeeeeeeeee 
+# A flashback appears on the screen; making the scene a more bloddy. <- equisdeeeeeeeee
+# -- bodies --
 Amador: ...
 # The bodies appear in the room
 Maite: You killed your own children. 
 Rocio: You murdered your wife...
 Lucas: and you took your own life soon after.
+# -- fundido a negro --
 Amador: ...
 - What did I do??
 - What did I do??

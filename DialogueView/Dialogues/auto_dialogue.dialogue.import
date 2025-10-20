@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://blmupg4j3jb00"
+path="res://.godot/imported/auto_dialogue.dialogue-97ca28bccd867da820e16060a5be531b.tres"
+
+[deps]
+
+source_file="res://DialogueView/Dialogues/auto_dialogue.dialogue"
+dest_files=["res://.godot/imported/auto_dialogue.dialogue-97ca28bccd867da820e16060a5be531b.tres"]
+
+[params]
+
+defaults=true

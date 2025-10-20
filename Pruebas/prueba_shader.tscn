@@ -1,15 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://cqhbu50pd56v6"]
 
-[ext_resource type="PackedScene" uid="uid://cxry78h0t6gjl" path="res://Scenes/ctr.tscn" id="2_5br5x"]
-[ext_resource type="Texture2D" uid="uid://bjsolsyt2ugdw" path="res://icon.svg" id="2_oihqu"]
+[ext_resource type="Script" uid="uid://n7j1x5lm8fnw" path="res://Pruebas/prueba_shader.gd" id="1_51grl"]
+[ext_resource type="Resource" uid="uid://blmupg4j3jb00" path="res://DialogueView/Dialogues/auto_dialogue.dialogue" id="2_5br5x"]
 
 [node name="Prueba Shader" type="Node2D"]
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(579, 324)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(608, 269)
-texture = ExtResource("2_oihqu")
-
-[node name="CTR" parent="." instance=ExtResource("2_5br5x")]
+script = ExtResource("1_51grl")
+dialogue = ExtResource("2_5br5x")

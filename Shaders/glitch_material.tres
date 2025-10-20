@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dp5a0ibwvtteh"]
 
-[ext_resource type="Shader" uid="uid://dexis8apr12j2" path="res://Pruebas/glitch.gdshader" id="1_k2xxt"]
+[ext_resource type="Shader" uid="uid://dexis8apr12j2" path="res://Shaders/glitch.gdshader" id="1_k2xxt"]
 
 [resource]
 shader = ExtResource("1_k2xxt")

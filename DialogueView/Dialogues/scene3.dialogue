@@ -49,26 +49,32 @@ Amador: It's 3:33 AM.
 * The TV turns on *
 ...
 Amador: It's a news report about some incident.
-News anchor: [i]Last week, the police found several dead bodies in the basement in the house of a local family.[/i]
+News anchor: Last week, the police found several dead bodies in the basement in the house of a local family.
 Amador: What happened?
-News anchor: [i]The man's wife was found dead in the basement.[/i] 
+News anchor: The man's wife was found dead in the basement.
 ...
-News anchor: [i]Their kids unfortunately shared the same fate.[/i]
+News anchor: Their kids unfortunately shared the same fate.
 ...
-News anchor: [i]Medical reports from the husband states he had some mental health issues triggered by TV static sounds...[/i]
-..
+News anchor: Medical reports from the husband states he had some mental health issues triggered by TV static sounds...
 ...
-# -- amador reveal --
+...
+=> amador_reveals
+
+~ amador_reveals
 Amador: What happened? Where did they go?
 News anchor: Amador..... it's time  to face it.
 # A flashback appears on the screen; making the scene a more bloddy. <- equisdeeeeeeeee
-# -- bodies --
+=> amador_bodies
+
+~ amador_bodies
 Amador: ...
 # The bodies appear in the room
 Maite: You killed your own children. 
 Rocio: You murdered your wife...
 Lucas: and you took your own life soon after.
-# -- fundido a negro --
+=> amador_fade_to_black
+
+~ amador_fade_to_black
 Amador: ...
 - What did I do??
 - What did I do??
@@ -83,5 +89,4 @@ News anchor: Whatever you do...
 News anchor: Do not turn on your home TV at 3:33 AM
 ...
 Amador: Thank you for playing. UwU
-
 => END

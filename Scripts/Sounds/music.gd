@@ -2,6 +2,7 @@ extends Node
 
 @export var game_music: AudioStream
 @export var cinematic_music: AudioStream
+@export var cimeatic_music_loop: AudioStream
 
 @onready var audio_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
@@ -26,6 +27,13 @@ func play_game_music() -> void:
 
 
 func play_cinematic_music() -> void:
+	audio_player.finished.disconnect(_on_music_finished)
+	
 	audio_player.stop()
 	audio_player.stream = cinematic_music
 	audio_player.play()
+	
+	await audio_player.finished
+	audio_player.stream = cimeatic_music_loop
+	audio_player.play()
+	_set_music_loop()

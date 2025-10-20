@@ -1,7 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://7rfs7cypiugi"]
+[gd_scene load_steps=22 format=3 uid="uid://7rfs7cypiugi"]
 
 [ext_resource type="Script" uid="uid://drypwdr4uq3qp" path="res://Scripts/Cinematic/final_cinematic.gd" id="1_eitsi"]
 [ext_resource type="Texture2D" uid="uid://c1snfue3idot7" path="res://Assets/Cinematic/Static-Sheet.png" id="1_s5l71"]
+[ext_resource type="Resource" uid="uid://c4q5xoawxgha8" path="res://DialogueView/Dialogues/scene3.dialogue" id="2_x2vej"]
+[ext_resource type="Texture2D" uid="uid://cr6a8dgpgaswr" path="res://Assets/Cinematic/Reveal-Sheet.png" id="3_kl28y"]
+[ext_resource type="Texture2D" uid="uid://bmr5w8caor73j" path="res://Assets/Cinematic/Bodies-Sheet.png" id="5_t34cq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eitsi"]
 atlas = ExtResource("1_s5l71")
@@ -46,8 +49,82 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4y1c"]
+atlas = ExtResource("3_kl28y")
+region = Rect2(0, 0, 256, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swbma"]
+atlas = ExtResource("3_kl28y")
+region = Rect2(256, 0, 256, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_igjnj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4y1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swbma")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igjnj"]
+atlas = ExtResource("5_t34cq")
+region = Rect2(0, 0, 256, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iaay1"]
+atlas = ExtResource("5_t34cq")
+region = Rect2(256, 0, 256, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pp4m"]
+atlas = ExtResource("5_t34cq")
+region = Rect2(512, 0, 256, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3jyu"]
+atlas = ExtResource("5_t34cq")
+region = Rect2(768, 0, 256, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xd6v4"]
+atlas = ExtResource("5_t34cq")
+region = Rect2(1024, 0, 256, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivfa2"]
+atlas = ExtResource("5_t34cq")
+region = Rect2(1280, 0, 256, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nv62j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igjnj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iaay1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pp4m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3jyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xd6v4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivfa2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
 [node name="Final Cinematic" type="Node2D"]
 script = ExtResource("1_eitsi")
+dialogue = ExtResource("2_x2vej")
+start_node = "amador_news_report"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(128, 80)
@@ -58,3 +135,14 @@ position = Vector2(128, 80)
 sprite_frames = SubResource("SpriteFrames_q4y1c")
 frame = 4
 frame_progress = 0.8952372
+
+[node name="Reveal Animation" type="AnimatedSprite2D" parent="."]
+position = Vector2(128, 80)
+sprite_frames = SubResource("SpriteFrames_igjnj")
+frame = 1
+frame_progress = 1.0
+
+[node name="Bodies Animation" type="AnimatedSprite2D" parent="."]
+position = Vector2(128, 80)
+sprite_frames = SubResource("SpriteFrames_nv62j")
+frame_progress = 0.33236116

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cxry78h0t6gjl"]
 
 [ext_resource type="Script" uid="uid://lo8qbu6rkuoo" path="res://Scripts/ctr.gd" id="1_8bl3q"]
-[ext_resource type="Material" uid="uid://bfbgdk6ggkfp7" path="res://Pruebas/ctr_material.tres" id="2_8bl3q"]
-[ext_resource type="Material" uid="uid://dp5a0ibwvtteh" path="res://Pruebas/glitch_material.tres" id="3_o5qah"]
+[ext_resource type="Material" uid="uid://bfbgdk6ggkfp7" path="res://Shaders/ctr_material.tres" id="2_8bl3q"]
+[ext_resource type="Material" uid="uid://dp5a0ibwvtteh" path="res://Shaders/glitch_material.tres" id="3_o5qah"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_71aw0"]
 

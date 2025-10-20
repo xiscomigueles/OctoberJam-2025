@@ -5,18 +5,18 @@ Amador: Rocio?! Lucas? Where did you go?
 
 ~ amador_enters_interacts_vhs_first
 # Amamonador has another flashback, with his children telling him a one-liner
-Lucas: ...daddy...please stop...
-Lucas: ...you are scaring me.
+Lucas: «...daddy...please stop...»
+Lucas: «...you are scaring me.»
 ..
 ...
-Rocio: What are you doing dad?!
+Rocio: «What are you doing dad?!»
 ..
 ...
-Maite: [color=white]I'm home... [/color][wait=1] [color=white]where's my... [wait=1][color=red]AMADOR![/color]
+Maite: «[color=white]I'm home... [/color][wait=1] [color=white]where's my... [wait=1][color=red]AMADOR![/color]»
 ..
 ...
 Amador: What...what was that??
-Amador looks at his hands; he has a VHS tape - the one previously in the floor...
+Amador looks at his hands; he has a VHS tape - the one previously on the floor...
 % Amador: I should play this.
 % Amador: Maybe this has the answers I need.
 => END
@@ -24,11 +24,11 @@ Amador looks at his hands; he has a VHS tape - the one previously in the floor..
 ~ amador_goes_tv
 if not Global.has_remote:
 	# This scene plays when Amador tries to play the tape without the remote.
-	% Rocio: Daad, the remote is on the couch.
-	% Maite: Darling, go fecth the remote on the couch, please.
+	% Rocio: «Daad, the remote is on the couch.»
+	% Maite: «Darling, go fecth the remote on the couch, please.»
 elif not Global.has_VHS:
 	# This scene plays when Amador tries to play the tape without the remote.
-	% Lucas: Daad, play something on the TV!
+	% Lucas: «Daad, play something on the TV!»
 	% Amador: I should play something on the TV
 else:
 	Amador: Oh no...
@@ -50,13 +50,13 @@ Amador: It's 3:33 AM.
 * The TV turns on *
 ...
 Amador: It's a news report about some incident.
-News anchor: Last week, the police found several dead bodies in the basement in the house of a local family.
+News anchor: «Last week, the police found several dead bodies in the basement in the house of a local family.»
 Amador: What happened?
-News anchor: The man's wife was found dead in the basement.
+News anchor: «The man's wife was found dead in the basement.»
 ...
-News anchor: Their kids unfortunately shared the same fate.
+News anchor: «Their kids unfortunately shared the same fate.»
 ...
-News anchor: Medical reports from the husband states he had some mental health issues triggered by TV static sounds...
+News anchor: «Medical reports from the husband states he had some mental health issues triggered by TV static noise...»
 ...
 ...
 => amador_reveals
@@ -73,9 +73,6 @@ Amador: ...
 Maite: You killed your own children. 
 Rocio: You murdered your wife...
 Lucas: and you took your own life soon after.
-=> amador_fade_to_black
-
-~ amador_fade_to_black
 Amador: ...
 - What have I done??
 - What have I done??
@@ -83,6 +80,9 @@ Amador: ...
 - What have I done??
 - What have I done??
 - What have I done??
+=> amador_fade_to_black
+
+~ amador_fade_to_black
 News anchor: This is your punishment.
 ...
 News anchor: And for those people still watching this...

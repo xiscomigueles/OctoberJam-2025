@@ -49,12 +49,12 @@ if not Global.tv_sotano:
 	# TV machine
 	The TV turns on, letting out an annoying static noise.
 	...
-	Maite: We should clean up the basement; it's a bit messy, after all.
+	Maite: «We should clean up the basement; it's a bit messy, after all.»
 	...
 	...
-	Maite: And the washimg machine... isn't it broken?? It surely belongs in the trash.
+	Maite: «And the washimg machine... isn't it broken?? It surely belongs in the trash.»
 	...
-	Maite: The books do look interesting, though. We are keeping them.
+	Maite: «The books do look interesting, though. We are keeping them.»
 else:
 	The hell you looking at?
 => END
@@ -95,6 +95,6 @@ else:
 => END
 
 ~ amador_open_safe
-* The safe was opened *
+* The locker was opened *
 * Amador gets the key *
 => END

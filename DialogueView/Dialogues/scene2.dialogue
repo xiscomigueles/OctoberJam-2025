@@ -32,7 +32,7 @@ Amador: Who let the gas on? It must have been Maite.
 ???: Amador! WHY?
 Amador: That voice... it's clearly from...
 - Maite??
-Maite: STAY AWAY FROM US!
+Maite: «STAY AWAY FROM US!»
 ...
 Amador: ...what was that?
 Amador: My head...still hurts so bad...
@@ -56,17 +56,17 @@ if not Global.tv_kitchen
 	# Flashback while playing the TV of the kitchen.
 	The TV turns on, letting out an annoying static noise.
 	...
-	Maite: We should go on a holiday trip, darling.
-	Rocio: Yeessss...let's go to the snow!
-	Lucas: Nooooo...I want to go hiking daaad!
-	Rocio: Shut up, normie! The winter is for going skiing.
-	Maite: Stop fighting kids. We are going wherever your father and I decide.
+	Maite: «We should go on a holiday trip, darling.»
+	Rocio: «Yeessss...let's go to the snow!»
+	Lucas: «Nooooo...I want to go hiking daaad!»
+	Rocio: «Shut up, normie! The winter is for going skiing.»
+	Maite: «Stop fighting kids. We are going wherever your father and I decide.»
 else:
 	* Bzzz *
 => END
 
 ~ amador_frigo_flashback
 # This plays when interacting with the fridge.
-Rocio: We need more MeatZZa Feast dad. It's the best pizza ever.
-Lucas: Yeesss, I love it too!
+Rocio: «We need more MeatZZa Feast dad. It's the best pizza ever.»
+Lucas: «Yeesss, I love it too!»
 => END

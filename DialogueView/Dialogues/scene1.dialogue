@@ -44,15 +44,19 @@ The painting shows both of your children. Lucas wears a cap with the number 9 on
 => END
 
 ~ amador_tv
-# TV machine
-The TV turns on, letting out an annoying static noise.
-...
-Maite: We should clean up the basement; it's a bit messy, after all.
-...
-...
-Maite: And the washimg machine... isn't it broken?? It surely belongs in the trash.
-...
-Maite: The books do look interesting, though. We are keeping them.
+
+if not Global.tv_sotano:
+	# TV machine
+	The TV turns on, letting out an annoying static noise.
+	...
+	Maite: We should clean up the basement; it's a bit messy, after all.
+	...
+	...
+	Maite: And the washimg machine... isn't it broken?? It surely belongs in the trash.
+	...
+	Maite: The books do look interesting, though. We are keeping them.
+else:
+	The hell you looking at?
 => END
 
 ~ amador_bookshelf

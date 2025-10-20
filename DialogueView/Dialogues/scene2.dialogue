@@ -51,14 +51,18 @@ Amador: Rocio! Lucas! They must be in the living room...I need to open the door 
 => END
 
 ~ amador_tv_flashback
-# Flashback while playing the TV of the kitchen.
-The TV turns on, letting out an annoying static noise.
-...
-Maite: We should go on a holiday trip, darling.
-Rocio: Yeessss...let's go to the snow!
-Lucas: Nooooo...I want to go hiking daaad!
-Rocio: Shut up, normie! The winter is for going skiing.
-Maite: Stop fighting kids. We are going wherever your father and I decide.
+
+if not Global.tv_kitchen
+	# Flashback while playing the TV of the kitchen.
+	The TV turns on, letting out an annoying static noise.
+	...
+	Maite: We should go on a holiday trip, darling.
+	Rocio: Yeessss...let's go to the snow!
+	Lucas: Nooooo...I want to go hiking daaad!
+	Rocio: Shut up, normie! The winter is for going skiing.
+	Maite: Stop fighting kids. We are going wherever your father and I decide.
+else:
+	* Bzzz *
 => END
 
 ~ amador_frigo_flashback

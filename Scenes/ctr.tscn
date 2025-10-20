@@ -8,6 +8,7 @@
 
 [node name="CTR" type="CanvasLayer"]
 script = ExtResource("1_8bl3q")
+glitch_duration = 0.5
 
 [node name="CTR Shader" type="TextureRect" parent="."]
 material = ExtResource("2_8bl3q")

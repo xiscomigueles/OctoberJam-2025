@@ -50,7 +50,7 @@ func _clear(with_sfx: bool = true):
 
 func _on_ok_pressed():
 	var input_value: String = line_edit_input.text
-	if input_value == combination:
+	if _check_combination(input_value):
 		_open()
 	else:
 		audio.play_incorrect_beep()
@@ -63,3 +63,13 @@ func _open() -> void:
 	hide()
 	ended.emit()
 	audio.play_open_safe_sound()
+
+
+func _check_combination(input: String) -> bool:
+	var nums1 = combination.split("")
+	var nums2 = input.split("")
+	
+	nums1.sort()
+	nums2.sort()
+	
+	return nums1 == nums2

@@ -5,6 +5,8 @@ extends Interactable
 @export var node_no_key: String
 @export var node_key: String
 
+
+
 func _ready() -> void:
 	_update_state()
 
@@ -17,7 +19,7 @@ func interact() -> void:
 		DialogueManager.show_dialogue_balloon(dialogue, node_key)
 		await DialogueManager.dialogue_ended
 		Global.basement_door_open = true
-		_open(true)
+		await _open(true)
 	
 	interaction_ended.emit()
 

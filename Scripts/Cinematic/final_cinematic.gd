@@ -8,6 +8,7 @@ extends Node2D
 @onready var tv_static_anim: AnimatedSprite2D = $"TV Static Animation"
 @onready var reveal_anim: AnimatedSprite2D = $"Reveal Animation"
 @onready var bodies_anim: AnimatedSprite2D = $"Bodies Animation"
+@onready var fade_anim: AnimationPlayer = $"Fade Animation"
 
 const cinematic_parts: int = 4
 var current_part: int = 0
@@ -16,6 +17,9 @@ func _ready() -> void:
 	Music.play_cinematic_music()
 	DialogueManager.passed_title.connect(_on_passed_title)
 	DialogueManager.show_dialogue_balloon_scene(ballon_cinematic_path, dialogue, start_node)
+	await DialogueManager.dialogue_ended
+	get_tree().quit()
+	print("sa terminao")
 
 
 func _on_passed_title(_title: String) -> void:
@@ -31,6 +35,8 @@ func _change_anim() -> void:
 			_play_reveal_anim()
 		3:
 			_play_bodies_anim()
+		4:
+			_play_fade_to_black()
 
 
 func _play_tv_static_anim() -> void:
@@ -56,3 +62,7 @@ func _play_bodies_anim() -> void:
 	
 	CTR.play_glitch_effect(0.2)
 	bodies_anim.play()
+
+
+func _play_fade_to_black() -> void:
+	fade_anim.play("fade")

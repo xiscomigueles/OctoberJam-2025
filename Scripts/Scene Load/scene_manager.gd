@@ -1,15 +1,19 @@
 # autoload script - scene_manager.gd (VERSIÓN CORRECTA Y FINAL)
 extends Node
 
-
 const PLAYER_SCENE: PackedScene = preload("res://Scenes/Player.tscn")
 const Y_SORT_NODE_NAME: String = "Y Sorting"
 const DEFAULT_SPAWN_NAME: String = "Default"
 const SPAWNS_NODE_NAME = "SpawnPoints"
+@export var final_scene_path: String = "res://Scenes/final_cinematic.tscn"
 
 
 func _ready() -> void:
 	_spawn_player()
+
+
+func change_to_final_scene() -> void:
+	change_scene(final_scene_path)
 
 
 func change_scene(scene_path: String, spawn_point: String = "") -> void:

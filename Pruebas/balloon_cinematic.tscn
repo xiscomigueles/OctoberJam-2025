@@ -70,7 +70,8 @@ PanelContainer/styles/panel = SubResource("StyleBoxFlat_qkmqt")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jyuo8"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_31gbe"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kcjfe"]
+bg_color = Color(0.6, 0.6, 0.6, 0.6666667)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ch160"]
 
@@ -163,7 +164,7 @@ theme_override_fonts/font = ExtResource("2_mpm5v")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxTexture_mpm5v")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_jyuo8")
-theme_override_styles/hover = SubResource("StyleBoxTexture_31gbe")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kcjfe")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_ch160")
 theme_override_styles/focus = SubResource("StyleBoxTexture_n5di0")
 text = "Response example"

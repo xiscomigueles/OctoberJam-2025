@@ -32,6 +32,7 @@ elif not Global.has_VHS:
 	% Amador: I should play something on the TV
 else:
 	Amador: Oh no...
+	do SceneManager.change_to_final_scene()
 => END
 
 ~ amador_goes_fetch_remote
@@ -76,17 +77,18 @@ Lucas: and you took your own life soon after.
 
 ~ amador_fade_to_black
 Amador: ...
-- What did I do??
-- What did I do??
-- What did I do??
-- What did I do??
-- What did I do??
-- What did I do??
+- What have I done??
+- What have I done??
+- What have I done??
+- What have I done??
+- What have I done??
+- What have I done??
 News anchor: This is your punishment.
 ...
 News anchor: And for those people still watching this...
 News anchor: Whatever you do...
-News anchor: Do not turn on your home TV at 3:33 AM
+News anchor: Do not turn on your home TV at 3:33 AM.
 ...
-Amador: Thank you for playing. UwU
+Amador: Thank you for playing.
+Amador: UwU
 => END

@@ -10,5 +10,5 @@ func interact() -> void:
 	await DialogueManager.dialogue_ended
 	DarkManager.swap_to_dark(room_type)
 	SFX.play_static_sound()
-	CTR.play_glitch_effect()
+	CTR.play_glitch_effect(0.5)
 	interaction_ended.emit()

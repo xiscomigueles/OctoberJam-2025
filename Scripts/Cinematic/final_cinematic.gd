@@ -54,4 +54,5 @@ func _play_bodies_anim() -> void:
 	reveal_anim.visible = false
 	bodies_anim.visible = true
 	
+	CTR.play_glitch_effect(0.2)
 	bodies_anim.play()

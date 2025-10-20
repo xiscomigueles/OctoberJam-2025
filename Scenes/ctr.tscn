@@ -1,21 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxry78h0t6gjl"]
+[gd_scene load_steps=5 format=3 uid="uid://cxry78h0t6gjl"]
 
-[ext_resource type="Shader" uid="uid://drtj5o6adytoe" path="res://Pruebas/ctr.gdshader" id="1_71aw0"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lb1jv"]
-shader = ExtResource("1_71aw0")
-shader_parameter/scanline_count = 72.0690034232775
-shader_parameter/curve_gradient = 7.214000342665
+[ext_resource type="Script" uid="uid://lo8qbu6rkuoo" path="res://Scripts/ctr.gd" id="1_8bl3q"]
+[ext_resource type="Material" uid="uid://bfbgdk6ggkfp7" path="res://Pruebas/ctr_material.tres" id="2_8bl3q"]
+[ext_resource type="Material" uid="uid://dp5a0ibwvtteh" path="res://Pruebas/glitch_material.tres" id="3_o5qah"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_71aw0"]
 
 [node name="CTR" type="CanvasLayer"]
+script = ExtResource("1_8bl3q")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-material = SubResource("ShaderMaterial_lb1jv")
+[node name="CTR Shader" type="TextureRect" parent="."]
+material = ExtResource("2_8bl3q")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("CanvasTexture_71aw0")
+
+[node name="Glitch Shader" type="TextureRect" parent="."]
+visible = false
+material = ExtResource("3_o5qah")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_71aw0")
+
+[node name="Glitch Timer" type="Timer" parent="."]

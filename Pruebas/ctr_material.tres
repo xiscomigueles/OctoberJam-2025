@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bfbgdk6ggkfp7"]
+
+[ext_resource type="Shader" uid="uid://drtj5o6adytoe" path="res://Pruebas/ctr.gdshader" id="1_yuhg7"]
+
+[resource]
+shader = ExtResource("1_yuhg7")
+shader_parameter/scanline_count = 65.126003093485
+shader_parameter/curve_gradient = 6.2770002981575

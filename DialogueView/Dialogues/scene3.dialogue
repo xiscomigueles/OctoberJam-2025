@@ -32,6 +32,7 @@ elif not Global.has_VHS:
 	% Amador: I should play something on the TV
 else:
 	Amador: Oh no...
+	do SceneManager.change_to_final_scene()
 => END
 
 ~ amador_goes_fetch_remote

@@ -145,4 +145,4 @@ frame_progress = 1.0
 [node name="Bodies Animation" type="AnimatedSprite2D" parent="."]
 position = Vector2(128, 80)
 sprite_frames = SubResource("SpriteFrames_nv62j")
-frame_progress = 0.2538748
+frame_progress = 0.20900415
